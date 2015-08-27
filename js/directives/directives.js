@@ -121,4 +121,19 @@
         };
     });
 
+    /** Toggle slide */
+
+    app.directive('slideToggle', function () {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attrs) {
+                var target = document.querySelector(attrs.slideToggle);
+                element.bind('click', function () {
+                    var content = target.querySelector('.slideable_content');
+                    $(target).slideToggle().toggleClass('lalalalal');
+                });
+            }
+        }
+    });
+
 })();
