@@ -136,4 +136,17 @@
         }
     });
 
+    app.directive("manageReports", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/subpages/manage-reports.html"
+        };
+    });
+    app.directive("taxReports", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/subpages/tax-reports.html"
+        };
+    });
+
 })();

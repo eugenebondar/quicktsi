@@ -124,5 +124,12 @@
         });
         row.selector = ".slideable-carrier-pay";
     }]);
+    app.controller('TaxReportsTableCtrl', ['$http', function($http){
+        var row = this;
+        row.items = [];
+        $http.get('./data/tables/tax-reports-table.json').success(function(data){
+            row.items = data;
+        });
+    }]);
 
 })();

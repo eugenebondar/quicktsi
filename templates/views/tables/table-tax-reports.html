@@ -1,0 +1,25 @@
+<table class="table-tax-reports table" >
+    <thead>
+    <tr>
+        <th class="th-checkbox">
+            <input type="checkbox"/>
+        </th>
+        <th class="th-name"><span>carrier name</span></th>
+        <th class="th-year"><span>year</span></th>
+        <th class="th-gross"><span>gross revenue</span></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-checkbox">
+            <input type="checkbox"/>
+        </td>
+        <td class="th-name"><span>{{item.name}}</span></td>
+        <td class="th-year"><span>{{item.year}}</span></td>
+        <td class="th-gross"><span>{{item.gross}}</span></td>
+    </tr>
+    </tbody>
+</table>
+<div class="empty-table" ng-show="table.items.length < 1" >
+    No data available in the table
+</div>

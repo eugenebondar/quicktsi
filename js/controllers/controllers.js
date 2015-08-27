@@ -87,22 +87,22 @@
 
     }]);
 
-    //app.controller('TabsCtrl', ['$http', function($http){
-    //
-    //    var acc = this;
-    //    acc.items = [];
-    //    $http.get('./data/accounting.json').success(function(data){
-    //        acc.items = data.account;
-    //    });
-    //
-    //    this.tab = 1;
-    //    this.selectTab = function(setTab){
-    //        this.tab = setTab;
-    //    };
-    //    this.isSelected = function(checkTab){
-    //        return this.tab === checkTab;
-    //    }
-    //
-    //}]);
+    app.controller('ReportsTabCtrl', ['$http', function($http){
+        var acc = this;
+        acc.items = [];
+        $http.get('./data/reports.json').success(function(data){
+            acc.items = data;
+        });
+
+        this.tab = 1;
+        this.selectTab = function(setTab){
+            this.tab = setTab;
+        };
+        this.isSelected = function(checkTab){
+            return this.tab === checkTab;
+        }
+
+    }]);
+
 
 })();

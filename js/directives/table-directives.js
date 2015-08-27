@@ -105,5 +105,11 @@
             templateUrl: "templates/views/tables/table-carrier-pay.html"
         };
     });
+    app.directive("tableTaxReports", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/tables/table-tax-reports.html"
+        };
+    });
 
 })();
