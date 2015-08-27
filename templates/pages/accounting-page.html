@@ -1,4 +1,4 @@
-<div class="administration-tabs-wrap" ng-controller="TabsCtrl as tab">
+<div class="account-tabs-wrap" ng-controller="AccountTabCtrl as panel">
 
     <div class="breadcrumbs">
         <ul class="breadcrumbs-list">
@@ -6,26 +6,78 @@
             <li><span>Accounting</span></li>
         </ul>
     </div>
-    <div class="container-controls" ng-repeat="item in tab.items">
-        <div class="panel-controls row" ng-show="tab.isSelected(item.id)">
-            <div class="col-xs-12 cc-label">
+
+    <div class="container-controls" ng-repeat="item in panel.items">
+        <div class="panel-controls row" ng-show="panel.isSelected(item.id)">
+            <div class="col-xs-6 cc-label">
                 <h2 class="title">{{item.title}}</h2>
+            </div>
+            <div class="col-xs-6 cc-btn">
+                <ul class="loads-btn-list">
+                    <li ng-repeat="button in item.buttons"><a class="green-btn" href="#"><img ng-src="{{button.src}}" alt="add"/>{{button.label}}</a></li>
+                </ul>
             </div>
         </div>
     </div>
+
     <div class="container">
 
-        <div class="admin-tabs-list-wrap">
-            <ul class="admin-tabs-list">
-                <li ng-repeat="item in tab.items" ng-class="{ active: tab.isSelected(item.id) }">
-                    <a href ng-click="tab.selectTab(item.id)">{{item.title}}</a>
+        <div class="account-tabs-list-wrap">
+            <ul class="account-tabs-list">
+                <li ng-repeat="item in panel.items" ng-class="{ active: panel.isSelected(item.id) }">
+                    <a href ng-click="panel.selectTab(item.id)">{{item.title}}</a>
                 </li>
             </ul>
         </div>
 
-        <div class="panel" ng-show="tab.isSelected(1)"></div>
-        <div class="panel" ng-show="tab.isSelected(2)"></div>
-        <div class="panel" ng-show="tab.isSelected(3)"></div>
+    </div>
 
+    <div class="panel" ng-show="panel.isSelected(1)" ng-controller="DriverPayTableCtrl as table">
+        <div class="toolbar-wrap" ng-controller="ToolbarCtrl as toolbar">
+            <div class="container-toolbar load-page-toolbar row">
+                <toolbar-driver-pay></toolbar-driver-pay>
+            </div>
+            <div class="account-page-filters filters row slideable-account hide">
+                <filter-driver-pay></filter-driver-pay>
+            </div>
+        </div>
+
+        <table-driver-pay></table-driver-pay>
+
+        <div class="container-toolbar container-bottomtoolbar row">
+            <bottom-toolbar></bottom-toolbar>
+        </div>
+    </div>
+    <div class="panel" ng-show="panel.isSelected(2)" ng-controller="SalesRepTableCtrl as table">
+        <div class="toolbar-wrap" ng-controller="ToolbarCtrl as toolbar">
+            <div class="container-toolbar load-page-toolbar row">
+                <toolbar-driver-pay></toolbar-driver-pay>
+            </div>
+            <div class="account-page-filters filters row slideable-sales-rep hide">
+                <filter-sales-rep></filter-sales-rep>
+            </div>
+        </div>
+
+        <table-sales-rep></table-sales-rep>
+
+        <div class="container-toolbar container-bottomtoolbar row">
+            <bottom-toolbar></bottom-toolbar>
+        </div>
+    </div>
+    <div class="panel" ng-show="panel.isSelected(3)" ng-controller="CarrierPayTableCtrl as table">
+        <div class="toolbar-wrap" ng-controller="ToolbarCtrl as toolbar">
+            <div class="container-toolbar load-page-toolbar row">
+                <toolbar-driver-pay></toolbar-driver-pay>
+            </div>
+            <div class="account-page-filters filters row slideable-carrier-pay hide">
+                <filter-sales-rep></filter-sales-rep>
+            </div>
+        </div>
+
+        <table-sales-rep></table-sales-rep>
+
+        <div class="container-toolbar container-bottomtoolbar row">
+            <bottom-toolbar></bottom-toolbar>
+        </div>
     </div>
 </div>

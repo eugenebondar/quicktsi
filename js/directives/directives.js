@@ -1,5 +1,5 @@
 (function(){
-    var app = angular.module('app-directives', ['table-directives']);
+    var app = angular.module('app-directives', ['table-directives', 'filters-directives']);
 
     app.directive("content", function() {
         return {
@@ -129,8 +129,8 @@
             link: function (scope, element, attrs) {
                 var target = document.querySelector(attrs.slideToggle);
                 element.bind('click', function () {
-                    var content = target.querySelector('.slideable_content');
-                    $(target).slideToggle().toggleClass('lalalalal');
+                    $(this).toggleClass('open');
+                    $(target).slideToggle();
                 });
             }
         }

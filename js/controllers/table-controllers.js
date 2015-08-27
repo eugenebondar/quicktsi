@@ -7,6 +7,7 @@
         $http.get('./data/tables/load-page-table.json').success(function(data){
             row.items = data;
         });
+        row.selector = ".slideable-load";
     }]);
     app.controller('ExpansesPageTableCtrl', ['$http', function($http){
         var row = this;
@@ -98,6 +99,30 @@
         $http.get('./data/tables/alert-table.json').success(function(data){
             row.items = data;
         });
+    }]);
+    app.controller('DriverPayTableCtrl', ['$http', function($http){
+        var row = this;
+        row.items = [];
+        $http.get('./data/tables/driver-pay-table.json').success(function(data){
+            row.items = data;
+        });
+        row.selector = ".slideable-account";
+    }]);
+    app.controller('SalesRepTableCtrl', ['$http', function($http){
+        var row = this;
+        row.items = [];
+        $http.get('./data/tables/sales-rep-table.json').success(function(data){
+            row.items = data;
+        });
+        row.selector = ".slideable-sales-rep";
+    }]);
+    app.controller('CarrierPayTableCtrl', ['$http', function($http){
+        var row = this;
+        row.items = [];
+        $http.get('./data/tables/carrier-apy-table.json').success(function(data){
+            row.items = data;
+        });
+        row.selector = ".slideable-carrier-pay";
     }]);
 
 })();

@@ -87,5 +87,23 @@
             templateUrl: "templates/views/tables/table-alert.html"
         };
     });
+    app.directive("tableDriverPay", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/tables/table-driver-pay.html"
+        };
+    });
+    app.directive("tableSalesRep", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/tables/table-sales-rep.html"
+        };
+    });
+    app.directive("tableCarrierPay", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/tables/table-carrier-pay.html"
+        };
+    });
 
 })();

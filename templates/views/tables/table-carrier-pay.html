@@ -1,0 +1,45 @@
+<table class="table-carrier-pay table" >
+    <thead>
+    <tr>
+        <th class="th-checkbox">
+            <input type="checkbox"/>
+        </th>
+        <th class="th-load"><span>load#</span></th>
+        <th class="th-carrier"><span>carrier</span></th>
+        <th class="th-customer"><span>customer</span></th>
+        <th class="th-origin"><span>origin</span></th>
+        <th class="th-shipped"><span>shipped</span></th>
+        <th class="th-dest"><span>dest.</span></th>
+        <th class="th-delivered"><span>delivered</span></th>
+        <th class="th-fee"><span>fee</span></th>
+        <th class="th-advances"><span>advances</span></th>
+        <th class="th-balance"><span>balance owing</span></th>
+        <th class="th-bill"><span>bill received</span></th>
+        <th class="th-received"><span>received date</span></th>
+        <th class="th-aging"><span>aging</span></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-checkbox">
+            <input type="checkbox"/>
+        </td>
+        <td class="th-load"><span>{{item.verification}}</span></td>
+        <td class="th-carrier"><span>{{item.carrier}}</span></td>
+        <td class="th-customer"><span>{{item.customer}}</span></td>
+        <td class="th-origin"><span>{{item.origin}}</span></td>
+        <td class="th-shipped"><span>{{item.shipped}}</span></td>
+        <td class="th-dest"><span>{{item.dest}}</span></td>
+        <td class="th-delivered"><span>{{item.delivered}}</span></td>
+        <td class="th-fee"><span>{{item.fee}}</span></td>
+        <td class="th-advances"><span>{{item.advances}}</span></td>
+        <td class="th-balance"><span>{{item.balance}}</span></td>
+        <td class="th-bill"><span>{{item.bill}}</span></td>
+        <td class="th-received"><span>{{item.received}}</span></td>
+        <td class="th-aging"><span>{{item.aging}}</span></td>
+    </tr>
+    </tbody>
+</table>
+<div class="empty-table" ng-show="table.items.length < 1" >
+    No data available in the table
+</div>

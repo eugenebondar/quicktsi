@@ -1,0 +1,35 @@
+<table class="table-sales-rep table" >
+    <thead>
+    <tr>
+        <th class="th-checkbox">
+            <input type="checkbox"/>
+        </th>
+        <th class="th-load"><span>load#</span></th>
+        <th class="th-carrier"><span>carrier</span></th>
+        <th class="th-customer"><span>customer</span></th>
+        <th class="th-origin"><span>origin</span></th>
+        <th class="th-shipped"><span>shipped</span></th>
+        <th class="th-destination"><span>destination</span></th>
+        <th class="th-carrier"><span>carrier fee</span></th>
+        <th class="th-advances"><span>advances</span></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-checkbox">
+            <input type="checkbox"/>
+        </td>
+        <td class="th-load"><span>{{item.load}}</span></td>
+        <td class="th-carrier"><span>{{item.carrier}}</span></td>
+        <td class="th-customer"><span>{{item.customer}}</span></td>
+        <td class="th-origin"><span>{{item.origin}}</span></td>
+        <td class="th-shipped"><span>{{item.shipped}}</span></td>
+        <td class="th-destination"><span>{{item.destination}}</span></td>
+        <td class="th-carrier"><span>{{loaded.carrier}}</span></td>
+        <td class="th-advances"><span>{{hourly.advances}}</span></td>
+    </tr>
+    </tbody>
+</table>
+<div class="empty-table" ng-show="table.items.length < 1" >
+    No data available in the table
+</div>

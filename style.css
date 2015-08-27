@@ -42,7 +42,7 @@ select::-moz-focus-inner {/* */
 
 .title {
     font-size: 26px;
-    font-weight: 400;
+    font-weight: 300;
     padding: 10px 0 0;
 }
 .green-btn {
@@ -101,7 +101,9 @@ select::-moz-focus-inner {/* */
     border-radius: 5px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
 }
-
+.hide {
+    display: none;
+}
 /** Sidebar */
 
 .sidebar {
@@ -385,6 +387,7 @@ select::-moz-focus-inner {/* */
 .panel {
     background: #fff none repeat scroll 0 0;
     border-bottom: 1px solid #e8edf1;
+    border-radius: 0 0 5px 5px;
     border-top: 1px solid #e8edf1;
     padding: 15px 10px 0;
 }
@@ -399,12 +402,14 @@ select::-moz-focus-inner {/* */
 /** Load Page */
 
 .container-toolbar {
+    border-bottom: 1px solid #e8edf1;
     color: #8990a0;
-    margin: 0 -15px;
-    padding: 5px 10px 20px;
+    margin: 0 -10px;
+    padding: 5px 10px 8px;
 }
 .container-toolbar.container-bottomtoolbar {
-    padding: 20px 15px 0;
+    border-top: 1px solid #e8edf1;
+    padding: 20px 15px 14px;
 }
 .ct-search-wrap, .ct-pagination-wrap {
     font-size: 12px;
@@ -635,4 +640,40 @@ select::-moz-focus-inner {/* */
 .status-select-inv.select-cont {
     height: 30px;
     width: 105px;
+}
+.empty-table {
+    border-top: 1px solid #e8edf1;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/** Account page */
+
+.account-tabs-wrap .container {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    margin-top: 10px;
+    padding: 0;
+}
+.account-tabs-list-wrap {
+    width: 100%;
+}
+.account-tabs-list {
+    background: #d1dadf none repeat scroll 0 0;
+    border-radius: 5px 5px 0 0;
+}
+.account-tabs-list li {
+    display: inline-block;
+    color: #8990a0;
+}
+.account-tabs-list li.active a {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 5px 5px 0 0;
+    box-shadow: -2px 0 3px -3px rgba(0, 0, 0, 0.5), 2px 0 3px -3px rgba(0, 0, 0, 0.5);
+    color: #000;
+    font-weight: 600;
+}
+.account-tabs-list li a {
+    display: inline-block;
+    padding: 10px 15px;
+    width: 100%;
 }

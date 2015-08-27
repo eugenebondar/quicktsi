@@ -1,0 +1,45 @@
+<table class="table-driver-pay table" >
+    <thead>
+    <tr>
+        <th class="th-checkbox">
+            <input type="checkbox"/>
+        </th>
+        <th class="th-verification"><span>verification</span></th>
+        <th class="th-load"><span>load#</span></th>
+        <th class="th-customer"><span>customer</span></th>
+        <th class="th-delivery"><span>delivery</span></th>
+        <th class="th-status"><span>status</span></th>
+        <th class="th-gross"><span>gross</span></th>
+        <th class="th-loaded"><span>loaded mi.</span></th>
+        <th class="th-empty"><span>loaded mi.</span></th>
+        <th class="th-hourly"><span>hourly mi.</span></th>
+        <th class="th-link"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-checkbox">
+            <input type="checkbox"/>
+        </td>
+        <td class="th-verification"><span>{{item.verification}}</span></td>
+        <td class="th-load"><span>{{item.load}}</span></td>
+        <td class="th-customer"><span>{{item.customer}}</span></td>
+        <td class="th-delivery"><span>{{item.delivery}}</span></td>
+        <td class="th-status"><span>{{item.status}}</span></td>
+        <td class="th-gross"><span>{{item.gross}}</span></td>
+        <td class="th-loaded"><span>{{item.loaded}}</span></td>
+        <td class="th-empty"><span>{{loaded.drug}}</span></td>
+        <td class="th-hourly"><span>{{hourly.drug}}</span></td>
+        <td class="th-link">
+            <ul class="th-link-list">
+                <li class="th-link-item">
+                    <a class="link-edit" href></a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="empty-table" ng-show="table.items.length < 1" >
+    No data available in the table
+</div>

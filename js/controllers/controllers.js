@@ -70,12 +70,11 @@
 
     }]);
 
-    app.controller('TabsCtrl', ['$http', function($http){
-
+    app.controller('AccountTabCtrl', ['$http', function($http){
         var acc = this;
         acc.items = [];
         $http.get('./data/accounting.json').success(function(data){
-            acc.items = data.account;
+            acc.items = data;
         });
 
         this.tab = 1;
@@ -87,5 +86,23 @@
         }
 
     }]);
+
+    //app.controller('TabsCtrl', ['$http', function($http){
+    //
+    //    var acc = this;
+    //    acc.items = [];
+    //    $http.get('./data/accounting.json').success(function(data){
+    //        acc.items = data.account;
+    //    });
+    //
+    //    this.tab = 1;
+    //    this.selectTab = function(setTab){
+    //        this.tab = setTab;
+    //    };
+    //    this.isSelected = function(checkTab){
+    //        return this.tab === checkTab;
+    //    }
+    //
+    //}]);
 
 })();
