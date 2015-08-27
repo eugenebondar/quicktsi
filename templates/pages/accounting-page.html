@@ -1,0 +1,31 @@
+<div class="administration-tabs-wrap" ng-controller="TabsCtrl as tab">
+
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs-list">
+            <li>YOU ARE HERE</li>
+            <li><span>Accounting</span></li>
+        </ul>
+    </div>
+    <div class="container-controls" ng-repeat="item in tab.items">
+        <div class="panel-controls row" ng-show="tab.isSelected(item.id)">
+            <div class="col-xs-12 cc-label">
+                <h2 class="title">{{item.title}}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="admin-tabs-list-wrap">
+            <ul class="admin-tabs-list">
+                <li ng-repeat="item in tab.items" ng-class="{ active: tab.isSelected(item.id) }">
+                    <a href ng-click="tab.selectTab(item.id)">{{item.title}}</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="panel" ng-show="tab.isSelected(1)"></div>
+        <div class="panel" ng-show="tab.isSelected(2)"></div>
+        <div class="panel" ng-show="tab.isSelected(3)"></div>
+
+    </div>
+</div>

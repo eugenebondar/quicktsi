@@ -1,0 +1,74 @@
+<div class="alert-table-wrap row">
+    <div class="col-sm-6">
+        <table class="table-alert table" >
+            <thead>
+            <tr>
+                <th class="th-checkbox">
+                    <input type="checkbox"/>
+                </th>
+                <th class="th-name"><span>alert name</span></th>
+                <th class="th-frequency"><span>frequency</span></th>
+                <th class="th-level"><span>level</span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in table.items">
+                <td class="th-checkbox">
+                    <input type="checkbox"/>
+                </td>
+                <td class="th-name"><a href><span>{{item.category}}</span></a></td>
+                <td class="th-frequency">
+                    <div class="freq-select select-cont inline">
+                        <select>
+                            <option ng-repeat="option in item.frequency" value="{{option}}">{{option}}</option>
+                        </select>
+                    </div>
+                </td>
+                <td class="th-level">
+                    <div class="level-select select-cont inline">
+                        <select>
+                            <option ng-repeat="option in item.level" value="{{option}}">{{option}}</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-6">
+        <table class="table-alert table" >
+            <thead>
+            <tr>
+                <th class="th-checkbox">
+                    <input type="checkbox"/>
+                </th>
+                <th class="th-name"><span>alert name</span></th>
+                <th class="th-frequency"><span>frequency</span></th>
+                <th class="th-level"><span>level</span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in table.items">
+                <td class="th-checkbox">
+                    <input type="checkbox"/>
+                </td>
+                <td class="th-name"><a href><span>{{item.category}}</span></a></td>
+                <td class="th-frequency">
+                    <div class="freq-select select-cont inline">
+                        <select>
+                            <option ng-repeat="option in item.frequency" value="{{option}}">{{option}}</option>
+                        </select>
+                    </div>
+                </td>
+                <td class="th-level">
+                    <div class="level-select select-cont inline">
+                        <select>
+                            <option ng-repeat="option in item.level" value="{{option}}">{{option}}</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

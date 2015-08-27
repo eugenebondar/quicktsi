@@ -1,0 +1,12 @@
+[
+    {"name": "Dashboard", "url": "/#/dashboard"},
+    {"name": "Loads", "url": "/#/loads"},
+    {"name": "Invoices", "url": "/#/invoices"},
+    {"name": "Expenses", "url": "/#/expenses"},
+    {"name": "Administration", "url": "/#/administration"},
+    {"name": "TMS Users", "url": "/#/tms_users"},
+    {"name": "Accounting", "url": "/#/accounting"},
+    {"name": "Reports", "url": "/#/reports"},
+    {"name": "Profile", "url": "/#/profile"},
+    {"name": "Help", "url": "/#/help"}
+  ]

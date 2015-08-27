@@ -1,0 +1,34 @@
+<table class="table-document table" >
+    <thead>
+    <tr>
+        <th class="th-checkbox">
+            <input type="checkbox"/>
+        </th>
+        <th class="th-category"><span>document category</span></th>
+        <th class="th-type"><span>document type</span></th>
+        <th class="th-link"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-checkbox">
+            <input type="checkbox"/>
+        </td>
+        <td class="th-category"><a href><span>{{item.category}}</span></a></td>
+        <td class="th-type"><span>{{item.type}}</span></td>
+        <td class="th-link">
+            <ul class="th-link-list">
+                <li class="th-link-item">
+                    <a class="link-edit" href></a>
+                </li>
+                <li class="th-link-item">
+                    <a class="link-copy" href></a>
+                </li>
+                <li class="th-link-item">
+                    <a class="link-remove" href></a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>

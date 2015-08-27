@@ -1,0 +1,45 @@
+<table class="table-truck table" >
+    <thead>
+    <tr>
+        <th class="th-truck"><span>trucks</span></th>
+        <th class="th-type"><span>type</span></th>
+        <th class="th-status"><span>status</span></th>
+        <th class="th-license"><span>license plate</span></th>
+        <th class="th-exp"><span>exp. date</span></th>
+        <th class="th-vin"><span>vin#</span></th>
+        <th class="th-reg"><span>reg. state</span></th>
+        <th class="th-ownership"><span>ownership</span></th>
+        <th class="th-available"><span>available</span></th>
+        <th class="th-link"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-truck"><span>{{item.truck}}</span></td>
+        <td class="th-type"><a href><span>{{item.type}}</span></a></td>
+        <td class="th-status"><span>{{item.status}}</span></td>
+        <td class="th-license"><span>{{item.license}}</span></td>
+        <td class="th-exp"><span>{{item.exp}}</span></td>
+        <td class="th-vin"><span>{{item.vin}}</span></td>
+        <td class="th-reg"><span>{{item.reg}}</span></td>
+        <td class="th-ownership"><span>{{item.ownership}}</span></td>
+        <td class="th-available"><span>{{item.available}} TO DO!!!!!</span></td>
+        <td class="th-link">
+            <ul class="th-link-list">
+                <li class="th-link-item">
+                    <a class="link-edit" href></a>
+                </li>
+                <li class="th-link-item">
+                    <a class="link-twitter" href></a>
+                </li>
+                <li class="th-link-item">
+                    <a class="link-linkedin" href></a>
+                </li>
+                <li class="th-link-item">
+                    <a class="link-q" href></a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>

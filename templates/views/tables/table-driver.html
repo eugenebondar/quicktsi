@@ -1,0 +1,32 @@
+<table class="table-driver table" >
+    <thead>
+    <tr>
+        <th class="th-name"><span>name</span></th>
+        <th class="th-telephone"><span>telephone</span></th>
+        <th class="th-email"><span>email</span></th>
+        <th class="th-license"><span>license#</span></th>
+        <th class="th-exp"><span>license exp.</span></th>
+        <th class="th-med"><span>med. test exp.</span></th>
+        <th class="th-drug"><span>drug test exp.</span></th>
+        <th class="th-link"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-name"><span>{{item.name}}</span></td>
+        <td class="th-telephone"><span>{{item.telephone}}</span></td>
+        <td class="th-email"><span>{{item.email}}</span></td>
+        <td class="th-license"><span>{{item.license}}</span></td>
+        <td class="th-exp"><span>{{item.exp}}</span></td>
+        <td class="th-med"><span>{{item.med}}</span></td>
+        <td class="th-drug"><span>{{item.drug}}</span></td>
+        <td class="th-link">
+            <ul class="th-link-list">
+                <li class="th-link-item">
+                    <a class="link-edit" href></a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>

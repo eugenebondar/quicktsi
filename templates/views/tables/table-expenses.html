@@ -1,0 +1,40 @@
+<table class="table-expenses table" >
+    <thead>
+    <tr>
+        <th class="th-checkbox">
+            <input type="checkbox"/>
+        </th>
+        <th class="th-date"><span>Date</span></th>
+        <th class="th-category"><span>category</span></th>
+        <th class="th-expenses"><span>expenses item</span></th>
+        <th class="th-description"><span>description</span></th>
+        <th class="th-amount"><span>amount</span></th>
+        <th class="th-link"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-checkbox">
+            <input type="checkbox"/>
+        </td>
+        <td class="th-load"><span>{{item.date}}</span></td>
+        <td class="th-category"><span>{{item.category}}</span></td>
+        <td class="th-expenses"><span>{{item.expense}}</span></td>
+        <td class="th-description"><span>{{item.description}}</span></td>
+        <td class="th-amount"><span>${{item.amount}}.00</span></td>
+        <td class="th-link">
+            <ul class="th-link-list">
+                <li class="th-link-item">
+                    <a class="link-edit" href></a>
+                </li>
+                <li class="th-link-item">
+                    <a class="link-copy" href></a>
+                </li>
+                <li class="th-link-item">
+                    <a class="link-remove" href></a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>

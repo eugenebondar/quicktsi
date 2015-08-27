@@ -1,0 +1,59 @@
+<div class="page row" ng-controller="contentCtrl as content" ng-class="{ close: content.isOpen() }">
+    <header class="header">
+        <div class="logo">
+            <a href="/">
+                <img src="../img/logo.png" alt="QuickTSI"/>
+            </a>
+        </div>
+        <div class="main-header row">
+            <div class="col-sm-8 header-controls">
+                <div class="btn-cont">
+                    <div class="btn-wrapper">
+                        <button class="btn-sidebar" ng-click="content.toggleMenu()">
+                            <span class="icon"></span><span class="icon"></span><span class="icon"></span>
+                        </button>
+                    </div>
+                    <div class="refresh">
+                        <a class="refresh-btn" href ng-click="content.refresh()">
+                            <img src="../img/refresh.png" alt="refresh"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-search">
+                    <input type="text" placeholder="Search QuickTSI"/>
+                </div>
+            </div>
+            <div class="col-sm-4 header-profile">
+                <div class="hp-name">John <strong>Smith</strong></div>
+                <div class="hp-img"><img src="../img/photo.png" alt="photo"/></div>
+            </div>
+        </div>
+    </header>
+    <aside class="sidebar column">
+        <div class="sidebar-wrap">
+            <div class="profile row">
+                <div class="prof-img col-xs-5">
+                    <img src="../img/photo.png" alt="photo"/>
+                </div>
+                <div class="prof-info col-xs-7">
+                    <span class="prof-name">Welcome <br/> John Smith</span>
+                    <a class="log-out" href="/">Log Out</a>
+                </div>
+            </div>
+            <nav class="main-navigation" ng-controller="MenuListCtrl as menu">
+                <ul class="main-menu" >
+                    <li ng-repeat="item in menu.items" ng-class="{ active: menu.isSelected(item.name) }">
+                        <a href="{{item.url}}" ng-click="menu.selectTab(item.name)">{{item.name}}</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <section class="content column">
+        <main class="main-content">
+            <div class="tab-content">
+                <div ng-view></div>
+            </div>
+        </main>
+    </section>
+</div>

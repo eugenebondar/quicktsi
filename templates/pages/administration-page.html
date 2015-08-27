@@ -1,0 +1,62 @@
+<div class="administration-tabs-wrap" ng-controller="PanelCtrl as panel">
+
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs-list">
+            <li>YOU ARE HERE</li>
+            <li><span>Administrations</span></li>
+        </ul>
+    </div>
+    <div class="container-controls" ng-repeat="item in panel.items">
+        <div class="panel-controls row" ng-show="panel.isSelected(item.id)">
+            <div class="col-xs-6 cc-label">
+                <h2 class="title">{{item.title}}</h2>
+            </div>
+            <div class="col-xs-6 cc-btn">
+                <ul class="loads-btn-list">
+                    <li ng-repeat="button in item.buttons"><a class="green-btn" href="#"><img ng-src="{{button.src}}" alt="add"/>{{button.label}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="admin-tabs-list-wrap">
+            <ul class="admin-tabs-list">
+                <li ng-repeat="item in panel.items" ng-class="{ active: panel.isSelected(item.id) }">
+                    <a href ng-click="panel.selectTab(item.id)">{{item.title}}</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="panel" ng-show="panel.isSelected(1)" ng-controller="CustomerTableCtrl as table">
+            <table-customer></table-customer>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(2)" ng-controller="ShipperTableCtrl as table">
+            <table-shipper></table-shipper>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(3)" ng-controller="ReceiversTableCtrl as table">
+            <table-receiver></table-receiver>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(4)" ng-controller="ExternalTableCtrl as table">
+            <table-external></table-external>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(5)" ng-controller="DriverTableCtrl as table">
+            <table-driver></table-driver>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(6)" ng-controller="TruckTableCtrl as table">
+            <table-truck></table-truck>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(7)" ng-controller="TrailerTableCtrl as table">
+            <table-trailer></table-trailer>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(8)" ng-controller="DocumentTableCtrl as table">
+            <table-document></table-document>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(9)" ng-controller="BrokerTableCtrl as table">
+            <table-broker></table-broker>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(10)" ng-controller="AlertTableCtrl as table">
+            <table-alert></table-alert>
+        </div>
+    </div>
+</div>

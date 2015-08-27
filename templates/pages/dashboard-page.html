@@ -1,0 +1,22 @@
+<div class="breadcrumbs">
+    <ul class="breadcrumbs-list">
+        <li>YOU ARE HERE</li>
+        <li><span>Dashboard</span></li>
+    </ul>
+</div>
+<h1 class="title">Dashboard</h1>
+<div class="container">
+    <div class="container-controls row">
+        <div class="col-xs-8 cc-label">
+            <strong>Loads</strong> Stats
+        </div>
+        <div class="col-xs-4 cc-btn"></div>
+    </div>
+    <div class="container-diagrams row" ng-controller="PiechartCtrl as piechart">
+        <div class="col-xs-2 diagram-item" ng-repeat="item in piechart.items">
+            <piechart color="{{item.color}}" fulfill="{{item.fulfill}}" value="{{item.value}}"></piechart>
+            <p style="color:{{item.color}}" class="canvas-label">{{item.label}}</p>
+            <p><a class="view-details-btn" href="/">View Details</a></p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<table class="table-tms table" >
+    <thead>
+    <tr>
+        <th class="th-name"><span>name</span></th>
+        <th class="th-address"><span>address</span></th>
+        <th class="th-city"><span>city</span></th>
+        <th class="th-zip"><span>zip</span></th>
+        <th class="th-state"><span>state</span></th>
+        <th class="th-telephone"><span>telephone</span></th>
+        <th class="th-link"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-name"><span>{{item.name}}</span></td>
+        <td class="th-address"><a href><span>{{item.address}}</span></a></td>
+        <td class="th-city"><span>{{item.city}}</span></td>
+        <td class="th-zip"><span>{{item.zip}}</span></td>
+        <td class="th-state"><span>{{item.state}}</span></td>
+        <td class="th-telephone"><span>{{item.telephone}}</span></td>
+        <td class="th-link">
+            <ul class="th-link-list">
+                <li class="th-link-item">
+                    <a class="link-edit" href></a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>

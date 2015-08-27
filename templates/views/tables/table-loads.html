@@ -1,0 +1,65 @@
+<table class="table-invoises table" >
+    <thead>
+        <tr>
+            <th class="th-checkbox">
+                <input type="checkbox"/>
+            </th>
+            <th class="th-load"><span>load#</span></th>
+            <th class="th-pickup"><span>pickup</span></th>
+            <th class="th-delivery"><span>delivery</span></th>
+            <th class="th-driver"><span>driver</span></th>
+            <th class="th-customer"><span>customer</span></th>
+            <th class="th-from"><span>from</span></th>
+            <th class="th-to"><span>to</span></th>
+            <th class="th-status"><span>status</span></th>
+            <th class="th-link"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in table.items">
+            <td class="th-checkbox">
+                <input type="checkbox"/>
+            </td>
+            <td class="th-load"><a href><span>{{item.load}}</span></a></td>
+            <td class="th-pickup"><span>{{item.pickup}}</span></td>
+            <td class="th-delivery"><span>{{item.delivery}}</span></td>
+            <td class="th-driver"><a href><span>{{item.driver}}</span></a></td>
+            <td class="th-customer"><a href><span>{{item.customer}}</span></a></td>
+            <td class="th-from"><a href><span>{{item.from}}</span></a></td>
+            <td class="th-to"><a href><span>{{item.to}}</span></a></td>
+            <td class="th-status">
+                <div class="inline status-select-wrap">
+                    <div class="status-select select-cont inline">
+                        <select>
+                            <option ng-repeat="option in item.select" value="{{option}}">{{option}}</option>
+                        </select>
+                    </div>
+                    <a class="ss-select-link" href><img src="img/rounds.png" alt="..."/></a>
+                </div>
+                
+            </td>
+            <td class="th-link">
+                <ul class="th-link-list">
+                    <li class="th-link-item">
+                        <a class="link-views" href></a>
+                    </li>
+                    <li class="th-link-item">
+                        <a class="link-docs" href></a>
+                    </li>
+                    <li class="th-link-item">
+                        <a class="link-twitter" href></a>
+                    </li>
+                    <li class="th-link-item">
+                        <a class="link-facebook" href></a>
+                    </li>
+                    <li class="th-link-item">
+                        <a class="link-linkedin" href></a>
+                    </li>
+                    <li class="th-link-item">
+                        <a class="link-q" href></a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>

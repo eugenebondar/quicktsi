@@ -1,0 +1,58 @@
+<table class="table-loads table" >
+    <thead>
+    <tr>
+        <th class="th-checkbox">
+            <input type="checkbox"/>
+        </th>
+        <th class="th-invoice"><span>invoice#</span></th>
+        <th class="th-invoiced"><span>invoiced</span></th>
+        <th class="th-paid"><span>paid</span></th>
+        <th class="th-outstanding"><span>outstanding</span></th>
+        <th class="th-customer"><span>customer</span></th>
+        <th class="th-total"><span>total amt.</span></th>
+        <th class="th-balance"><span>balance due</span></th>
+        <th class="th-status"><span>status</span></th>
+        <th class="th-link"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-checkbox">
+            <input type="checkbox"/>
+        </td>
+        <td class="th-invoice"><a href><span>{{item.invoice}}</span></a></td>
+        <td class="th-invoiced"><span>{{item.invoiced}}</span></td>
+        <td class="th-paid"><span>{{item.paid}}</span></td>
+        <td class="th-outstanding"><span>{{item.outstanding}}+</span></td>
+        <td class="th-customer"><a href><span>{{item.customer}}</span></a></td>
+        <td class="th-total"><span>{{item.total}}.00</span></td>
+        <td class="th-balance"><span>{{item.balance}}.00</span></td>
+        <td class="th-status">
+            <div class="status-select-inv select-cont inline">
+                <select>
+                    <option ng-repeat="option in item.select" value="{{option}}">{{option}}</option>
+                </select>
+            </div>
+        </td>
+        <td class="th-link">
+            <ul class="th-link-list">
+                <li class="th-link-item">
+                    <a class="link-views" href></a>
+                </li>
+                <li class="th-link-item">
+                    <a class="link-check" href></a>
+                </li>
+                <li class="th-link-item">
+                    <a class="link-mail" href></a>
+                </li>
+                <li class="th-link-item">
+                    <a class="link-print" href></a>
+                </li>
+                <li class="th-link-item">
+                    <a class="link-cancel" href></a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>
