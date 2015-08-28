@@ -8,41 +8,6 @@
         };
     });
 
-    app.directive("checkbox-element", function() {
-        return {
-            restrict: 'E',
-            templateUrl: "templates/views/checkbox.html"
-        };
-    });
-
-    app.directive("filters", function() {
-        return {
-            restrict: 'E',
-            templateUrl: "templates/views/filters.html"
-        };
-    });
-
-    app.directive("toolbar", function() {
-        return {
-            restrict: 'E',
-            templateUrl: "templates/views/toolbar.html"
-        };
-    });
-
-    app.directive("selwrap", function() {
-        return {
-            restrict: 'E',
-            templateUrl: "templates/views/select-wrap.html"
-        };
-    });
-
-    app.directive("bottomToolbar", function() {
-        return {
-            restrict: 'E',
-            templateUrl: "templates/views/bottom-toolbar.html"
-        };
-    });
-
     app.directive("piechart", function() {
         var linkFunction = function(scope, element, attrs){
             var progress = 0,
@@ -146,6 +111,36 @@
         return {
             restrict: 'E',
             templateUrl: "templates/pages/subpages/tax-reports.html"
+        };
+    });
+    app.directive("account", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/subpages/account.html"
+        };
+    });
+    app.directive("setting", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/subpages/setting.html"
+        };
+    });
+    app.directive("functionality", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/subpages/functionality.html"
+        };
+    });
+    app.directive("ifta", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/subpages/ifta.html"
+        };
+    });
+    app.directive("notes", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/subpages/notes.html"
         };
     });
 

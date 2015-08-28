@@ -1,0 +1,7 @@
+[
+  {"title": "Account", "id": 1, "buttons": [{"label" : "save", "src": "img/save.png"}]},
+  {"title": "Settings", "id": 2, "buttons": [{"label" : "save", "src": "img/save.png"}]},
+  {"title": "Functionality", "id": 3, "buttons": [{"label" : "save", "src": "img/save.png"}]},
+  {"title": "IFTA", "id": 4, "buttons": [{"label" : "save", "src": "img/save.png"}]},
+  {"title": "Notes", "id": 5, "buttons": [{"label" : "save", "src": "img/save.png"}]}
+]

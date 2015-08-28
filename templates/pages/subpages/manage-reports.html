@@ -1,131 +1,151 @@
-<div class="manage-reports-wrap">
-    <div class="mr-row row">
-        <div class="mr-col mr-col-left col-sm-6">
+<div class="manage-reports-wrap form-wrap">
+    <div class="mr-row field-row row">
+        <div class="mr-col mr-col-left col-left col-sm-6">
             <label class="label">Category <span class="red">*</span></label>
-            <div class="select-cont">
+            <div class="select-cont full-select">
                 <select>
-                    <option value="1">Select Category</option>
-                    <option value="2">Category 1</option>
-                    <option value="3">Category 2</option>
-                    <option value="4">Category 3</option>
+                    <option>Select Category</option>
+                    <option value="1">Category 1</option>
+                    <option value="2">Category 2</option>
+                    <option value="3">Category 3</option>
                 </select>
             </div>
         </div>
-        <div class="mr-col mr-col-right col-sm-6">
+        <div class="mr-col mr-col-right col-right col-sm-6">
             <label class="label">Customer <span class="red">*</span></label>
-            <div class="select-cont">
+            <div class="select-cont full-select">
                 <select>
-                    <option value="1">Select Customer</option>
-                    <option value="2">Customer 1</option>
-                    <option value="3">Customer 2</option>
-                    <option value="4">Customer 3</option>
+                    <option>Select Country</option>
+                    <option value="1">Customer 1</option>
+                    <option value="2">Customer 2</option>
+                    <option value="3">Customer 3</option>
                 </select>
             </div>
         </div>
     </div>
-    <div class="mr-row row">
-        <div class="mr-col mr-col-left row col-sm-6">
+    <div class="mr-row field-row row">
+        <div class="mr-col mr-col-left col-left row col-sm-6">
             <div class="mr-radio col-sm-4">
-                <input type="radio" name="filter" value="ship date" id="ship-date"/>
-                <label for="ship-date">Ship Date</label>
+                <input type="radio" class="radio" name="filter" value="ship date" id="ship-date"/>
+                <span></span>
+                <label class="label-for" for="ship-date">Ship Date</label>
             </div>
             <div class="mr-radio col-sm-4">
-                <input type="radio" name="filter" value="delivery date" id="delivery-date"/>
-                <label for="delivery-date">Delivery Date</label>
+                <input type="radio" class="radio" name="filter" value="delivery date" id="delivery-date"/>
+                <span></span>
+                <label class="label-for" for="delivery-date">Delivery Date</label>
             </div>
             <div class="mr-radio col-sm-4">
-                <input type="radio" name="filter" value="invoice date" id="invoice-date"/>
-                <label for="invoice-date">Invoice Date</label>
+                <input type="radio" class="radio" name="filter" value="invoice date" id="invoice-date"/>
+                <span></span>
+                <label class="label-for" for="invoice-date">Invoice Date</label>
             </div>
         </div>
-        <div class="mr-col mr-col-right row col-sm-6">
-            <div class="mr-col mr-col-left">
+        <div class="mr-col mr-col-right col-right row col-sm-6">
+            <div class="mr-col mr-col-left col-left">
                 <input type="text" placeholder="From" class="date-input" />
             </div>
-            <div class="mr-col mr-col-right">
+            <div class="mr-col mr-col-right col-right">
                 <input type="text" placeholder="To" class="date-input" />
             </div>
         </div>
     </div>
-    <div class="mr-row row">
+    <div class="mr-row field-row row">
         <div class="mr-col col-xs-2">
             <div class="mr-check">
-                <input type="checkbox" id="truck" value="truck"/>
-                <label for="truck">truck</label>
+                <input type="checkbox" class="checkbox" id="truck" value="truck"/>
+                <span></span>
+                <label class="label-for" for="truck">truck</label>
             </div>
             <div class="mr-check">
-                <input type="checkbox" id="po" value="po"/>
-                <label for="po">#po</label>
+                <input type="checkbox" class="checkbox" id="po" value="po"/>
+                <span></span>
+                <label class="label-for" for="po">#po</label>
             </div>
             <div class="mr-check">
-                <input type="checkbox" id="pd" value="pd"/>
-                <label for="pd">P&D</label>
+                <input type="checkbox" class="checkbox" id="pd" value="pd"/>
+                <span></span>
+                <label class="label-for" for="pd">P&D</label>
             </div>
         </div>
         <div class="mr-col col-xs-2">
             <div class="mr-check">
-                <input type="checkbox" id="load-type" value="load type"/>
-                <label for="load-type">load type</label>
+                <input type="checkbox" class="checkbox" id="load-type" value="load type"/>
+                <span></span>
+                <label class="label-for" for="load-type">load type</label>
             </div>
             <div class="mr-check">
-                <input type="checkbox" id="revenue" value="revenue"/>
-                <label for="revenue">revenue</label>
+                <input type="checkbox" class="checkbox" id="revenue" value="revenue"/>
+                <span></span>
+                <label class="label-for" for="revenue">revenue</label>
             </div>
             <div class="mr-check">
-                <input type="checkbox" id="sales-rep" value="sales rep"/>
-                <label for="sales-rep">Sales rep</label>
-            </div>
-        </div>
-        <div class="mr-col col-xs-2">
-            <div class="mr-check">
-                <input type="checkbox" id="numbers-trailler" value="numbers trailler"/>
-                <label for="numbers-trailler">numbers trailler</label>
-            </div>
-            <div class="mr-check">
-                <input type="checkbox" id="carrier-pay" value="carrierpay"/>
-                <label for="carrier-pay">carrier pay</label>
-            </div>
-            <div class="mr-check">
-                <input type="checkbox" id="additional-changes" value="additional changes"/>
-                <label for="additional-changes">additional changes</label>
+                <input type="checkbox" class="checkbox" id="sales-rep" value="sales rep"/>
+                <span></span>
+                <label class="label-for" for="sales-rep">Sales rep</label>
             </div>
         </div>
         <div class="mr-col col-xs-2">
             <div class="mr-check">
-                <input type="checkbox" id="miles" value="miles"/>
-                <label for="miles">#miles</label>
+                <input type="checkbox" class="checkbox" id="numbers-trailler" value="numbers trailler"/>
+                <span></span>
+                <label class="label-for" for="numbers-trailler">numbers trailler</label>
             </div>
             <div class="mr-check">
-                <input type="checkbox" id="weight" value="weight"/>
-                <label for="weight">weight</label>
+                <input type="checkbox" class="checkbox" id="carrier-pay" value="carrierpay"/>
+                <span></span>
+                <label class="label-for" for="carrier-pay">carrier pay</label>
             </div>
             <div class="mr-check">
-                <input type="checkbox" id="driver-pay" value="driver pay"/>
-                <label for="driver-pay">driver pay</label>
-            </div>
-        </div>
-        <div class="mr-col col-xs-2">
-            <div class="mr-check">
-                <input type="checkbox" id="fsc" value="fsc"/>
-                <label for="fsc">F.S.C</label>
-            </div>
-            <div class="mr-check">
-                <input type="checkbox" id="net-profit" value="net profit"/>
-                <label for="net-profit">Net profit</label>
-            </div>
-            <div class="mr-check">
-                <input type="checkbox" id="line-haul" value="line haul"/>
-                <label for="line-haul">line haul</label>
+                <input type="checkbox" class="checkbox" id="additional-changes" value="additional changes"/>
+                <span></span>
+                <label class="label-for" for="additional-changes">additional changes</label>
             </div>
         </div>
         <div class="mr-col col-xs-2">
             <div class="mr-check">
-                <input type="checkbox" id="origin" value="origin"/>
-                <label for="origin">Origin / Destination</label>
+                <input type="checkbox" class="checkbox" id="miles" value="miles"/>
+                <span></span>
+                <label class="label-for" for="miles">#miles</label>
             </div>
             <div class="mr-check">
-                <input type="checkbox" id="equipment" value="equipment"/>
-                <label for="equipment">equipment type</label>
+                <input type="checkbox" class="checkbox" id="weight" value="weight"/>
+                <span></span>
+                <label class="label-for" for="weight">weight</label>
+            </div>
+            <div class="mr-check">
+                <input type="checkbox" class="checkbox" id="driver-pay" value="driver pay"/>
+                <span></span>
+                <label class="label-for" for="driver-pay">driver pay</label>
+            </div>
+        </div>
+        <div class="mr-col col-xs-2">
+            <div class="mr-check">
+                <input type="checkbox" class="checkbox" id="fsc" value="fsc"/>
+                <span></span>
+                <label class="label-for" for="fsc">F.S.C</label>
+            </div>
+            <div class="mr-check">
+                <input type="checkbox" class="checkbox" id="net-profit" value="net profit"/>
+                <span></span>
+                <label class="label-for" for="net-profit">Net profit</label>
+            </div>
+            <div class="mr-check">
+                <input type="checkbox" class="checkbox" id="line-haul" value="line haul"/>
+                <span></span>
+                <label class="label-for" for="line-haul">line haul</label>
+            </div>
+        </div>
+        <div class="mr-col col-xs-2">
+            <div class="mr-check">
+                <input type="checkbox" class="checkbox" id="origin" value="origin"/>
+                <span></span>
+                <label class="label-for" for="origin">Origin / Destination</label>
+            </div>
+            <div class="mr-check">
+                <input type="checkbox" class="checkbox" id="equipment" value="equipment"/>
+                <span></span>
+                <label class="label-for" for="equipment">equipment type</label>
             </div>
         </div>
     </div>

@@ -1,1 +1,50 @@
-profile page
+<div class="account-tabs-wrap profile-page" ng-controller="ProfileTabCtrl as panel">
+
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs-list">
+            <li>YOU ARE HERE</li>
+            <li><span>Profile</span></li>
+        </ul>
+    </div>
+
+    <div class="container-controls" ng-repeat="item in panel.items">
+        <div class="panel-controls row" ng-show="panel.isSelected(item.id)">
+            <div class="col-xs-6 cc-label">
+                <h2 class="title">{{item.title}}</h2>
+            </div>
+            <div class="col-xs-6 cc-btn">
+                <ul class="loads-btn-list">
+                    <li ng-repeat="button in item.buttons"><a class="green-btn save-btn" href="#"><img ng-src="{{button.src}}" alt="add"/>{{button.label}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="account-tabs-list-wrap">
+            <ul class="account-tabs-list">
+                <li ng-repeat="item in panel.items" ng-class="{ active: panel.isSelected(item.id) }">
+                    <a href ng-click="panel.selectTab(item.id)">{{item.title}}</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="panel" ng-show="panel.isSelected(1)">
+        <account></account>
+    </div>
+    <div class="panel" ng-show="panel.isSelected(2)">
+        <setting></setting>
+    </div>
+    <div class="panel" ng-show="panel.isSelected(3)">
+        <functionality></functionality>
+    </div>
+    <div class="panel" ng-show="panel.isSelected(4)">
+        <ifta></ifta>
+    </div>
+    <div class="panel" ng-show="panel.isSelected(5)">
+        <notes></notes>
+    </div>
+</div>

@@ -1,0 +1,143 @@
+<div class="functionality-wrap form-wrap">
+    <div class="fw-row row field-row">
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Blind Shipments</label>
+            <input type="checkbox" class="checkbox" id="blind"  />
+            <span></span>
+            <label class="label-for" for="blind">Include Blind Shipments</label>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Quick Invoicing</label>
+            <input type="checkbox" class="checkbox" id="invoicing" />
+            <span></span>
+            <label class="label-for" for="invoicing">Include Quick Invoicing</label>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">QuickBooks Description</label>
+            <input type="checkbox" class="checkbox" id="quickbook" />
+            <span></span>
+            <label class="label-for" for="quickbook">Show Origin/Destination in Description</label>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Load Confirmation</label>
+            <input type="checkbox" class="checkbox" id="confirmation" />
+            <span></span>
+            <label class="label-for" for="confirmation">Show Carrier Advance Notes</label>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Basic Rating Information</label>
+            <input type="checkbox" class="checkbox" id="rating" />
+            <span></span>
+            <label class="label-for" for="rating">Share Your Basic Rating Information</label>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Carrier Insurance</label>
+            <input type="checkbox" class="checkbox" id="insurance" />
+            <span></span>
+            <label class="label-for" for="insurance">Carrier Must Have Insurance</label>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Invoice Address</label>
+            <input type="checkbox" class="checkbox" id="address" />
+            <span></span>
+            <label class="label-for" for="address">Show Shipper & Consignee Address</label>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Shippers & Consignees</label>
+            <input type="checkbox" class="checkbox" id="shippers" />
+            <span></span>
+            <label class="label-for" for="shippers">Loads Need Shipper & Consignee</label>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Customer Credit Limit</label>
+            <input type="checkbox" class="checkbox" id="credit" />
+            <span></span>
+            <label class="label-for" for="credit">Prohibit Use of Over-limit Customers</label>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Description Live Type</label>
+            <input type="checkbox" class="checkbox" id="description" />
+            <span></span>
+            <label class="label-for" for="description">Enable Live Type for Load Descriptions</label>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Re-exporting to QB</label>
+            <input type="checkbox" class="checkbox" id="qb" />
+            <span></span>
+            <label class="label-for" for="qb">Disable Re-exporting Customers/Vendors to QB</label>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Tracking Notes</label>
+            <input type="checkbox" class="checkbox" id="tracking" />
+            <span></span>
+            <label class="label-for" for="tracking">Disable Tracking Notes Required Fields</label>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Shippers/Consignees Name</label>
+            <input type="checkbox" class="checkbox" id="name" />
+            <span></span>
+            <label class="label-for" for="name">Show Contact Name on Rate Confirmations</label>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Load Fields</label>
+            <input type="checkbox" class="checkbox" id="fields" />
+            <span></span>
+            <label class="label-for" for="fields">Disable Rrequired Fields Description, Type, Quantity</label>
+        </div>
+    </div>
+    <div class="fw-row row field-row">
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">External Carrier Insurance</label>
+            <input type="checkbox" class="checkbox" id="external" />
+            <span></span>
+            <label class="label-for" for="external">Only Administrators Can Edit Insurance</label>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label"></label>
+            <input type="checkbox" class="checkbox" id="require" />
+            <span></span>
+            <label class="label-for" for="require">Require Carrier Insurance</label>
+        </div>
+    </div>
+    <div class="fw-row row field-row">
+        <div class="field-col fw-col col-sm-4 col-xs-6 row">
+            <label class="label">Invoice Date</label>
+            <div class="col-sm-6">
+                <input type="radio" class="radio" name="invoice-date" id="invoice-creation-date" value="invoice-creation-date"/>
+                <span></span>
+                <label class="label-for" for="invoice-creation-date">Invoice Creation Date</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="radio" class="radio" name="invoice-date" id="delivery-date" value="delivery-date"/>
+                <span></span>
+                <label class="label-for" for="delivery-date">Delivery Date</label>
+            </div>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Driver Pay For</label>
+            <div class="col-sm-6">
+                <input type="radio" class="radio" name="driver-pay-for" id="delivery-loads" value="delivery-loads"/>
+                <span></span>
+                <label class="label-for" for="invoice-creation-date">Delivery Loads</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="radio" class="radio" name="driver-pay-for" id="completed-loads" value="completed-loads"/>
+                <span></span>
+                <label class="label-for" for="completed-loads">Completed Loads</label>
+            </div>
+        </div>
+        <div class="field-col fw-col col-sm-4 col-xs-6">
+            <label class="label">Driver Pay Sorting</label>
+            <div class="col-sm-6">
+                <input type="radio" class="radio" name="driver-pay-sorting" id="load-number" value="load-number"/>
+                <span></span>
+                <label class="label-for" for="load-number">Load Number</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="radio" class="radio" name="driver-pay-sorting" id="invoice-date" value="completed-loads"/>
+                <span></span>
+                <label class="label-for" for="invoice-date">Invoice Date</label>
+            </div>
+        </div>
+    </div>
+</div>
