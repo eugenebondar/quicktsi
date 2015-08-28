@@ -39,7 +39,7 @@ angular.module('app').config(function($routeProvider){
     .when('/administration/add-driver', {
         templateUrl: '/templates/pages/adding-pages/driver.html'
     })
-    .when('/invoices/add-invoice', {
+    .when('/invoices/create-invoice', {
         templateUrl: '/templates/pages/adding-pages/invoice.html'
     })
     .when('/expenses/add-expense', {
@@ -57,8 +57,14 @@ angular.module('app').config(function($routeProvider){
     .when('/administration/add-shipper', {
         templateUrl: '/templates/pages/adding-pages/shipper.html'
     })
-    .when('/administration/add-trailler', {
-        templateUrl: '/templates/pages/adding-pages/trailler.html'
+    .when('/administration/add-trailer', {
+        templateUrl: '/templates/pages/adding-pages/trailer.html'
+    })
+    .when('/administration/add-truck', {
+        templateUrl: '/templates/pages/adding-pages/truck.html'
+    })
+    .when('/administration/add-broker', {
+        templateUrl: '/templates/pages/adding-pages/broker.html'
     })
     .otherwise({ redirectTo: '/' });
 });

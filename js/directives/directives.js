@@ -143,5 +143,11 @@
             templateUrl: "templates/pages/subpages/notes.html"
         };
     });
+    app.directive("dispatch", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/adding-pages/content/dispatch.html"
+        };
+    });
 
 })();
