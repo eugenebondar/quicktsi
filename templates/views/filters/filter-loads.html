@@ -1,106 +1,182 @@
-<div class="col-sm-4 filter-col">
-    <div class="filter-row"><input type="text" class="text" /></div>
-    <div class="filter-row"><input type="text" class="text" /></div>
-    <div class="filter-row row">
-        <div class="filt-left col-xs-6">
-            <select-element></select-element>
+<div class="form-wrap">
+    <div class="filter-row field-row row">
+        <div class="filter-col field-col col-sm-3 filter-left col-left">
+            <input type="text" class="text" placeholder="Load #" />
         </div>
-        <div class="filt-right col-xs-6">
-            <select-element></select-element>
+        <div class="filter-col field-col col-sm-3 filter-right col-right row">
+            <div class="filter-col field-col col-sm-6 filter-left col-left">
+                <div class="time-input-wrap">
+                    <input type="text" class="text" placeholder="Pickup date" />
+                </div>
+            </div>
+            <div class="filter-col field-col col-sm-6 filter-right col-right">
+                <div class="time-input-wrap">
+                    <input type="text" class="text" placeholder="Delivery date" />
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="filter-row">
-        <select-element></select-element>
-    </div>
-</div>
-<div class="col-sm-4 filter-col">
-    <div class="filter-row row">
-        <div class="filt-left col-xs-6">
-            <select-element></select-element>
-        </div>
-        <div class="filt-right col-xs-6">
-            <select-element></select-element>
-        </div>
-    </div>
-    <div class="filter-row row">
-        <div class="filt-left col-xs-6">
-            <select-element></select-element>
-        </div>
-        <div class="filt-right col-xs-6">
-            <input type="text" class="text" />
+        <div class="filter-col field-col col-sm-3 filter-right col-right row">
+            <div class="filter-col field-col col-sm-6 filter-left col-left">
+                <input type="text" class="text" placeholder="P.O #" />
+            </div>
+            <div class="filter-col field-col col-sm-6 filter-right col-right">
+                <input type="text" class="text" placeholder="Work Order #" />
+            </div>
         </div>
     </div>
-    <div class="filter-row row">
-        <div class="filt-left col-xs-6">
-            <select-element></select-element>
+    <div class="filter-row field-row row">
+        <div class="filter-col field-col col-sm-3 filter-left col-left">
+            <input type="text" class="text" placeholder="Origin City" />
         </div>
-        <div class="filt-right col-xs-6">
-            <input type="text" class="text" />
+        <div class="filter-col field-col col-sm-3 filter-right col-right row">
+            <div class="filter-col field-col col-sm-6 filter-left col-left">
+                <div class="select-cont full-select">
+                    <select>
+                        <option>Select Origin State</option>
+                        <option value="1">State 1</option>
+                        <option value="2">State 2</option>
+                        <option value="3">State 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter-col field-col col-sm-6 filter-right col-right">
+                <div class="select-cont full-select">
+                    <select>
+                        <option>Origin Zip</option>
+                        <option value="1">Zip 1</option>
+                        <option value="2">Zip 2</option>
+                        <option value="3">Zip 3</option>
+                    </select>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="filter-row">
-        <select-element></select-element>
-    </div>
-    <div class="filter-row">
-        <select-element></select-element>
-    </div>
-</div>
-<div class="col-sm-4 filter-col">
-    <div class="filter-row row">
-        <div class="filt-left col-xs-6">
-            <input type="text" class="text" />
-        </div>
-        <div class="filt-right col-xs-6">
-            <input type="text" class="text" />
-        </div>
-    </div>
-    <div class="filter-row">
-        <select-element></select-element>
-    </div>
-    <div class="filter-row">
-        <select-element></select-element>
-    </div>
-    <div class="filter-row">
-        <select-element></select-element>
-    </div>
-    <div class="filter-row row">
-        <div class="filt-left col-xs-6">
-            <input type="text" class="text" />
-        </div>
-        <div class="filt-right col-xs-6">
-            <input type="text" class="text" />
+        <div class="filter-col field-col col-sm-3 filter-right col-right">
+            <div class="select-cont full-select">
+                <select>
+                    <option>Select Shipper</option>
+                    <option value="1">Shipper 1</option>
+                    <option value="2">Shipper 2</option>
+                    <option value="3">Shipper 3</option>
+                </select>
+            </div>
         </div>
     </div>
-</div>
-<div class="col-sm-8 filter-status">
-    Status
-    <ul class="filter-status-list">
-        <li>
-            <checkbox-element></checkbox-element>
-        </li>
-        <li>
-            <checkbox-element></checkbox-element>
-        </li>
-        <li>
-            <checkbox-element></checkbox-element>
-        </li>
-        <li>
-            <checkbox-element></checkbox-element>
-        </li>
-        <li>
-            <checkbox-element></checkbox-element>
-        </li>
-        <li>
-            <checkbox-element></checkbox-element>
-        </li>
-        <li>
-            <checkbox-element></checkbox-element>
-        </li>
-        <li>
-            <checkbox-element></checkbox-element>
-        </li>
-    </ul>
-</div>
-<div class="col-sm-4 filter-btn-wrap">
-    <a class="filter-btn" href="#">Search</a>
+    <div class="filter-row field-row row">
+        <div class="filter-col field-col col-sm-3 filter-left col-left">
+            <input type="text" class="text" placeholder="Destination City" />
+        </div>
+        <div class="filter-col field-col col-sm-3 filter-right col-right row">
+            <div class="filter-col field-col col-sm-6 filter-left col-left">
+                <div class="select-cont full-select">
+                    <select>
+                        <option>Select Dest. State</option>
+                        <option value="1">State 1</option>
+                        <option value="2">State 2</option>
+                        <option value="3">State 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter-col field-col col-sm-6 filter-right col-right">
+                <input type="text" class="text" placeholder="Destination Zip" />
+            </div>
+        </div>
+        <div class="filter-col field-col col-sm-3 filter-right col-right">
+            <div class="select-cont full-select">
+                <select>
+                    <option>Select Receiver</option>
+                    <option value="1">Receiver 1</option>
+                    <option value="2">Receiver 2</option>
+                    <option value="3">Receiver 3</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="filter-row field-row row">
+        <div class="filter-col field-col col-sm-3 filter-left col-left row">
+            <div class="filter-col field-col col-sm-6 filter-left col-left">
+                <div class="select-cont full-select">
+                    <select>
+                        <option>Select Truck</option>
+                        <option value="1">Truck 1</option>
+                        <option value="2">Truck 2</option>
+                        <option value="3">Truck 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter-col field-col col-sm-6 filter-right col-right">
+                <div class="select-cont full-select">
+                    <select>
+                        <option>Select Trailler</option>
+                        <option value="1">Trailler 1</option>
+                        <option value="2">Trailler 2</option>
+                        <option value="3">Trailler 3</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="filter-col field-col col-sm-3 filter-right col-right row">
+            <div class="filter-col field-col col-sm-6 filter-left col-left">
+                <div class="select-cont full-select">
+                    <select>
+                        <option>Select Dispatcher</option>
+                        <option value="1">Dispatcher 1</option>
+                        <option value="2">Dispatcher 2</option>
+                        <option value="3">Dispatcher 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter-col field-col col-sm-6 filter-right col-right">
+                <div class="select-cont full-select">
+                    <select>
+                        <option>Select Driver</option>
+                        <option value="1">Driver 1</option>
+                        <option value="2">Driver 2</option>
+                        <option value="3">Driver 3</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="filter-col field-col col-sm-3 filter-right col-right">
+            <div class="select-cont full-select">
+                <select>
+                    <option>Select Carrier</option>
+                    <option value="1">Carrier 1</option>
+                    <option value="2">Carrier 2</option>
+                    <option value="3">Carrier 3</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="filter-row field-row row">
+        <div class="filter-col field-col col-sm-3 filter-right col-right">
+            <div class="select-cont full-select">
+                <select>
+                    <option>Select Invoice Days Outstanding</option>
+                    <option value="1">Invoice 1</option>
+                    <option value="2">Invoice 2</option>
+                    <option value="3">Invoice 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="filter-col field-col col-sm-3 filter-right col-right">
+            <div class="select-cont full-select">
+                <select>
+                    <option>Select Sales Rep</option>
+                    <option value="1">Sales rep 1</option>
+                    <option value="2">Sales rep 2</option>
+                    <option value="3">Sales rep 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="filter-col field-col col-sm-3 filter-right col-right row">
+            <div class="filter-col field-col col-sm-6 filter-left col-left">
+                <input type="text" class="text" placeholder="Invoice #" />
+            </div>
+            <div class="filter-col field-col col-sm-6 filter-right col-right">
+                <div class="time-input-wrap">
+                    <input type="text" class="text" placeholder="Invoice date" />
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
