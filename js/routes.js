@@ -33,5 +33,32 @@ angular.module('app').config(function($routeProvider){
         templateUrl: '/templates/pages/help-page.html'
     })
 
+    .when('/loads/add-dispatch', {
+        templateUrl: '/templates/pages/adding-pages/dispatch.html'
+    })
+    .when('/administration/add-driver', {
+        templateUrl: '/templates/pages/adding-pages/driver.html'
+    })
+    .when('/invoices/add-invoice', {
+        templateUrl: '/templates/pages/adding-pages/invoice.html'
+    })
+    .when('/expenses/add-expense', {
+        templateUrl: '/templates/pages/adding-pages/expense.html'
+    })
+    .when('/administration/add-external-carrier', {
+        templateUrl: '/templates/pages/adding-pages/external-carrier.html'
+    })
+    .when('/administration/add-customer', {
+        templateUrl: '/templates/pages/adding-pages/customer.html'
+    })
+    .when('/administration/add-receiver', {
+        templateUrl: '/templates/pages/adding-pages/receiver.html'
+    })
+    .when('/administration/add-shipper', {
+        templateUrl: '/templates/pages/adding-pages/shipper.html'
+    })
+    .when('/administration/add-trailler', {
+        templateUrl: '/templates/pages/adding-pages/trailler.html'
+    })
     .otherwise({ redirectTo: '/' });
 });
