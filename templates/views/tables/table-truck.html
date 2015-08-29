@@ -23,7 +23,14 @@
         <td class="th-vin"><span>{{item.vin}}</span></td>
         <td class="th-reg"><span>{{item.reg}}</span></td>
         <td class="th-ownership"><span>{{item.ownership}}</span></td>
-        <td class="th-available"><span>{{item.available}} TO DO!!!!!</span></td>
+        <td class="th-available">
+            <input id="broken-{{item.id}}" class="checkbox cb-broken" type="checkbox">
+            <label class="label-for" for="broken-{{item.id}}">
+                <span class="is-broken"></span>
+                <span ng-show="">Yes</span>
+                <span ng-show="">Now</span>
+            </label>
+        </td>
         <td class="th-link">
             <ul class="th-link-list">
                 <li class="th-link-item">

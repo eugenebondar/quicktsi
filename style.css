@@ -42,6 +42,7 @@ option {
     padding-top: 8px;
 }
 input[type="checkbox"] + span {
+    background: #fff;
     border: 1px solid #0aa699;
     border-radius: 2px;
     cursor: pointer;
@@ -68,6 +69,7 @@ input[type="checkbox"] {
     z-index: 10;
 }
 input[type="radio"] + span {
+    background: #fff;
     border: 1px solid #0aa699;
     border-radius: 50%;
     cursor: pointer;
@@ -300,17 +302,17 @@ textarea {
 .full-select select {
     color: #505358;
     font-size: 14px;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 .form-wrap .row .col-sm-6, .form-wrap .row .col-sm-4, .form-wrap .row .col-xs-6 {
     padding-left: 10px;
     padding-right: 10px;
 }
-.form-wrap .row > .row:first-child {
+.form-wrap .row > .row {
     margin-right: 10px;
     padding-right: 0;
 }
-.form-wrap .row > .row:first-child > div:last-child {
+.form-wrap .row > .row > div:last-child, .form-wrap .row > .row > .col-right {
     padding-right: 0;
 }
 
@@ -621,11 +623,11 @@ textarea {
 .admin-tabs-list {
     background: #d1dadf none repeat scroll 0 0;
     border-radius: 5px 5px 0 0;
-    display: table-row;
+    text-align: left;
 }
 .admin-tabs-list li {
     color: #8990a0;
-    display: table-cell;
+    display: inline-block;
 }
 .admin-tabs-list li.active a {
     background: #fff none repeat scroll 0 0;
@@ -636,7 +638,7 @@ textarea {
 }
 .admin-tabs-list li a {
     display: inline-block;
-    padding: 10px 0;
+    padding: 10px 18px;
     width: 100%;
 }
 .panel {
@@ -658,13 +660,11 @@ textarea {
 /** Load Page */
 
 .container-toolbar {
-    border-bottom: 1px solid #e8edf1;
     color: #8990a0;
     margin: 0 -10px;
     padding: 5px 10px 8px;
 }
 .container-toolbar.container-bottomtoolbar {
-    border-top: 1px solid #e8edf1;
     padding: 20px 15px 14px;
 }
 .ct-search-wrap, .ct-pagination-wrap {
@@ -934,4 +934,88 @@ textarea {
 
 .nw-row {
     margin-bottom: 20px;
+}
+
+/** Filters */
+
+.filters .label-for, .filters .text, .filters select {
+    font-size: 12px;
+}
+.filters .checkbox {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+.filters input[type="checkbox"] + span {
+    margin-right: 3px;
+    top: 3px;
+}
+.green-btn.search-filter-btn {
+    height: 32px;
+    line-height: 30px;
+}
+.filter-search {
+    text-align: right;
+}
+.fs-loads .search-filter-btn {
+    position: relative;
+    top: 50px;
+}
+.filter-col {
+    margin-bottom: 5px;
+}
+.filters {
+    background: #f7fafa none repeat scroll 0 0;
+    border-top: 1px solid #e8edf1;
+    margin: 0 -15px;
+    padding: 20px 15px 15px;
+}
+.fs-invoices .green-btn.search-filter-btn {
+    position: relative;
+    top: 22px;
+}
+.is-broken {
+    background: #b9b8b8;
+    border-radius: 10px;
+    display: inline-block;
+    height: 15px;
+    margin: 0 6px 0 -15px;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    width: 35px;
+}
+.cb-broken:checked + label > .is-broken {
+    background: #3ad2c5 none repeat scroll 0 0;
+}
+.is-broken::after {
+    background: #f1f1f1 none repeat scroll 0 0;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+    content: "";
+    height: 20px;
+    left: -2px;
+    position: absolute;
+    top: -2px;
+    width: 20px;
+}
+.cb-broken:checked + label > .is-broken::after {
+    background: #0aa699 none repeat scroll 0 0;
+    left: auto;
+    right: -2px;
+}
+.cb-broken + label {
+    padding-top: 7px;
+}
+.filters .form-wrap {
+    padding: 5px 0 0;
+}
+.page .filters {
+    margin: 0 -20px;
+}
+.panel .container-table {
+    margin: 0 -20px;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
 }

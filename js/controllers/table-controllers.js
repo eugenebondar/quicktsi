@@ -15,6 +15,8 @@
         $http.get('./data/tables/expenses-table.json').success(function(data){
             row.items = data;
         });
+        row.selector = ".slideable-expenses";
+
     }]);
     app.controller('InvoicesPageTableCtrl', ['$http', function($http){
         var row = this;
@@ -22,6 +24,7 @@
         $http.get('./data/tables/invoices-table.json').success(function(data){
             row.items = data;
         });
+        row.selector = ".slideable-invoices";
     }]);
     app.controller('TmsPageTableCtrl', ['$http', function($http){
         var row = this;
@@ -29,6 +32,7 @@
         $http.get('./data/tables/tms-table.json').success(function(data){
             row.items = data;
         });
+        row.selector = ".slideable-tms";
     }]);
     app.controller('CustomerTableCtrl', ['$http', function($http){
         var row = this;
@@ -36,6 +40,7 @@
         $http.get('./data/tables/customer-table.json').success(function(data){
             row.items = data;
         });
+        row.selector = ".slideable-customer";
     }]);
     app.controller('ShipperTableCtrl', ['$http', function($http){
         var row = this;
@@ -43,6 +48,7 @@
         $http.get('./data/tables/shipper-table.json').success(function(data){
             row.items = data;
         });
+        row.selector = ".slideable-shipper";
     }]);
     app.controller('ReceiversTableCtrl', ['$http', function($http){
         var row = this;
@@ -50,6 +56,7 @@
         $http.get('./data/tables/receivers-table.json').success(function(data){
             row.items = data;
         });
+        row.selector = ".slideable-receiver";
     }]);
     app.controller('ExternalTableCtrl', ['$http', function($http){
         var row = this;
@@ -57,6 +64,7 @@
         $http.get('./data/tables/external-table.json').success(function(data){
             row.items = data;
         });
+        row.selector = ".slideable-external";
     }]);
     app.controller('DriverTableCtrl', ['$http', function($http){
         var row = this;
@@ -64,6 +72,7 @@
         $http.get('./data/tables/driver-table.json').success(function(data){
             row.items = data;
         });
+        row.selector = ".slideable-driver";
     }]);
     app.controller('TruckTableCtrl', ['$http', function($http){
         var row = this;
@@ -71,6 +80,7 @@
         $http.get('./data/tables/trucks-table.json').success(function(data){
             row.items = data;
         });
+        row.selector = ".slideable-truck";
     }]);
     app.controller('TrailerTableCtrl', ['$http', function($http){
         var row = this;
@@ -78,6 +88,7 @@
         $http.get('./data/tables/trailer-table.json').success(function(data){
             row.items = data;
         });
+        row.selector = ".slideable-trailer";
     }]);
     app.controller('DocumentTableCtrl', ['$http', function($http){
         var row = this;
@@ -85,6 +96,7 @@
         $http.get('./data/tables/document-table.json').success(function(data){
             row.items = data;
         });
+        row.selector = ".slideable-document";
     }]);
     app.controller('BrokerTableCtrl', ['$http', function($http){
         var row = this;
@@ -92,6 +104,7 @@
         $http.get('./data/tables/broker-table.json').success(function(data){
             row.items = data;
         });
+        row.selector = ".slideable-broker";
     }]);
     app.controller('AlertTableCtrl', ['$http', function($http){
         var row = this;
@@ -99,6 +112,7 @@
         $http.get('./data/tables/alert-table.json').success(function(data){
             row.items = data;
         });
+        row.selector = ".slideable-alert";
     }]);
     app.controller('DriverPayTableCtrl', ['$http', function($http){
         var row = this;

@@ -2,7 +2,7 @@
   {"title": "Customers", "buttons": [{"label" : "add new customer", "src": "img/add.png", "href": "/#/administration/add-customer"},{ "label": "export", "src": "img/export.png"}], "id": 1},
   {"title": "Shippers", "buttons": [{"label" : "add new shippers", "src": "img/add.png", "href": "/#/administration/add-shipper"},{ "label": "export", "src": "img/export.png"}], "id": 2},
   {"title": "Receivers", "buttons": [{"label" : "add new receivers", "src": "img/add.png", "href": "/#/administration/add-receiver"},{ "label": "export", "src": "img/export.png"}], "id": 3},
-  {"title": "Extra Carries", "buttons": [{"label" : "add new carrier", "src": "img/add.png", "href": "/#/administration/add-carrier"},{ "label": "export", "src": "img/export.png"}], "id": 4},
+  {"title": "External Carries", "buttons": [{"label" : "add new carrier", "src": "img/add.png", "href": "/#/administration/add-carrier"},{ "label": "export", "src": "img/export.png"}], "id": 4},
   {"title": "Drivers", "buttons": [{"label" : "add new driver", "src": "img/add.png", "href": "/#/administration/add-driver"},{ "label": "export", "src": "img/export.png"}], "id": 5},
   {"title": "Trucks", "buttons": [{"label" : "add new truck", "src": "img/add.png", "href": "administration/add-truck"},{ "label": "export", "src": "img/export.png"}], "id": 6},
   {"title": "Trailers", "buttons": [{"label" : "add new trailer", "src": "img/add.png", "href": "/#/administration/add-trailer"},{ "label": "export", "src": "img/export.png"}], "id": 7},
