@@ -149,7 +149,31 @@
             templateUrl: "templates/pages/adding-pages/content/dispatch.html"
         };
     });
+    app.directive("customer", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/adding-pages/content/customer.html"
+        };
+    });
+    app.directive("customerStepTwo", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/adding-pages/content/customer-step-two.html"
+        };
+    });
+    app.directive("customerStepThree", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/adding-pages/content/customer-step-three.html"
+        };
+    });
     app.directive("expense", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/adding-pages/content/expense.html"
+        };
+    });
+    app.directive("shipper", function() {
         return {
             restrict: 'E',
             templateUrl: "templates/pages/adding-pages/content/expense.html"

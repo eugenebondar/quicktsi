@@ -13,26 +13,27 @@
     <div class="col-xs-6 cc-btn">
         <ul class="loads-btn-list">
             <li><a class="white-btn" href="/tms/v2/#/administration"><img src="img/cancel.png" alt="cancel"/>cancel</a></li>
-            <li><a class="green-btn" href="/tms/v2/#/administration/add-customer-step-2"><img src="img/nxt.png" alt="save"/>next</a></li>
+            <li><a class="green-btn" href="/tms/v2/#/administration/add-customer"><img src="img/bck.png" alt="back"/>back</a></li>
+            <li><a class="green-btn" href="/tms/v2/#/administration/add-customer-step-3"><img src="img/nxt.png" alt="next"/>next</a></li>
         </ul>
     </div>
 </div>
 <div class="container border">
     <div class="customer-content-wrap">
         <div class="invoice-steps-wrap row">
-            <div class="invoice-step invoice-step-1 checked current">
+            <div class="invoice-step invoice-step-1 checked">
                 <div class="is-number">1</div>
                 <div class="is-label">Basic details</div>
             </div>
-            <div class="invoice-step invoice-step-2">
+            <div class="invoice-step invoice-step-2 checked current">
                 <div class="is-number">2</div>
                 <div class="is-label">Advence Details</div>
             </div>
             <div class="invoice-step invoice-step-3">
                 <div class="is-number">3</div>
                 <div class="is-label">Notifications/div>
+                </div>
             </div>
+            <customer-step-two></customer-step-two>
         </div>
-        <customer></customer>
     </div>
-</div>

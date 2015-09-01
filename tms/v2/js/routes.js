@@ -63,6 +63,12 @@ angular.module('app').config(function($routeProvider){
     .when('/administration/add-customer', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/customer.html'
     })
+    .when('/administration/add-customer-step-2', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/customer-step-2.html'
+    })
+    .when('/administration/add-customer-step-3', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/customer-step-3.html'
+    })
     .when('/administration/add-receiver', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/receiver.html'
     })
