@@ -1,0 +1,24 @@
+<table class="table-create-invoise table" >
+    <thead>
+    <tr>
+        <th class="th-id"><span>#</span></th>
+        <th class="th-customer"><span>customer</span></th>
+        <th class="th-number"><span>number of loads</span></th>
+        <th class="th-selection"><span>selection</span></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-load"><span>{{item.id}}</span></td>
+        <td class="th-customer"><span>{{item.customer}}</span></td>
+        <td class="th-number"><span>{{item.number}}</span></td>
+        <td class="th-selection">
+            <input type="radio" class="radio" name="selection" value="sel-{{item.id}}"/>
+            <span></span>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="empty-table" ng-show="table.items.length < 1" >
+    No data available in the table
+</div>

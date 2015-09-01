@@ -36,14 +36,26 @@ angular.module('app').config(function($routeProvider){
     .when('/loads/add-dispatch', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/dispatch.html'
     })
+    .when('/loads/edit-dispatch', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/dispatch.html'
+    })
     .when('/administration/add-driver', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/driver.html'
     })
     .when('/invoices/create-invoice', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/invoice.html'
     })
+    .when('/invoices/create-invoice-step-2', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/create-invoice-2.html'
+    })
+    .when('/invoices/create-invoice-step-3', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/create-invoice-3.html'
+    })
     .when('/expenses/add-expense', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/expense.html'
+    })
+        .when('/expenses/edit-expense', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/edit-expense.html'
     })
     .when('/administration/add-external-carrier', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/external-carrier.html'

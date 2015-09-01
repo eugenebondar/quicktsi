@@ -149,5 +149,11 @@
             templateUrl: "templates/pages/adding-pages/content/dispatch.html"
         };
     });
+    app.directive("expense", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/adding-pages/content/expense.html"
+        };
+    });
 
 })();

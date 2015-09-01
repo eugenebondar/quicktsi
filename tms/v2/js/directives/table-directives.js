@@ -111,5 +111,23 @@
             templateUrl: "templates/views/tables/table-tax-reports.html"
         };
     });
+    app.directive("tableCreateInvoice", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/tables/table-create-invoice.html"
+        };
+    });
+    app.directive("tableCreateInvoiceTwo", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/tables/table-create-invoice-two.html"
+        };
+    });
+    app.directive("tableCreateInvoiceThree", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/tables/table-create-invoice-three.html"
+        };
+    });
 
 })();

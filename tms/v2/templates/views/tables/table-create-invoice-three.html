@@ -1,0 +1,94 @@
+<div class="invoice-header row">
+    <div class="col-sm-6">
+        <h3>Invoice #00004879</h3>
+    </div>
+    <div class="col-sm-6 right">
+        <a class="green btn-text" href>
+            <img src="img/copy-green.png" alt="copy"/> Copy invoice
+        </a>
+    </div>
+</div>
+<div class="tci-wrap row">
+    <div class="tci-item tci-item-1 col-sm-4">
+        <header>
+            <h6>AWF</h6>
+        </header>
+        <p>Address Line 1</p>
+        <p>City</p>
+        <p>Region/State</p>
+        <p>Zip/Postal Code</p>
+    </div>
+    <div class="tci-item tci-item-2 col-sm-4">
+        <header>
+            <h6>SHIPPER</h6>
+        </header>
+        <p>Address Line 1</p>
+        <p>City</p>
+        <p>Region/State</p>
+        <p>Zip/Postal Code</p>
+    </div>
+    <div class="tci-item tci-item-3 col-sm-4">
+        <div class="tsi-logo">
+            <img src="" alt="logo here"/>
+        </div>
+        <div class="col-xs-6">
+            <p>Invoice #</p>
+            <p>Date</p>
+            <p>Due Date #</p>
+        </div>
+        <div class="col-xs-6 right">
+            <p>00004879</p>
+            <p>08/24/2015</p>
+            <p>08/24/2015</p>
+        </div>
+    </div>
+</div>
+<table class="table-create-invoices-3 table-border table" >
+    <thead>
+    <tr>
+        <th class="th-load"><span>load#</span></th>
+        <th class="th-pickup"><span>pickup</span></th>
+        <th class="th-delivery"><span>delivery</span></th>
+        <th class="th-from"><span>from</span></th>
+        <th class="th-to"><span>to</span></th>
+        <th class="th-po"><span>P.O #</span></th>
+        <th class="th-info"><span>customer info</span></th>
+        <th class="th-weight"><span>weight</span></th>
+        <th class="th-fee"><span>fees</span></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-load"><span>{{item.load}}</span></td>
+        <td class="th-pickup"><span>{{item.pickup}}</span></td>
+        <td class="th-delivery"><span>{{item.delivery}}</span></td>
+        <td class="th-customer"><span>{{item.customer}}</span></td>
+        <td class="th-from"><span>{{item.from}}</span></td>
+        <td class="th-po"><span></span></td>
+        <th class="th-info"><span></span></th>
+        <th class="th-weight"><span>{{item.weight}}</span></th>
+        <th class="th-fee"><span>{{item.fees}}</span></th>
+    </tr>
+    </tbody>
+</table>
+<table class="crate-table-total"  ng-show="table.items.length >= 1" >
+    <tbody>
+        <tr>
+            <td>Subtotal</td>
+            <td>$2500</td>
+        </tr>
+        <tr>
+            <td>Tax</td>
+            <td>$500</td>
+        </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td>Grand Total</td>
+        <td>$3000</td>
+    </tr>
+    </tfoot>
+</table>
+<div class="empty-table" ng-show="table.items.length < 1" >
+    No data available in the table
+</div>

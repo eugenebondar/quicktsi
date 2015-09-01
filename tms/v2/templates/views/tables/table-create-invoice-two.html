@@ -1,0 +1,42 @@
+<table class="table-create-invoises-2 table" >
+    <thead>
+    <tr>
+        <th class="th-checkbox">
+            <input type="checkbox"/>
+        </th>
+        <th class="th-load"><span>load#</span></th>
+        <th class="th-pickup"><span>pickup</span></th>
+        <th class="th-delivery"><span>delivery</span></th>
+        <th class="th-customer"><span>customer</span></th>
+        <th class="th-from"><span>from</span></th>
+        <th class="th-to"><span>to</span></th>
+        <th class="th-bol"><span>bol</span></th>
+        <th class="th-miles"><span>miles</span></th>
+        <th class="th-weight"><span>weight</span></th>
+        <th class="th-unit"><span>unit</span></th>
+        <th class="th-driver"><span>driver/carrier</span></th>
+        <th class="th-fee"><span>fees</span></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-checkbox">
+            <input type="checkbox"/>
+        </td>
+        <td class="th-load"><a href><span>{{item.load}}</span></a></td>
+        <td class="th-pickup"><span>{{item.pickup}}</span></td>
+        <td class="th-delivery"><span>{{item.delivery}}</span></td>
+        <td class="th-customer"><a href><span>{{item.customer}}</span></a></td>
+        <td class="th-from"><a href><span>{{item.from}}</span></a></td>
+        <td class="th-to"><a href><span>{{item.to}}</span></a></td>
+        <th class="th-bol"><span></span></th>
+        <th class="th-miles"><span>{{item.miles}}</span></th>
+        <th class="th-weight"><span>{{item.weight}}lbs</span></th>
+        <th class="th-unit"><span>{{item.unit}} Truck</span></th>
+        <td class="th-driver"><a href><span>{{item.driver}}</span></a></td>
+    </tr>
+    </tbody>
+</table>
+<div class="empty-table" ng-show="table.items.length < 1" >
+    No data available in the table
+</div>

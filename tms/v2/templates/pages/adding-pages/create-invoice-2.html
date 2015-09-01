@@ -12,18 +12,19 @@
     <div class="col-xs-6 cc-btn">
         <ul class="loads-btn-list">
             <li><a class="white-btn" href="/tms/v2/#/invoice"><img src="img/cancel.png" alt="cancel"/>cancel</a></li>
-            <li><a class="green-btn" href="/tms/v2/#/invoices/create-invoice-step-2"><img src="img/nxt.png" alt="next"/>next</a></li>
+            <li><a class="green-btn" href="/tms/v2/#/invoices/create-invoice-step-2"><img src="img/bck.png" alt="back"/>back</a></li>
+            <li><a class="green-btn" href="/tms/v2/#/invoices/create-invoice-step-3"><img src="img/nxt.png" alt="next"/>next</a></li>
         </ul>
     </div>
 </div>
 <div class="container border">
     <div class="invoice-content-wrap">
         <div class="invoice-steps-wrap row">
-            <div class="invoice-step invoice-step-1 checked current">
+            <div class="invoice-step invoice-step-1 checked">
                 <div class="is-number">1</div>
                 <div class="is-label">Customer Section</div>
             </div>
-            <div class="invoice-step invoice-step-2">
+            <div class="invoice-step invoice-step-2 checked current">
                 <div class="is-number">2</div>
                 <div class="is-label">Invoice Details</div>
             </div>
@@ -32,8 +33,22 @@
                 <div class="is-label">Invoice Review</div>
             </div>
         </div>
-        <div class="container-table" ng-controller="CreateInvoiceTableCtrl as table">
-            <table-create-invoice></table-create-invoice>
+        <div class="field-row ifw-row row">
+            <div class="ifw-col field-col field-col-left col-left col-sm-6">
+                <label class="label">Invoice Number</label>
+                <input type="text" class="text" />
+            </div>
+            <div class="ifw-col field-col field-col-right col-right col-sm-6">
+                <label class="label">Invoice Date</label>
+                <div class="time-input-wrap">
+                    <datepicker date-format="{{pattern}}">
+                        <input ng-model="date" type="text" class="text" placeholder="To"/>
+                    </datepicker>
+                </div>
+            </div>
+        </div>
+        <div class="container-table" ng-controller="CreateInvoiceStepTwoTableCtrl as table">
+            <table-create-invoice-two></table-create-invoice-two>
         </div>
         <div class="container-toolbar container-bottomtoolbar row">
             <bottom-toolbar></bottom-toolbar>

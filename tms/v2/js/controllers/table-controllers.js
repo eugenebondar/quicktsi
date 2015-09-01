@@ -145,5 +145,26 @@
             row.items = data;
         });
     }]);
+    app.controller('CreateInvoiceTableCtrl', ['$http', function($http){
+        var row = this;
+        row.items = [];
+        $http.get('./data/tables/cr-invoice-table.json').success(function(data){
+            row.items = data;
+        });
+    }]);
+    app.controller('CreateInvoiceStepTwoTableCtrl', ['$http', function($http){
+        var row = this;
+        row.items = [];
+        $http.get('./data/tables/cr-invoice-2-table.json').success(function(data){
+            row.items = data;
+        });
+    }]);
+    app.controller('CreateInvoiceStepThreeTableCtrl', ['$http', function($http){
+        var row = this;
+        row.items = [];
+        $http.get('./data/tables/cr-invoice-2-table.json').success(function(data){
+            row.items = data;
+        });
+    }]);
 
 })();
