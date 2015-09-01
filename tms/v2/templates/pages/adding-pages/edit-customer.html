@@ -1,0 +1,47 @@
+<div class="edit-customer account-tabs-wrap" ng-controller="CustomerTabCtrl as panel">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs-list">
+            <li>YOU ARE HERE</li>
+            <li>Administration</li>
+            <li>Customers</li>
+            <li><span>Edit Customer</span></li>
+        </ul>
+    </div>
+    <div class="container-controls row">
+        <div class="col-xs-6 cc-label">
+            <h1 class="title"><img src="img/back.png" alt=""/>Martin</h1>
+        </div>
+        <div class="col-xs-6 cc-btn">
+            <ul class="loads-btn-list">
+                <li><a class="white-btn" href="/tms/v2/#/administration"><img src="img/cancel.png" alt="cancel"/>cancel</a></li>
+                <li><a class="green-btn" href><img src="img/save.png" alt="save"/>save</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="customer-content-wrap">
+        <div class="container">
+            <div class="account-tabs-list-wrap">
+                <ul class="account-tabs-list">
+                    <li ng-class="{ active: panel.isSelected(1) }">
+                        <a class="ng-binding" ng-click="panel.selectTab(1)" href="">Basic Details</a>
+                    </li>
+                    <li ng-class="{ active: panel.isSelected(2) }">
+                        <a class="ng-binding" ng-click="panel.selectTab(2)" href="">Advance Details</a>
+                    </li>
+                    <li ng-class="{ active: panel.isSelected(3) }">
+                        <a class="ng-binding" ng-click="panel.selectTab(3)" href="">Notifications</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(1)">
+            <customer></customer>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(2)">
+            <customer-step-two></customer-step-two>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(3)">
+            <customer-step-three></customer-step-three>
+        </div>
+    </div>
+</div>

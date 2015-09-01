@@ -63,6 +63,9 @@ angular.module('app').config(function($routeProvider){
     .when('/administration/add-customer', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/customer.html'
     })
+    .when('/administration/edit-customer', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/edit-customer.html'
+    })
     .when('/administration/add-customer-step-2', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/customer-step-2.html'
     })
@@ -72,8 +75,14 @@ angular.module('app').config(function($routeProvider){
     .when('/administration/add-receiver', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/receiver.html'
     })
+    .when('/administration/edit-receiver', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/edit-receiver.html'
+    })
     .when('/administration/add-shipper', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/shipper.html'
+    })
+    .when('/administration/edit-shipper', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/edit-shipper.html'
     })
     .when('/administration/add-trailer', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/trailer.html'

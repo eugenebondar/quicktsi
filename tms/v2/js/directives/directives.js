@@ -176,7 +176,13 @@
     app.directive("shipper", function() {
         return {
             restrict: 'E',
-            templateUrl: "templates/pages/adding-pages/content/expense.html"
+            templateUrl: "templates/pages/adding-pages/content/shipper.html"
+        };
+    });
+    app.directive("receiver", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/adding-pages/content/receiver.html"
         };
     });
 
