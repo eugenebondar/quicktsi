@@ -42,6 +42,15 @@ angular.module('app').config(function($routeProvider){
     .when('/administration/add-driver', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/driver.html'
     })
+    .when('/administration/add-driver-step-2', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/driver-step-2.html'
+    })
+    .when('/administration/add-driver-step-3', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/driver-step-3.html'
+    })
+    .when('/administration/edit-driver', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/edit-driver.html'
+    })
     .when('/invoices/create-invoice', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/invoice.html'
     })
@@ -57,8 +66,17 @@ angular.module('app').config(function($routeProvider){
         .when('/expenses/edit-expense', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/edit-expense.html'
     })
+    .when('/administration/edit-external-carrier', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/edit-external.html'
+    })
     .when('/administration/add-external-carrier', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/external-carrier.html'
+    })
+    .when('/administration/add-external-carrier-step-2', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/external-carrier-step-2.html'
+    })
+    .when('/administration/add-external-carrier-step-3', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/external-carrier-step-3.html'
     })
     .when('/administration/add-customer', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/customer.html'

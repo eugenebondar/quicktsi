@@ -1,11 +1,11 @@
-<div class="receiver-wrap form-wrap">
+<div class="ext-carrier-wrap form-wrap">
     <div class="aw-block">
         <header class="aw-tetle">
-            <h4>Receiver info</h4>
+            <h4>External carrier info</h4>
         </header>
         <div class="aw-row field-row row">
             <div class="aw-col field-col col-sm-6 aw-left col-left">
-                <label class="label">Shipper Name <span class="red">*</span></label>
+                <label class="label">External Carrier Name <span class="red">*</span></label>
                 <input type="text" class="text"/>
             </div>
             <div class="aw-col field-col col-sm-6 aw-right col-right row">
@@ -20,10 +20,17 @@
                         </select>
                     </div>
                 </div>
-                <div class="aw-col field-col col-sm-6 aw-right col-right">
-                    <input type="checkbox" class="checkbox" id="duplicate" />
-                    <span></span>
-                    <label class="label-for" for="duplicate">Duplicate as Receiver?</label>
+                <div class="aw-col field-col col-sm-6 aw-right col-right row">
+                    <div class="aw-col field-col col-sm-6 aw-left col-left">
+                        <input type="checkbox" class="checkbox" id="blacklisted" />
+                        <span></span>
+                        <label class="label-for" for="blacklisted">Blacklisted</label>
+                    </div>
+                    <div class="aw-col field-col col-sm-6 aw-right col-right row">
+                        <input type="checkbox" class="checkbox" id="corporation" />
+                        <span></span>
+                        <label class="label-for" for="corporation">Corporation</label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -208,11 +215,48 @@
     </div>
     <div class="aw-block">
         <header class="aw-tetle">
+            <h4>Payment info</h4>
+        </header>
+        <div class="aw-row field-row field-row row">
+            <div class="aw-col field-col col-sm-6 aw-left col-left">
+                <label class="label">Payment Terms <span class="red">*</span></label>
+                <div class="select-cont full-select">
+                    <select>
+                        <option>Select Payment Terms</option>
+                        <option value="1">Payment Terms 1</option>
+                        <option value="2">Payment Terms 2</option>
+                        <option value="3">Payment Terms 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="aw-col field-col col-sm-6 aw-right col-right row">
+                <div class="aw-col field-col col-sm-6 aw-left col-left">
+                    <label class="label">Tax ID <span class="red">*</span></label>
+                    <input type="text" class="text" />
+                </div>
+                <div class="aw-col field-col col-sm-6 aw-right col-right">
+                    <label class="label">USDOT# <span class="red">*</span></label>
+                    <input type="text" class="text" />
+                </div>
+            </div>
+        </div>
+        <div class="aw-row field-row field-row row">
+            <div class="aw-col field-col col-sm-6 aw-left col-left">
+                <label class="label">M.C.# <span class="red">*</span></label>
+                <input type="text" class="text" />
+            </div>
+            <div class="aw-col field-col col-sm-6 aw-right col-right">
+                <a class="green btn-text-light" href>Check # at Federal Motor Carrier Safety Administration</a>
+            </div>
+        </div>
+    </div>
+    <div class="aw-block">
+        <header class="aw-tetle">
             <h4>Notes</h4>
         </header>
         <div class="aw-row field-row">
             <div class="field-col">
-                <label class="label">Receiving Notes</label>
+                <label class="label">Shipping Notes</label>
                 <div class="textarea-wrap"><textarea></textarea></div>
             </div>
         </div>
@@ -220,6 +264,31 @@
             <div class="field-col">
                 <label class="label">Internal Notes</label>
                 <div class="textarea-wrap"><textarea></textarea></div>
+            </div>
+        </div>
+    </div>
+    <div class="aw-block">
+        <header class="aw-tetle">
+            <h4>Document</h4>
+        </header>
+        <div class="aw-row field-row field-row row">
+            <div class="aw-col field-col col-sm-6 aw-left col-left">
+                <div class="select-cont full-select">
+                    <select>
+                        <option>Select Document</option>
+                        <option value="1">Document 1</option>
+                        <option value="2">Document 2</option>
+                        <option value="3">Document 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="aw-col field-col col-sm-6 aw-right col-right row">
+                <div class="aw-col field-col col-sm-6 aw-left col-left">
+                    <input type="file" class="file" />
+                </div>
+                <div class="aw-col field-col col-sm-6 aw-right col-right">
+                    <a class="green btn-text" href><img src="./img/add-green.png" alt="add"/>Add More</a>
+                </div>
             </div>
         </div>
     </div>

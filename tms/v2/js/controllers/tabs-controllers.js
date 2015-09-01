@@ -89,4 +89,24 @@
         }
 
     }]);
+    app.controller('ExternalTabCtrl', ['$http', function($http){
+        this.tab = 1;
+        this.selectTab = function(setTab){
+            this.tab = setTab;
+        };
+        this.isSelected = function(checkTab){
+            return this.tab === checkTab;
+        }
+
+    }]);
+    app.controller('DriverlTabCtrl', ['$http', function($http){
+        this.tab = 1;
+        this.selectTab = function(setTab){
+            this.tab = setTab;
+        };
+        this.isSelected = function(checkTab){
+            return this.tab === checkTab;
+        }
+
+    }]);
 })();

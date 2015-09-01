@@ -2,37 +2,39 @@
     <ul class="breadcrumbs-list">
         <li>YOU ARE HERE</li>
         <li>Administration</li>
-        <li>External Carriers</li>
-        <li><span>Add External Carriers</span></li>
+        <li>Drivers</li>
+        <li><span>Add Driver</span></li>
     </ul>
 </div>
 <div class="container-controls row">
     <div class="col-xs-6 cc-label">
-        <h1 class="title"><img src="img/back.png" alt=""/>Add External Carriers</h1>
+        <h1 class="title"><img src="img/back.png" alt=""/>Add Driver</h1>
     </div>
     <div class="col-xs-6 cc-btn">
         <ul class="loads-btn-list">
             <li><a class="white-btn" href="/tms/v2/#/administration"><img src="img/cancel.png" alt="cancel"/>cancel</a></li>
-            <li><a class="green-btn" href="/tms/v2/#/administration/add-external-carrier-step-2"><img src="img/nxt.png" alt="next"/>next</a></li>
+            <li><a class="green-btn" href="/tms/v2/#/administration/add-driver-step-2"><img src="img/bck.png" alt="save"/>previous</a></li>
+            <li><a class="green-btn" href><img src="img/save.png" alt="save"/>save</a></li>
+
         </ul>
     </div>
 </div>
 <div class="container border">
     <div class="customer-content-wrap">
         <div class="invoice-steps-wrap row">
-            <div class="invoice-step invoice-step-1 checked current">
+            <div class="invoice-step invoice-step-1 checked">
                 <div class="is-number">1</div>
                 <div class="is-label">Basic details</div>
             </div>
-            <div class="invoice-step invoice-step-2">
+            <div class="invoice-step invoice-step-2 checked">
                 <div class="is-number">2</div>
-                <div class="is-label">Insurance Details</div>
+                <div class="is-label">Payment Details</div>
             </div>
-            <div class="invoice-step invoice-step-3">
+            <div class="invoice-step invoice-step-3 checked current">
                 <div class="is-number">3</div>
-                <div class="is-label">Notifications</div>
+                <div class="is-label">Recurring payment</div>
             </div>
         </div>
-        <ext-carrier-one></ext-carrier-one>
+        <driver-three></driver-three>
     </div>
 </div>
