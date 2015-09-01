@@ -1009,7 +1009,7 @@ textarea {
 .filters .form-wrap {
     padding: 5px 0 0;
 }
-.page .filters {
+.page .panel .filters {
     margin: 0 -20px;
 }
 .panel .container-table {

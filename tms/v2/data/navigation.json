@@ -1,0 +1,12 @@
+[
+    {"name": "Dashboard", "url": "/tms/v2/#/dashboard"},
+    {"name": "Loads", "url": "/tms/v2/#/loads"},
+    {"name": "Invoices", "url": "/tms/v2/#/invoices"},
+    {"name": "Expenses", "url": "/tms/v2/#/expenses"},
+    {"name": "Administration", "url": "/tms/v2/#/administration"},
+    {"name": "TMS Users", "url": "/tms/v2/#/tms_users"},
+    {"name": "Accounting", "url": "/tms/v2/#/accounting"},
+    {"name": "Reports", "url": "/tms/v2/#/reports"},
+    {"name": "Profile", "url": "/tms/v2/#/profile"},
+    {"name": "Help", "url": "/tms/v2/#/help"}
+  ]
