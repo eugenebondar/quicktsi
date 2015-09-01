@@ -47,8 +47,9 @@ input[type="checkbox"] + span {
     border-radius: 2px;
     cursor: pointer;
     display: inline-block;
+    float: left;
     height: 16px;
-    margin: 0 10px 0 -17px;
+    margin: 0 10px 20px -14px;
     position: relative;
     top: 3px;
     width: 16px;
@@ -60,22 +61,24 @@ input[type="checkbox"]:checked + span {
 input[type="checkbox"] {
     cursor: pointer;
     display: inline-block;
+    float: left;
     height: 16px;
     left: 2px;
     opacity: 0;
     position: relative;
-    top: 1px;
+    top: 0;
     width: 16px;
     z-index: 10;
 }
 input[type="radio"] + span {
-    background: #fff;
+    background: #fff none repeat scroll 0 0;
     border: 1px solid #0aa699;
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
+    float: left;
     height: 16px;
-    margin: 0 10px 0 -17px;
+    margin: 0 10px 20px -14px;
     position: relative;
     top: 3px;
     width: 16px;
@@ -97,16 +100,18 @@ input[type="radio"]:checked + span::after {
 input[type="radio"] {
     cursor: pointer;
     display: inline-block;
+    float: left;
     height: 16px;
     left: 2px;
+    margin: 3px 0 20px;
     opacity: 0;
     position: relative;
-    top: 1px;
+    top: 0;
     width: 16px;
     z-index: 10;
 }
 textarea {
-    border: 1px solid #505358;
+    border: 1px solid #e8edf1;
     border-radius: 5px 5px 0;
     color: #c0c3c6;
     font-size: 14px;
@@ -263,12 +268,13 @@ textarea {
 }
 .label-for {
     cursor: pointer;
-    display: inline-block;
+    display: inline;
     font-weight: 300;
+    vertical-align: middle;
 }
 .checkbox {
     margin-bottom: 20px;
-    margin-top: 7px;
+    margin-top: 3px;
 }
 .form-wrap {
     padding: 5px 0 20px;
@@ -1018,4 +1024,24 @@ textarea {
 
 .sidebar::-webkit-scrollbar {
     display: none;
+}
+
+/** Datepicker */
+
+.time-input-wrap datepicker {
+    position: relative;
+}
+.time-input-wrap datepicker::after {
+    background: #ffffff url("img/date.png") no-repeat scroll 50% 50%;
+    border-left: 1px solid #e8edf1;
+    border-radius: 0 5px 5px 0;
+    content: "";
+    height: 29px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 31px;
+}
+.text.ng-touched {
+    border-radius: 5px 5px 0 0;
 }

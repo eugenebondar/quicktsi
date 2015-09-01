@@ -43,10 +43,18 @@
         </div>
         <div class="mr-col mr-col-right col-right row col-sm-6">
             <div class="mr-col mr-col-left col-left">
-                <input type="text" placeholder="From" class="date-input" />
+                <div class="time-input-wrap">
+                    <datepicker date-format="{{pattern}}">
+                        <input ng-model="date" type="text" class="text" placeholder="From"/>
+                    </datepicker>
+                </div>
             </div>
             <div class="mr-col mr-col-right col-right">
-                <input type="text" placeholder="To" class="date-input" />
+                <div class="time-input-wrap">
+                    <datepicker date-format="{{pattern}}">
+                        <input ng-model="date" type="text" class="text" placeholder="To"/>
+                    </datepicker>
+                </div>
             </div>
         </div>
     </div>

@@ -91,5 +91,11 @@
             templateUrl: "templates/views/filters/filter-trailer.html"
         };
     });
+    app.directive("filterBroker", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/filters/filter-broker.html"
+        };
+    });
 
 })();

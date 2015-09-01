@@ -6,12 +6,16 @@
         <div class="filter-col field-col col-sm-4 filter-right col-right row">
             <div class="filter-col field-col col-sm-6 filter-left col-left">
                 <div class="time-input-wrap">
-                    <input type="text" class="text" placeholder="Pickup date" />
+                    <datepicker date-format="{{pattern}}">
+                        <input ng-model="date" type="text" class="text" placeholder="Pickup date"/>
+                    </datepicker>
                 </div>
             </div>
             <div class="filter-col field-col col-sm-6 filter-right col-right">
                 <div class="time-input-wrap">
-                    <input type="text" class="text" placeholder="Delivery date" />
+                    <datepicker date-format="{{pattern}}">
+                        <input ng-model="date" type="text" class="text" placeholder="Delivery date"/>
+                    </datepicker>
                 </div>
             </div>
         </div>
@@ -174,7 +178,9 @@
             </div>
             <div class="filter-col field-col col-sm-6 filter-right col-right">
                 <div class="time-input-wrap">
-                    <input type="text" class="text" placeholder="Invoice date" />
+                    <datepicker date-format="{{pattern}}">
+                        <input ng-model="date" type="text" class="text" placeholder="Invoice date"/>
+                    </datepicker>
                 </div>
             </div>
         </div>
