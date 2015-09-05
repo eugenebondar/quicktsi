@@ -4,19 +4,10 @@
             <input type="text" class="text" placeholder="Load #" />
         </div>
         <div class="filter-col field-col col-sm-4 filter-right col-right row">
-            <div class="filter-col field-col col-sm-6 filter-left col-left">
-                <div class="time-input-wrap">
-                    <datepicker date-format="{{pattern}}">
-                        <input ng-model="date" type="text" class="text" placeholder="Pickup date"/>
-                    </datepicker>
-                </div>
-            </div>
-            <div class="filter-col field-col col-sm-6 filter-right col-right">
-                <div class="time-input-wrap">
-                    <datepicker date-format="{{pattern}}">
-                        <input ng-model="date" type="text" class="text" placeholder="Delivery date"/>
-                    </datepicker>
-                </div>
+            <div class="time-input-wrap">
+                <datepicker date-format="{{pattern}}">
+                    <input ng-model="date" type="text" class="text" placeholder="Pickup date"/>
+                </datepicker>
             </div>
         </div>
         <div class="filter-col field-col col-sm-4 filter-right col-right row">
@@ -32,6 +23,50 @@
         <div class="filter-col field-col col-sm-4 filter-left col-left">
             <input type="text" class="text" placeholder="Origin City" />
         </div>
+        <div class="filter-col field-col col-sm-4 filter-right col-right">
+            <div class="filter-col field-col col-sm-6 filter-right col-right">
+                <div class="time-input-wrap">
+                    <datepicker date-format="{{pattern}}">
+                        <input ng-model="date" type="text" class="text" placeholder="Delivery date"/>
+                    </datepicker>
+                </div>
+            </div>
+        </div>
+        <div class="filter-col field-col col-sm-4 filter-right col-right row">
+            <div class="filter-col field-col col-sm-6 filter-left col-left">
+                <div class="select-cont full-select">
+                    <select>
+                        <option>Select Shipper</option>
+                        <option value="1">Shipper 1</option>
+                        <option value="2">Shipper 2</option>
+                        <option value="3">Shipper 3</option>
+                    </select>
+                    <div class="radio-sel-wrap">
+                        <input type="radio" class="radio" name="ship" value="shipper"/>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-col field-col col-sm-6 filter-right col-right">
+                <div class="select-cont full-select select-radio">
+                    <select>
+                        <option>Select Receiver</option>
+                        <option value="1">Receiver 1</option>
+                        <option value="2">Receiver 2</option>
+                        <option value="3">Receiver 3</option>
+                    </select>
+                    <div class="radio-sel-wrap">
+                        <input type="radio" class="radio" name="ship" value="receiver"/>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="filter-row field-row row">
+        <div class="filter-col field-col col-sm-4 filter-left col-left">
+            <input type="text" class="text" placeholder="Destination City" />
+        </div>
         <div class="filter-col field-col col-sm-4 filter-right col-right row">
             <div class="filter-col field-col col-sm-6 filter-left col-left">
                 <div class="select-cont full-select">
@@ -44,54 +79,37 @@
                 </div>
             </div>
             <div class="filter-col field-col col-sm-6 filter-right col-right">
-                <div class="select-cont full-select">
-                    <select>
-                        <option>Origin Zip</option>
-                        <option value="1">Zip 1</option>
-                        <option value="2">Zip 2</option>
-                        <option value="3">Zip 3</option>
-                    </select>
-                </div>
+                <input type="text" class="text" placeholder="Origin Zip"/>
             </div>
-        </div>
-        <div class="filter-col field-col col-sm-4 filter-right col-right">
-            <div class="select-cont full-select">
-                <select>
-                    <option>Select Shipper</option>
-                    <option value="1">Shipper 1</option>
-                    <option value="2">Shipper 2</option>
-                    <option value="3">Shipper 3</option>
-                </select>
-            </div>
-        </div>
-    </div>
-    <div class="filter-row field-row row">
-        <div class="filter-col field-col col-sm-4 filter-left col-left">
-            <input type="text" class="text" placeholder="Destination City" />
         </div>
         <div class="filter-col field-col col-sm-4 filter-right col-right row">
             <div class="filter-col field-col col-sm-6 filter-left col-left">
-                <div class="select-cont full-select">
+                <div class="select-cont full-select select-radio">
                     <select>
-                        <option>Select Dest. State</option>
-                        <option value="1">State 1</option>
-                        <option value="2">State 2</option>
-                        <option value="3">State 3</option>
+                        <option>Select Driver</option>
+                        <option value="1">Driver 1</option>
+                        <option value="2">Driver 2</option>
+                        <option value="3">Driver 3</option>
                     </select>
+                    <div class="radio-sel-wrap">
+                        <input type="radio" class="radio" name="dr" value="driver"/>
+                        <span></span>
+                    </div>
                 </div>
             </div>
             <div class="filter-col field-col col-sm-6 filter-right col-right">
-                <input type="text" class="text" placeholder="Destination Zip" />
-            </div>
-        </div>
-        <div class="filter-col field-col col-sm-4 filter-right col-right">
-            <div class="select-cont full-select">
-                <select>
-                    <option>Select Receiver</option>
-                    <option value="1">Receiver 1</option>
-                    <option value="2">Receiver 2</option>
-                    <option value="3">Receiver 3</option>
-                </select>
+                <div class="select-cont full-select select-radio">
+                    <select>
+                        <option>Select Carrier</option>
+                        <option value="1">Carrier 1</option>
+                        <option value="2">Carrier 2</option>
+                        <option value="3">Carrier 3</option>
+                    </select>
+                    <div class="radio-sel-wrap">
+                        <input type="radio" class="radio" name="dr" value="carrier"/>
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -122,43 +140,30 @@
             <div class="filter-col field-col col-sm-6 filter-left col-left">
                 <div class="select-cont full-select">
                     <select>
-                        <option>Select Dispatcher</option>
-                        <option value="1">Dispatcher 1</option>
-                        <option value="2">Dispatcher 2</option>
-                        <option value="3">Dispatcher 3</option>
+                        <option>Select Dest. State</option>
+                        <option value="1">State 1</option>
+                        <option value="2">State 2</option>
+                        <option value="3">State 3</option>
                     </select>
+
                 </div>
             </div>
             <div class="filter-col field-col col-sm-6 filter-right col-right">
-                <div class="select-cont full-select">
-                    <select>
-                        <option>Select Driver</option>
-                        <option value="1">Driver 1</option>
-                        <option value="2">Driver 2</option>
-                        <option value="3">Driver 3</option>
-                    </select>
-                </div>
+                <input type="text" class="text" placeholder="Destination Zip" />
             </div>
         </div>
         <div class="filter-col field-col col-sm-4 filter-right col-right">
-            <div class="select-cont full-select">
-                <select>
-                    <option>Select Carrier</option>
-                    <option value="1">Carrier 1</option>
-                    <option value="2">Carrier 2</option>
-                    <option value="3">Carrier 3</option>
-                </select>
-            </div>
+            <input class="text" type="text" placeholder="Incoice #"/>
         </div>
     </div>
     <div class="filter-row field-row row">
         <div class="filter-col field-col col-sm-4 filter-right col-right">
             <div class="select-cont full-select">
                 <select>
-                    <option>Select Invoice Days Outstanding</option>
-                    <option value="1">Invoice 1</option>
-                    <option value="2">Invoice 2</option>
-                    <option value="3">Invoice 3</option>
+                    <option>Select Dispatcher</option>
+                    <option value="1">Dispatcher 1</option>
+                    <option value="2">Dispatcher 2</option>
+                    <option value="3">Dispatcher 3</option>
                 </select>
             </div>
         </div>
@@ -172,10 +177,7 @@
                 </select>
             </div>
         </div>
-        <div class="filter-col field-col col-sm-4 filter-right col-right row">
-            <div class="filter-col field-col col-sm-6 filter-left col-left">
-                <input type="text" class="text" placeholder="Invoice #" />
-            </div>
+        <div class="filter-col field-col col-sm-4 filter-right col-right">
             <div class="filter-col field-col col-sm-6 filter-right col-right">
                 <div class="time-input-wrap">
                     <datepicker date-format="{{pattern}}">
@@ -185,7 +187,6 @@
             </div>
         </div>
     </div>
-
     <div class="filter-row filter-bottom field-row row">
         <div class="filter-col field-col col-sm-4 filter-left col-left row">
             <div class="field-col col-sm-4 col-xs-6">

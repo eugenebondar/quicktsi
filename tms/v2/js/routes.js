@@ -105,11 +105,26 @@ angular.module('app').config(function($routeProvider){
     .when('/administration/add-trailer', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/trailer.html'
     })
+    .when('/administration/edit-trailer', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/edit-trailer.html'
+    })
     .when('/administration/add-truck', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/truck.html'
     })
+    .when('/administration/edit-truck', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/edit-truck.html'
+    })
     .when('/administration/add-broker', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/broker.html'
+    })
+    .when('/administration/edit-broker', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/edit-broker.html'
+    })
+    .when('/administration/edit-user', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/edit-user.html'
+    })
+    .when('/administration/add-user', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/user.html'
     })
     .otherwise({ redirectTo: '/' });
 });

@@ -79,5 +79,29 @@
             templateUrl: "templates/pages/adding-pages/content/driver-three.html"
         };
     });
+    app.directive("truck", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/adding-pages/content/truck.html"
+        };
+    });
+    app.directive("trailer", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/adding-pages/content/trailer.html"
+        };
+    });
+    app.directive("broker", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/adding-pages/content/broker.html"
+        };
+    });
+    app.directive("user", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/adding-pages/content/user.html"
+        };
+    });
 
 })();

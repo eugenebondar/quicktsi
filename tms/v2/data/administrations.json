@@ -4,7 +4,7 @@
   {"title": "Receivers", "buttons": [{"label" : "add new receivers", "src": "img/add.png", "href": "/tms/v2/#/administration/add-receiver"},{ "label": "export", "src": "img/export.png"}], "id": 3},
   {"title": "External Carries", "buttons": [{"label" : "add new carrier", "src": "img/add.png", "href": "/tms/v2/#/administration/add-external-carrier"},{ "label": "export", "src": "img/export.png"}], "id": 4},
   {"title": "Drivers", "buttons": [{"label" : "add new driver", "src": "img/add.png", "href": "/tms/v2/#/administration/add-driver"},{ "label": "export", "src": "img/export.png"}], "id": 5},
-  {"title": "Trucks", "buttons": [{"label" : "add new truck", "src": "img/add.png", "href": "administration/add-truck"},{ "label": "export", "src": "img/export.png"}], "id": 6},
+  {"title": "Trucks", "buttons": [{"label" : "add new truck", "src": "img/add.png", "href": "/tms/v2/#/administration/add-truck"},{ "label": "export", "src": "img/export.png"}], "id": 6},
   {"title": "Trailers", "buttons": [{"label" : "add new trailer", "src": "img/add.png", "href": "/tms/v2/#/administration/add-trailer"},{ "label": "export", "src": "img/export.png"}], "id": 7},
   {"title": "Document Types", "buttons": [{"label" : "add new document type", "src": "img/add.png", "href": ""},{ "label": "export", "src": "img/export.png"}], "id": 8},
   {"title": "Custom Broker", "buttons": [{"label" : "add new broker", "src": "img/add.png", "href": "/tms/v2/#/administration/add-broker"},{ "label": "export", "src": "img/export.png"}], "id": 9},
