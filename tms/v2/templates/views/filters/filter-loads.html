@@ -3,7 +3,7 @@
         <div class="filter-col field-col col-sm-4 filter-left col-left">
             <input type="text" class="text" placeholder="Load #" />
         </div>
-        <div class="filter-col field-col col-sm-4 filter-right col-right row">
+        <div class="filter-col field-col col-sm-4 filter-right col-right">
             <div class="time-input-wrap">
                 <datepicker date-format="{{pattern}}">
                     <input ng-model="date" type="text" class="text" placeholder="Pickup date"/>
@@ -24,17 +24,15 @@
             <input type="text" class="text" placeholder="Origin City" />
         </div>
         <div class="filter-col field-col col-sm-4 filter-right col-right">
-            <div class="filter-col field-col col-sm-6 filter-right col-right">
-                <div class="time-input-wrap">
-                    <datepicker date-format="{{pattern}}">
-                        <input ng-model="date" type="text" class="text" placeholder="Delivery date"/>
-                    </datepicker>
-                </div>
+            <div class="time-input-wrap">
+                <datepicker date-format="{{pattern}}">
+                    <input ng-model="date" type="text" class="text" placeholder="Delivery date"/>
+                </datepicker>
             </div>
         </div>
         <div class="filter-col field-col col-sm-4 filter-right col-right row">
             <div class="filter-col field-col col-sm-6 filter-left col-left">
-                <div class="select-cont full-select">
+                <div class="select-cont full-select select-radio">
                     <select>
                         <option>Select Shipper</option>
                         <option value="1">Shipper 1</option>
@@ -178,12 +176,10 @@
             </div>
         </div>
         <div class="filter-col field-col col-sm-4 filter-right col-right">
-            <div class="filter-col field-col col-sm-6 filter-right col-right">
-                <div class="time-input-wrap">
-                    <datepicker date-format="{{pattern}}">
-                        <input ng-model="date" type="text" class="text" placeholder="Invoice date"/>
-                    </datepicker>
-                </div>
+            <div class="time-input-wrap">
+                <datepicker date-format="{{pattern}}">
+                    <input ng-model="date" type="text" class="text" placeholder="Invoice date"/>
+                </datepicker>
             </div>
         </div>
     </div>

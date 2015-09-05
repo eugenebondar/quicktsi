@@ -2,7 +2,7 @@
     <thead>
     <tr>
         <th class="th-checkbox">
-            <input type="checkbox"/>
+            <input type="checkbox" class="checkbox"/><span></span>
         </th>
         <th class="th-invoice"><span>invoice#</span></th>
         <th class="th-invoiced"><span>invoiced</span></th>
@@ -18,7 +18,7 @@
     <tbody>
     <tr ng-repeat="item in table.items">
         <td class="th-checkbox">
-            <input type="checkbox"/>
+            <input type="checkbox" class="checkbox"/><span></span>
         </td>
         <td class="th-invoice"><a href><span>{{item.invoice}}</span></a></td>
         <td class="th-invoiced"><span>{{item.invoiced}}</span></td>
@@ -28,7 +28,7 @@
         <td class="th-total"><span>{{item.total}}.00</span></td>
         <td class="th-balance"><span>{{item.balance}}.00</span></td>
         <td class="th-status">
-            <div class="status-select-inv select-cont inline">
+            <div class="full-select select-cont inline">
                 <select>
                     <option ng-repeat="option in item.select" value="{{option}}">{{option}}</option>
                 </select>

@@ -321,7 +321,35 @@ textarea {
 .form-wrap .row > .row > div:last-child, .form-wrap .row > .row > .col-right {
     padding-right: 0;
 }
-
+.radio-sel-wrap {
+    border-left: 1px solid #e8edf1;
+    height: 29px;
+    padding-left: 6px;
+    padding-top: 3px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 11;
+}
+.radio-sel-wrap > * {
+    margin-bottom: 0 !important;
+}
+.select-cont.select-radio::after {
+    right: 36px;
+}
+.select-cont.select-radio > select {
+    padding-right: 75px;
+}
+.th-checkbox .checkbox, .th-checkbox .checkbox + span {
+    float: none;
+    margin-bottom: 0;
+}
+.th-checkbox .checkbox + span {
+    border-color: #e8edf1;
+}
+th.th-checkbox .checkbox + span {
+    border-color: #8990a0;
+}
 
 /** Sidebar */
 
@@ -330,10 +358,11 @@ textarea {
     height: 100%;
     left: 0;
     min-height: 100%;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     padding: 60px 15px 0;
     position: fixed;
-    transition: left 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
     width: 230px;
     z-index: 5;
 }
@@ -341,11 +370,33 @@ textarea {
     background: #22262f none repeat scroll 0 0;
     height: 60px;
     left: 0;
+    overflow: hidden;
     padding: 15px 0 0;
     position: fixed;
     text-align: center;
     transition: all 0.8s ease 0s;
     width: 230px;
+}
+.logo img {
+    max-width: 144px;
+}
+.logo > a {
+    display: inline-block;
+    overflow: hidden;
+    transition: width 0.4s ease 0s;
+    width: 100%;
+}
+.logo > a::after {
+    border-color: transparent transparent #22262f;
+    border-style: solid;
+    border-width: 0 0 30px 19px;
+    bottom: 0;
+    content: "";
+    height: 0;
+    position: absolute;
+    transition: right 0.4s ease 0.4s;
+    right: -100%;
+    width: 0;
 }
 .main-header {
     margin-left: 230px;
@@ -364,6 +415,7 @@ textarea {
 .profile {
     color: #fff;
     padding: 15px 0 35px;
+    transition: all 0.4s ease 0s;
 }
 .prof-img {
     padding-left: 0;
@@ -398,32 +450,195 @@ textarea {
     color: #8b91a1;
     font-size: 18px;
     font-weight: 500;
-    padding: 0 0 35px 30px;
-    position: relative;
+    padding: 0 0 35px;
 }
-.main-menu li::after {
-    background: #8b91a1 none repeat scroll 0 0;
+.main-menu a::after {
+    background: rgba(0, 0, 0, 0) url("img/menu.png") no-repeat scroll 0 0 / 279px auto;
     content: "";
-    height: 15px;
+    height: 23px;
     left: 2px;
     position: absolute;
-    top: 4px;
-    width: 15px;
+    top: 2px;
+    width: 21px;
 }
-.main-menu li:hover, .main-menu li.active {
+.main-menu a:hover, .main-menu li.active {
     color: #fff;
 }
-.main-menu li:hover::after, .main-menu li.active::after {
-    background: #fff none repeat scroll 0 0;
+.main-menu a {
+    padding-left: 45px;
+    position: relative;
+    transition: all 0.4s ease;
 }
+.Dashboard-menu::after {
+    background-position: 0 0 !important;
+}
+.Loads-menu::after {
+    background-position: -29px 0 !important;
+}
+.Invoices-menu::after {
+    background-position: -57px 0 !important;
+}
+.Expenses-menu::after {
+    background-position: -84px 0 !important;
+}
+.Administration-menu::after {
+    background-position: -110px 0 !important;
+}
+.Users-menu::after {
+    background-position: -139px 0 !important;
+}
+.Accounting-menu::after {
+    background-position: -168px 0 !important;
+}
+.Reports-menu::after {
+    background-position: -197px 0 !important;
+}
+.Profile-menu::after {
+    background-position: -226px 0 !important;
+}
+.Help-menu::after {
+    background-position: -255px 0 !important;
+}
+
+.Dashboard-menu:hover::after, .active .Dashboard-menu::after {
+    background-position: 0 -25px !important;
+}
+.Loads-menu:hover::after, .active .Loads-menu::after {
+    background-position: -29px -25px !important;
+}
+.Invoices-menu:hover::after, .active .Invoices-menu::after {
+    background-position: -57px -25px !important;
+}
+.Expenses-menu:hover::after, .active .Expenses-menu::after {
+    background-position: -84px -25px !important;
+}
+.Administration-menu:hover::after, .active .Administration-menu::after {
+    background-position: -110px -25px !important;
+}
+.Users-menu:hover::after, .active .Users-menu::after {
+    background-position: -139px -25px !important;
+}
+.Accounting-menu:hover::after, .active .Accounting-menu::after {
+    background-position: -168px -25px !important;
+}
+.Reports-menu:hover::after, .active .Reports-menu::after {
+    background-position: -197px -25px !important;
+}
+.Profile-menu:hover::after, .active .Profile-menu::after {
+    background-position: -226px -25px !important;
+}
+.Help-menu:hover::after, .active .Help-menu::after {
+    background-position: -255px -25px !important;
+}
+
 
 /** Close menu */
 
 .close.page .sidebar, .close.page .logo {
-    left: -100%;
+    width: 70px;
 }
 .page.close .main-header, .page.close .content {
-    margin-left: 0;
+    margin-left: 70px;
+}
+.page.close .main-menu a::after {
+    background-size: 405px auto;
+    height: 36px;
+    left: 2px;
+    top: 2px;
+    width: 36px;
+}
+.page.close .main-menu a {
+    padding-left: 60px;
+    white-space: nowrap;
+}
+.page.close .Dashboard-menu::after {
+    background-position: 2px 0 !important;
+}
+.page.close .Loads-menu::after {
+    background-position: -38px 0 !important;
+}
+.page.close .Invoices-menu::after {
+    background-position: -80px 0 !important;
+}
+.page.close .Expenses-menu::after {
+    background-position: -119px 0 !important;
+}
+.page.close .Administration-menu::after {
+    background-position: -158px 0 !important;
+}
+.page.close .Users-menu::after {
+    background-position: -200px 0 !important;
+}
+.page.close .Accounting-menu::after {
+    background-position: -241px 0 !important;
+}
+.page.close .Reports-menu::after {
+    background-position: -282px 0 !important;
+}
+.page.close .Profile-menu::after {
+    background-position: -324px 0 !important;
+}
+.page.close .Help-menu::after {
+    background-position: -367px 0 !important;
+}
+.page.close .Dashboard-menu:hover::after, .page.close .active .Dashboard-menu::after {
+    background-position: 2px -37px !important;
+}
+.page.close .Loads-menu:hover::after, .page.close .active .Loads-menu::after {
+    background-position: -38px -37px !important;
+}
+.page.close .Invoices-menu:hover::after, .page.close .active .Invoices-menu::after {
+    background-position: -80px -37px !important;
+}
+.page.close .Expenses-menu:hover::after, .page.close .active .Expenses-menu::after {
+    background-position: -119px -37px !important;
+}
+.page.close .Administration-menu:hover::after, .page.close .active .Administration-menu::after {
+    background-position: -158px -37px !important;
+}
+.page.close .Users-menu:hover::after, .page.close .active .Users-menu::after {
+    background-position: -200px -37px !important;
+}
+.page.close .Accounting-menu:hover::after, .page.close .active .Accounting-menu::after {
+    background-position: -241px -37px !important;
+}
+.page.close .Reports-menu:hover::after, .page.close .active .Reports-menu::after {
+    background-position: -282px -37px !important;
+}
+.page.close .Profile-menu:hover::after, .page.close .active .Profile-menu::after {
+    background-position: -324px -37px !important;
+}
+.page.close .Help-menu:hover::after, .page.close .active .Help-menu::after {
+    background-position: -367px -37px !important;
+}
+.page.close .logo > a {
+    position: relative;
+    width: 40px;
+}
+.page.close .logo > a::after {
+    right: 0;
+}
+.page.close .log-out, .page.close .pn-welcome {
+    display: none;
+}
+.page.close .profile > div {
+    float: none;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+.page.close .prof-img img {
+    width: 36px;
+}
+.page.close .prof-name {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4em;
+    text-align: center;
+}
+.page.close .profile {
+    padding: 15px 0 28px;
+    transition: all 0.4s ease 0s;
 }
 
 /** Header */
@@ -769,6 +984,7 @@ textarea {
 }
 .th-checkbox {
     text-align: center !important;
+    width: 40px;
 }
 .table td a:hover {
     text-decoration: none;
@@ -778,7 +994,7 @@ textarea {
     text-decoration: underline;
 }
 .table th {
-    padding: 10px 5px;
+    padding: 10px 5px 8px;
     text-align: left;
     text-transform: uppercase;
 }
@@ -793,7 +1009,7 @@ textarea {
 }
 .th-link-item {
     display: inline-block;
-    margin: 3px 1px;
+    margin: 3px 2px;
 }
 .th-link-item a {
     background-image: url("img/icon-sprite.png");
@@ -851,7 +1067,6 @@ textarea {
 .th-link-list {
     display: inline-block;
     text-align: left;
-    width: 70px;
 }
 .th-link {
     opacity: 0;
@@ -868,11 +1083,12 @@ textarea {
 }
 .status-select-wrap {
     height: 30px;
-    width: 135px;
+    position: relative;
+    width: 100%;
 }
 .status-select {
     height: 30px;
-    width: 105px;
+    width: 100%;
 }
 .ss-select-link {
     background: #0aa699 none repeat scroll 0 0;
@@ -880,8 +1096,18 @@ textarea {
     display: inline-block;
     height: 30px;
     padding-top: 4px;
+    position: absolute;
+    right: 0;
     text-align: center;
+    top: 0;
     width: 30px;
+    z-index: 11;
+}
+.status-select.select-cont::after {
+    right: 27px;
+}
+.status-select > select {
+    padding-right: 65px;
 }
 .status-select-wrap > * {
     margin-right: -0.25em;
@@ -904,6 +1130,84 @@ textarea {
     padding: 15px 0;
     text-align: center;
 }
+.th-checkbox .checkbox, .th-checkbox .checkbox + span {
+    float: none;
+    height: 12px;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 12px;
+}
+.th-checkbox .checkbox:checked + span::after {
+    background: #0aa699 none repeat scroll 0 0;
+    border-radius: 50%;
+    bottom: 0;
+    content: "";
+    height: 6px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 6px;
+}
+.th-checkbox .checkbox:checked + span {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    position: relative;
+}
+.th-checkbox .checkbox + span {
+    border-color: #e8edf1;
+    margin: 0 0 0 -10px;
+    top: 1px;
+}
+th.th-checkbox .checkbox + span {
+    border-color: #8990a0;
+}
+.table-invoises .th-load {
+    width: 6.6%;
+}
+.table-invoises .th-pickup, .table-invoises .th-delivery, .table-invoises .th-customer {
+    width: 9.1%;
+}
+.table-invoises .th-driver {
+    width: 11.7%;
+}
+.table-invoises .th-from, .table-invoises .th-to {
+    width: 10.1%;
+}
+.table-invoises .th-status {
+    width: 15.9%;
+}
+.table-loads .th-invoice, .table-loads .th-paid {
+    width: 8.8%;
+}
+.table-loads .th-invoiced, .table-loads .th-customer {
+    width: 9.9%;
+}
+.table-loads .th-outstanding {
+    width: 12.6%;
+}
+.table-loads .th-total {
+    width: 9.5%;
+}
+.table-loads .th-balance, .table-loads .th-status {
+    width: 13.2%;
+}
+.table-expenses .th-date {
+    width: 13.7%;
+}
+.table-expenses .th-category {
+    width: 12%;
+}
+.table-expenses .th-expenses {
+    width: 14.8%;
+}
+.table-expenses .th-description {
+    width: 33.5%;
+}
+.table-expenses .th-amount {
+    width: 9.9%;
+}
+
 
 /** Account page */
 
@@ -1025,6 +1329,12 @@ textarea {
 .sidebar::-webkit-scrollbar {
     display: none;
 }
+.filter-bottom .checkbox, .filter-bottom .checkbox + span {
+    margin-bottom: 0;
+}
+.filter-bottom .label-for {
+    padding-left: 6px;
+}
 
 /** Datepicker */
 
@@ -1032,7 +1342,7 @@ textarea {
     position: relative;
 }
 .time-input-wrap datepicker::after {
-    background: #ffffff url("img/date.png") no-repeat scroll 50% 50%;
+    background: #0AA699 url("img/date.png") no-repeat scroll 50% 50%;
     border-left: 1px solid #e8edf1;
     border-radius: 0 5px 5px 0;
     content: "";

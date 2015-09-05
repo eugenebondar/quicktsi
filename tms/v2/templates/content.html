@@ -42,14 +42,14 @@
                     <img src="./img/photo.png" alt="photo"/>
                 </div>
                 <div class="prof-info col-xs-7">
-                    <span class="prof-name">Welcome <br/> John Smith</span>
+                    <span class="prof-name"><span class="pn-welcome">Welcome <br/> </span>John Smith</span>
                     <a class="log-out" href="/">Log Out</a>
                 </div>
             </div>
             <nav class="main-navigation" ng-controller="MenuListCtrl as menu">
                 <ul class="main-menu" >
                     <li ng-repeat="item in menu.items" ng-class="{ active: menu.isSelected(item.name) }">
-                        <a href="{{item.url}}" ng-click="menu.selectTab(item.name)">{{item.name}}</a>
+                        <a href="{{item.url}}" class="{{item.name}}-menu" ng-click="menu.selectTab(item.name)">{{item.name}}</a>
                     </li>
                 </ul>
             </nav>

@@ -34,12 +34,16 @@
     <div class="filter-row field-row row">
         <div class="filter-col field-col col-sm-4 filter-left col-left">
             <div class="time-input-wrap">
-                <input type="text" class="text" placeholder="From" />
+                <datepicker date-format="{{pattern}}">
+                    <input ng-model="date" type="text" class="text" placeholder="From"/>
+                </datepicker>
             </div>
         </div>
         <div class="filter-col field-col col-sm-4 filter-left col-left">
             <div class="time-input-wrap">
-                <input type="text" class="text" placeholder="To" />
+                <datepicker date-format="{{pattern}}">
+                    <input ng-model="date" type="text" class="text" placeholder="To"/>
+                </datepicker>
             </div>
         </div>
         <div class="filter-col field-col col-sm-4 filter-left col-left filter-search">

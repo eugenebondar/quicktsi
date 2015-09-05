@@ -2,12 +2,12 @@
     <thead>
         <tr>
             <th class="th-checkbox">
-                <input type="checkbox"/>
+                <input type="checkbox" class="checkbox"/><span></span>
             </th>
             <th class="th-load"><span>load#</span></th>
             <th class="th-pickup"><span>pickup</span></th>
             <th class="th-delivery"><span>delivery</span></th>
-            <th class="th-driver"><span>driver</span></th>
+            <th class="th-driver"><span>driver/carrier</span></th>
             <th class="th-customer"><span>customer</span></th>
             <th class="th-from"><span>from</span></th>
             <th class="th-to"><span>to</span></th>
@@ -18,7 +18,7 @@
     <tbody>
         <tr ng-repeat="item in table.items">
             <td class="th-checkbox">
-                <input type="checkbox"/>
+                <input type="checkbox" class="checkbox"/><span></span>
             </td>
             <td class="th-load"><a href="/tms/v2/#/loads/edit-dispatch"><span>{{item.load}}</span></a></td>
             <td class="th-pickup"><span>{{item.pickup}}</span></td>
