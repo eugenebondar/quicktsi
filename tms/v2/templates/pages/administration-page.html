@@ -13,7 +13,7 @@
             </div>
             <div class="col-xs-6 cc-btn">
                 <ul class="loads-btn-list">
-                    <li ng-repeat="button in item.buttons"><a class="green-btn" href="{{button.href}}"><img ng-src="{{button.src}}" alt="add"/>{{button.label}}</a></li>
+                    <li ng-repeat="button in item.buttons"><a class="green-btn" href="{{button.href}}"><img ng-src="{{button.src}}" ng-show="{{button.src}}" alt="add"/>{{button.label}}</a></li>
                 </ul>
             </div>
         </div>

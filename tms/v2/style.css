@@ -880,7 +880,6 @@ th.th-checkbox .checkbox + span {
 }
 .freq-select, .level-select {
     height: 30px;
-    width: 100px;
 }
 .freq-select select, .level-select select {
     background-position: 80px 50%;
@@ -991,6 +990,7 @@ th.th-checkbox .checkbox + span {
     vertical-align: middle;
 }
 .th-checkbox {
+    padding-left: 5px !important;
     text-align: center !important;
     width: 40px;
 }
@@ -1080,12 +1080,6 @@ th.th-checkbox .checkbox + span {
     opacity: 0;
     text-align: center;
 }
-.table-tms .th-name {
-    padding-left: 15px !important;
-}
-.table-tms .th-link-list, .table-truck .th-link-list {
-    width: 100px;
-}
 .table tbody tr:hover .th-link {
     opacity: 1;
 }
@@ -1170,6 +1164,9 @@ th.th-checkbox .checkbox + span {
 th.th-checkbox .checkbox + span {
     border-color: #8990a0;
 }
+.table tr th:first-child, .table tr td:first-child {
+    padding-left: 10px;
+}
 .table-invoises .th-load {
     width: 6.6%;
 }
@@ -1215,6 +1212,205 @@ th.th-checkbox .checkbox + span {
 .table-expenses .th-amount {
     width: 9.9%;
 }
+.table-customer .th-name {
+    width: 9.3%;
+}
+.table-customer .th-address {
+    width: 15.4%;
+}
+.table-customer .th-city, .table-customer .th-zip {
+    width: 11.5%;
+}
+.table-customer .th-state {
+    width: 9.9%;
+}
+.table-customer .th-telephone {
+    width: 14.3%;
+}
+.table-customer .th-mc {
+    width: 7.7%;
+}
+.table-customer .th-broker {
+    width: 10.9%;
+}
+.table-shipper .th-name, .table-shipper .th-city, .table-receiver .th-name, .table-receiver .th-city, .table-broker .th-name, .table-broker .th-city, .table-tms .th-name, .table-tms .th-city {
+    width: 14.8%;
+}
+.table-shipper .th-address, .table-receiver .th-address, .table-broker .th-address, .table-tms .th-address {
+    width: 17.6%;
+}
+.table-shipper .th-zip, .table-receiver .th-zip, .table-broker .th-zip, .table-tms .th-zip {
+    width: 16.5%;
+}
+.table-shipper .th-state, .table-receiver .th-state, .table-broker .th-state, .table-tms .th-state {
+    width: 14%;
+}
+.table-shipper .th-telephone, .table-receiver .th-telephone, .table-broker .th-telephone, .table-tms .th-telephone {
+    width: 13.2%;
+}
+.table-external .th-name {
+    width: 7.5%;
+}
+.table-external .th-address {
+    width: 11.8%;
+}
+.table-external .th-city, .table-external .th-zip {
+    width: 7.3%;
+}
+.table-external .th-state, .table-external .th-dot {
+    width: 9.3%;
+}
+.table-external .th-telephone {
+    width: 12%;
+}
+.table-external .th-liability, .table-external .th-cargo {
+    width: 10.7%;
+}
+.table-external .th-fleet {
+    width: 10.1%;
+}
+.table-driver .th-name {
+    width: 7.7%;
+}
+.table-driver .th-telephone {
+    width: 12%;
+}
+.table-driver .th-email {
+    width: 24.5%;
+}
+.table-driver .th-license {
+    width: 10.2%;
+}
+.table-driver .th-exp, .table-driver .th-drug, .table-driver .th-med {
+    width: 13.7%;
+}
+.table-truck .th-truck {
+    width: 8.8%;
+}
+.table-truck .th-type {
+    width: 6%;
+}
+.table-truck .th-status {
+    width: 8.2%;
+}
+.table-truck .th-license {
+    width: 13.7%;
+}
+.table-truck .th-exp {
+    width: 10.4%;
+}
+.table-truck .th-vin {
+    width: 6.6%;
+}
+.table-truck .th-reg, .table-truck .th-available {
+    width: 11%;
+}
+.table-truck .th-ownership {
+    width: 12.6%;
+}
+.table-trailer .th-trailer, .table-trailer .th-reg {
+    width: 11%;
+}
+.table-trailer .th-type {
+    width: 10.4%;
+}
+.table-trailer .th-status, .table-trailer .th-vin {
+    width: 12.1%;
+}
+.table-trailer .th-license, .table-trailer .th-exp {
+    width: 17.6%;
+}
+.table-document .th-category {
+    width: 38%;
+}
+.table-document .th-type {
+    width: 43.2%;
+}
+.table-alert .th-name {
+    width: 45.3%;
+}
+.table-alert .th-frequency, .table-alert .th-level {
+    width: 25.3%;
+}
+.table-driver-pay .th-verification {
+    width: 12.9%;
+}
+.table-driver-pay .th-load, .table-driver-pay .th-gross {
+    width: 8.7%;
+}
+.table-driver-pay .th-customer, .table-driver-pay .th-empty {
+    width: 9.9%;
+}
+.table-driver-pay .th-delivery {
+    width: 8.8%;
+}
+.table-driver-pay .th-status {
+    width: 7.7%;
+}
+.table-driver-pay .th-loaded {
+    width: 10.2%;
+}
+.table-driver-pay .th-hourly {
+    width: 11%;
+}
+.table-sales-rep .th-load, .table-sales-rep .th-shipped {
+    width: 8.8%;
+}
+.table-sales-rep .th-carrier {
+    width: 9.9%;
+}
+.table-sales-rep .th-customer {
+    width: 12.1%;
+}
+.table-sales-rep .th-origin {
+    width: 8.2%;
+}
+.table-sales-rep .th-destination {
+    width: 13.2%;
+}
+.table-sales-rep .th-delivered, .table-sales-rep .th-carrier, .table-sales-rep .th-advances {
+    width: 11.5%;
+}
+.table-carrier-pay .th-load, .table-carrier-pay .th-origin {
+    width: 5.5%;
+}
+.table-carrier-pay .th-carrier {
+    width: 6.8%;
+}
+.table-carrier-pay .th-customer, .table-carrier-pay .th-shipped {
+    width: 8.8%;
+}
+.table-carrier-pay .th-dest {
+    width: 4.6%;
+}
+.table-carrier-pay .th-delivered {
+    width: 8.2%;
+}
+.table-carrier-pay .th-fee {
+    width: 3.3%;
+}
+.table-carrier-pay .th-advances {
+    width: 6.6%;
+}
+.table-carrier-pay .th-balance {
+    width: 12%;
+}
+.table-carrier-pay .th-bill, .table-carrier-pay .th-received {
+    width: 11%;
+}
+.table-carrier-pay .th-aging {
+    width: 4.8%;
+}
+.table-tax-reports .th-name {
+    width: 42.5%;
+}
+.table-tax-reports .th-year {
+    width: 33%;
+}
+.table-tax-reports .th-gross {
+    width: 21%;
+}
+
 
 
 /** Account page */
