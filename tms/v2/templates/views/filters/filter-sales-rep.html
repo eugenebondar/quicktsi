@@ -1,39 +1,51 @@
 <div class="col-sm-4 filter-col">
     <div class="filter-row row">
         <div class="col-xs-6">
-            <div class="select-cont">
+            <div class="select-cont full-select">
                 <select>
-                    <option>1</option>
-                    <option value="1">2</option>
-                    <option value="2">3</option>
-                    <option value="3">4</option>
+                    <option>Select Sales Rep</option>
+                    <option value="1">Sales Rep 1</option>
+                    <option value="2">Sales Rep 2</option>
+                    <option value="3">Sales Rep 3</option>
                 </select>
             </div>
         </div>
         <div class="col-xs-6">
-            Select All?
+            <input id="select-all" class="checkbox cb-broken" type="checkbox">
+            <label class="label-for" for="select-all">
+                <span class="is-broken"></span>
+                Select All?
+            </label>
         </div>
     </div>
 </div>
 <div class="col-sm-4 filter-col">
     <div class="filter-row row">
         <div class="filt-left col-xs-6">
-            <input type="text" class="text" />
+            <div class="time-input-wrap">
+                <datepicker date-format="{{pattern}}">
+                    <input ng-model="date" type="text" class="text" placeholder="Pay From"/>
+                </datepicker>
+            </div>
         </div>
         <div class="filt-right col-xs-6">
-            <input type="text" class="text" />
+            <div class="time-input-wrap">
+                <datepicker date-format="{{pattern}}">
+                    <input ng-model="date" type="text" class="text" placeholder="Pay To"/>
+                </datepicker>
+            </div>
         </div>
     </div>
 </div>
 <div class="col-sm-4 filter-col">
     <div class="filter-row row">
         <div class="filt-left col-xs-6">
-            <div class="select-cont">
+            <div class="select-cont full-select">
                 <select>
-                    <option>1</option>
-                    <option value="1">2</option>
-                    <option value="2">3</option>
-                    <option value="3">4</option>
+                    <option>Select Ship Date</option>
+                    <option value="1">Sales Ship Date 1</option>
+                    <option value="2">Sales Ship Date 2</option>
+                    <option value="3">Sales Ship Date 3</option>
                 </select>
             </div>
         </div>

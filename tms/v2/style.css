@@ -253,6 +253,9 @@ textarea {
     min-height: 36px;
     padding: 8px 0;
 }
+.label-wr {
+    padding-left: 15px;
+}
 .red {
     color: #e5424d;
 }
@@ -349,6 +352,11 @@ textarea {
 }
 th.th-checkbox .checkbox + span {
     border-color: #8990a0;
+}
+.green-btn.report-btn {
+    float: right;
+    height: 30px;
+    line-height: 30px;
 }
 
 /** Sidebar */
@@ -1238,6 +1246,15 @@ th.th-checkbox .checkbox + span {
     display: inline-block;
     padding: 10px 15px;
     width: 100%;
+}
+
+/** Reports page */
+
+.mr-check {
+    clear: both;
+}
+.mr-check .checkbox, .mr-check .checkbox + span {
+    margin-bottom: 6px;
 }
 
 /** Profile page */
