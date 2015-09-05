@@ -97,5 +97,11 @@
             templateUrl: "templates/views/filters/filter-broker.html"
         };
     });
+    app.directive("filterTms", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/filters/filter-tms.html"
+        };
+    });
 
 })();
