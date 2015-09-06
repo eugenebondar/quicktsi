@@ -284,10 +284,6 @@ textarea {
 }
 .aw-block {
     margin-bottom: 30px;
-    padding-top: 30px;
-}
-.aw-block:first-child {
-    pading-top: 0;
 }
 .aw-tetle h4 {
     background: #e8edf1 none repeat scroll 0 0;
@@ -409,6 +405,24 @@ th.th-checkbox .checkbox + span {
     display: inline-block;
     font-size: 16px;
     font-weight: 700;
+}
+.btn-text-light:hover {
+    text-decoration: none;
+}
+.btn-text-light {
+    display: inline-block;
+    margin-top: 6px;
+    text-decoration: underline;
+}
+.check-box-list > li {
+    display: inline-block;
+    margin-right: 25px;
+}
+.check-box-list {
+    padding: 10px 10px 0;
+}
+.check-box-list > li .checkbox, .check-box-list > li .checkbox + span {
+    margin-bottom: 0;
 }
 
 /** Sidebar */
