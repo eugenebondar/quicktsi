@@ -135,15 +135,15 @@ textarea {
     height: 0;
     z-index: 10;
 }
-.textarea-wrap:before {
-    content: '';
-    position: absolute;
+.textarea-wrap::before {
+    background: #ffffff none repeat scroll 0 0;
     bottom: 1px;
-    right: 1px;
+    content: "";
     display: block;
-    background: #ffffff;
-    width: 10px;
-    height: 10px;
+    height: 12px;
+    position: absolute;
+    right: 1px;
+    width: 12px;
     z-index: 5;
 }
 
@@ -423,6 +423,10 @@ th.th-checkbox .checkbox + span {
 }
 .check-box-list > li .checkbox, .check-box-list > li .checkbox + span {
     margin-bottom: 0;
+}
+.field-row .checkbox, .field-row .checkbox + span, .field-row .label-for {
+    display: inline-block;
+    margin-top: 4px;
 }
 
 /** Sidebar */
@@ -1858,4 +1862,67 @@ th.th-checkbox .checkbox + span {
 .field-col .green.btn-text {
     display: inline-block;
     margin-top: 7px;
+}
+
+/** Add extermal carriers page */
+
+.ext-left {
+    padding-right: 40px !important;
+}
+.ext-right {
+    padding-left: 40px !important;
+}
+.ext-row {
+    position: relative;
+}
+.ext-btn {
+    background: #0aa699 url("img/table-arrow.png") no-repeat scroll 0 0;
+    border-radius: 5px;
+    height: 40px;
+    left: -10px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 40px;
+    z-index: 10;
+}
+.ext-btn-left {
+    background-position: 50% 11px;
+    margin-top: -25px;
+    top: 50%;
+}
+.ext-btn-right {
+    background-position: 50% -30px;
+    margin-top: 25px;
+    top: 50%;
+}
+.ext-header > h4 {
+    border-bottom: 1px solid #e8edf1;
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.ext-col-wrap {
+    border: 1px solid #e8edf1;
+    border-radius: 5px;
+}
+.ext-row .checkbox, .ext-row .checkbox + span {
+    margin-bottom: 0;
+}
+.ext-wrap .ext-row {
+    margin-bottom: 10px;
+}
+.ext-wrap {
+    min-height: 410px;
+    padding: 20px;
+}
+.ext-search {
+    background: rgba(0, 0, 0, 0) url("img/search-gray.png") no-repeat scroll 8px 50%;
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+.ext-footer {
+    border-top: 1px solid #e8edf1;
+    padding: 20px;
 }
