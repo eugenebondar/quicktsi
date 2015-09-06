@@ -186,14 +186,14 @@ textarea {
  }
 .white-btn {
     background: #ffffff none repeat scroll 0 0;
-    border: 1px solid #0aa699;
+    border: 2px solid #0aa699;
     border-radius: 5px;
     box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
     color: #0aa699;
     display: inline-block;
     font-weight: 600;
     height: 41px;
-    line-height: 39px;
+    line-height: 38px;
     min-width: 100px;
     padding: 0 18px;
     text-align: center;
@@ -357,6 +357,25 @@ th.th-checkbox .checkbox + span {
     float: right;
     height: 30px;
     line-height: 30px;
+}
+.edit-btn img {
+    margin-right: 0;
+}
+.right {
+    text-align: right;
+}
+.green {
+    color: #0aa699;
+}
+.btn-text {
+    display: inline-block;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.btn-text > img {
+    margin-right: 3px;
+    position: relative;
+    top: 3px;
 }
 
 /** Sidebar */
@@ -1410,7 +1429,141 @@ th.th-checkbox .checkbox + span {
 .table-tax-reports .th-gross {
     width: 21%;
 }
+.table-create-invoise .th-id {
+    width: 50px;
+}
+.table-create-invoise .th-customer {
+    width: 35.2%;
+}
+.table-create-invoise .th-number {
+    width: 40%;
+}
+.table-create-invoise .th-selection {
+    width: 19.8%;
+}
+.table-create-invoise .th-selection .radio, .table-create-invoise .th-selection .radio + span {
+    margin-bottom: 0;
+}
+.table-create-invoises-2 .th-load {
+    width: 6.9%;
+}
+.table-create-invoises-2 .th-pickup, .table-create-invoises-2 .th-delivery {
+    width: 9%;
+}
+.table-create-invoises-2 .th-from, .table-create-invoises-2 .th-to {
+    width: 12%;
+}
+.table-create-invoises-2 .th-bol, .table-create-invoises-2 .th-miles {
+    width: 6.3%;
+}
+.table-create-invoises-2 .th-weight, .table-create-invoises-2 .th-unit {
+    width: 7.7%;
+}
+.table-create-invoises-2 .th-driver {
+    width: 13.2%;
+}
+.table-create-invoises-2 .th-fee {
+    width: 6%;
+}
+.table-create-invoices-3 .th-load, .table-create-invoices-3 .th-po {
+    width: 8.2%;
+}
+.table-create-invoices-3 .th-pickup, .table-create-invoices-3 .th-delivery {
+    width: 11.6%;
+}
+.table-create-invoices-3 .th-from, .table-create-invoices-3 .th-to {
+    width: 13.4%;
+}
+.table-create-invoices-3 .th-info {
+    width: 15.6%;
+}
+.table-create-invoices-3 .th-weight {
+    width: 9.9%;
+}
+.table-create-invoices-3 .th-fee {
+    width: 7.6%;
+}
 
+/** Create Invoice Pages */
+
+.table-create-invoices-3 th, .table-create-invoices-3 td {
+    border: 1px solid #e8edf1;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.table-create-invoices-3 th {
+    padding-top: 20px;
+}
+.field-row.ifw-row {
+    border-top: 1px solid #e8edf1;
+    margin: 0 -15px;
+    padding: 20px 15px 30px;
+}
+.crate-table-total {
+    border-collapse: collapse;
+    margin-left: 66.9%;
+    margin-top: 10px;
+    width: 33.1%;
+}
+.crate-table-total tbody td {
+    padding: 8px 20px;
+}
+.crate-table-total tfoot td {
+    border-top: 1px solid #e8edf1;
+    color: #505358;
+    font-size: 24px;
+    padding: 7px 20px 21px;
+}
+.crate-table-total tbody td:first-child {
+    width: 77%;
+}
+.crate-table-total tbody td:last-child {
+    width: 23%;
+}
+.crate-table-total tfoot span {
+    display: inline-block;
+    margin-left: -25px;
+}
+.invoice-header h3 {
+    color: #505358;
+    font-size: 24px;
+    font-weight: 500;
+}
+.invoice-header {
+    border-bottom: 1px solid #e8edf1;
+    margin: 0 15px;
+    padding-bottom: 13px;
+}
+.tci-item {
+    padding-top: 20px;
+}
+.tci-item h6 {
+    border-bottom: 1px solid #e8edf1;
+    border-top: 1px solid #e8edf1;
+    font-size: 1em;
+    margin-bottom: 8px;
+    padding: 5px 0;
+}
+.tci-item-wrap {
+    border-bottom: 1px solid #e8edf1;
+    margin-bottom: 40px;
+    min-height: 130px;
+}
+.tsi-logo {
+    border: 1px solid #e8edf1;
+    color: #d4d6dc;
+    font-weight: 600;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.tci-item-3 .col-xs-6 {
+    padding: 5px 0 0;
+}
+.table-create-invoices-3-wrap {
+    padding: 0 15px;
+}
 
 
 /** Account page */
@@ -1567,4 +1720,72 @@ th.th-checkbox .checkbox + span {
 }
 .text.ng-touched {
     border-radius: 5px 5px 0 0;
+}
+
+/** Steps block */
+
+.invoice-step {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 33%;
+}
+.is-number {
+    background: #fff none repeat scroll 0 0;
+    border: 6px solid;
+    border-radius: 50%;
+    color: #e5eaed;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    height: 60px;
+    line-height: 50px;
+    position: relative;
+    width: 60px;
+    z-index: 4;
+}
+.invoice-step.checked .is-number {
+    background: #0aa699 none repeat scroll 0 0;
+    border-color: #53c1b8;
+    color: #fff;
+}
+.is-label {
+    color: #e5eaed;
+    font-weight: 800;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+.invoice-step.checked .is-label {
+    color: #8990a0;
+}
+.invoice-step.checked.current .is-label {
+    color: #0aa699;
+}
+.invoice-step-2::after, .invoice-step-2::before {
+    background: #e5eaed none repeat scroll 0 0;
+    content: "";
+    height: 6px;
+    position: absolute;
+    top: 32%;
+    width: 100%;
+    z-index: 1;
+}
+.invoice-step::after {
+    right: -53%;
+}
+.invoice-step::before {
+    left: -53%;
+}
+.invoice-step-2.checked.current::before {
+    background: #53c1b8 none repeat scroll 0 0;
+}
+.invoice-step-2.checked.current::after {
+    background: #E5EAED none repeat scroll 0 0;
+}
+.invoice-step-2.checked::after, .invoice-step-2.checked::before {
+    background: #53c1b8 none repeat scroll 0 0;
+}
+.invoice-steps-wrap {
+    margin: 0 -10%;
+    padding: 30px 0 10px;
 }
