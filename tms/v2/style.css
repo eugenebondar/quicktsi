@@ -284,6 +284,10 @@ textarea {
 }
 .aw-block {
     margin-bottom: 30px;
+    padding-top: 30px;
+}
+.aw-block:first-child {
+    pading-top: 0;
 }
 .aw-tetle h4 {
     background: #e8edf1 none repeat scroll 0 0;
@@ -313,7 +317,7 @@ textarea {
     font-size: 14px;
     padding: 0 5px;
 }
-.form-wrap .row .col-sm-6, .form-wrap .row .col-sm-4, .form-wrap .row .col-xs-6 {
+.form-wrap .row .col-sm-6, .form-wrap .row .col-sm-9, .form-wrap .row .col-sm-3, .form-wrap .row .col-sm-4, .form-wrap .row .col-xs-6 {
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -364,6 +368,9 @@ th.th-checkbox .checkbox + span {
 .right {
     text-align: right;
 }
+.center {
+    text-align: center;
+}
 .green {
     color: #0aa699;
 }
@@ -372,10 +379,36 @@ th.th-checkbox .checkbox + span {
     font-weight: 600;
     text-transform: uppercase;
 }
-.btn-text > img {
-    margin-right: 3px;
+.invoice-header .btn-text > img {
     position: relative;
     top: 3px;
+}
+.btn-text > img {
+    margin-right: 3px;
+}
+.margin-right-10 {
+    margin-right: 10px;
+}
+.cap {
+    text-transform: capitalize;
+}
+.form-wrap hr {
+    background: #e8edf1 none repeat scroll 0 0;
+    border: medium none;
+    height: 1px;
+    margin: 20px 0 15px;
+}
+.upper {
+    text-transform: uppercase;
+}
+.up-title a {
+    margin: 0 !important;
+    text-decoration: underline;
+}
+.up-title {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 /** Sidebar */
@@ -1127,12 +1160,21 @@ th.th-checkbox .checkbox + span {
 .status-select.select-cont::after {
     right: 27px;
 }
+.load-select select {
+    padding-right: 70px;
+}
+.load-select::after {
+    right: 30px;
+}
 .status-select > select {
     padding-right: 65px;
 }
 .status-select-wrap > * {
     margin-right: -0.25em;
     vertical-align: top;
+}
+.ss-select-link.select-edit > img {
+    padding-top: 3px;
 }
 .table select {
     background-position: 87px 50%;
@@ -1788,4 +1830,18 @@ th.th-checkbox .checkbox + span {
 .invoice-steps-wrap {
     margin: 0 -10%;
     padding: 30px 0 10px;
+}
+
+/** Dispatch Page */
+
+.second-field-row {
+    clear: both;
+    padding-top: 12px;
+}
+.second-field-row .col-right {
+    padding-right: 0 !important;
+}
+.field-col .green.btn-text {
+    display: inline-block;
+    margin-top: 7px;
 }

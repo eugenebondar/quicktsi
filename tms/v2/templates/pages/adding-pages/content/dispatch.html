@@ -9,28 +9,28 @@
                 <input type="text" class="text" />
             </div>
             <div class="aw-col field-col col-sm-6 aw-right col-right row">
-                <div class="aw-col field-col col-xs-5 aw-left col-left">
+                <div class="aw-col field-col col-sm-6 aw-left col-left">
                     <label class="label">P.O. Number</label>
                     <input type="text" class="text" />
                 </div>
-                <div class="aw-col field-col col-xs-7 aw-right col-right ">
+                <div class="aw-col field-col col-sm-6 aw-right col-right ">
                     <label class="label">Load Status</label>
-                    <div class="status-select select-cont inline">
+                    <div class="load-select select-cont full-select">
                         <select>
                             <option>Select Status</option>
                             <option value="1">Status 1</option>
                             <option value="2">Status 2</option>
                             <option value="3">Status 3</option>
                         </select>
+                        <a class="ss-select-link" href><img src="img/rounds.png" alt="..."/></a>
                     </div>
-                    <a class="ss-select-link" href><img src="img/rounds.png" alt="..."/></a>
                 </div>
             </div>
         </div>
         <div class="aw-row field-row row">
             <div class="aw-col field-col col-sm-6 aw-left col-left row">
+                <label class="label label-wr">Customer Bill To <span class="red">*</span></label>
                 <div class="aw-col field-col col-sm-9 aw-left col-left">
-                    <label class="label">Customer Bill To <span class="red">*</span></label>
                     <div class="select-cont full-select">
                         <select>
                             <option>Select Address</option>
@@ -41,8 +41,7 @@
                     </div>
                 </div>
                 <div class="aw-col field-col col-sm-3 aw-right col-right">
-                    <label class="label"></label>
-                    <a class="green btn-text" href><img src="./img/add-green.png" alt="add"/>Add Customer</a>
+                    <a class="green btn-text cap" href><img src="./img/add-green.png" alt="add"/>Add Customer</a>
                 </div>
             </div>
             <div class="aw-col field-col col-sm-6 aw-right col-right row">
@@ -71,8 +70,38 @@
             </div>
         </div>
         <div class="aw-row field-row row">
+            <div class="aw-col field-col col-sm-6 aw-left col-left">
+                <label class="label">Dispatcher</label>
+                <div class="select-cont full-select">
+                    <select>
+                        <option>Select Dispatcher</option>
+                        <option value="1">Dispatcher 1</option>
+                        <option value="2">Dispatcher 2</option>
+                        <option value="3">Dispatcher 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="aw-col field-col col-sm-6 aw-right col-right">
+                <label class="label">Sales Rep.</label>
+                <div class="select-cont full-select">
+                    <select>
+                        <option>Select Sales Rep.</option>
+                        <option value="1">Sales Rep. 1</option>
+                        <option value="2">Sales Rep. 2</option>
+                        <option value="3">Sales Rep. 3</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="aw-row field-row row center">
+            <span class="upper up-title">
+                <a class="green btn-text" href="">Fees</a>
+            </span>
+        </div>
+        <div class="aw-row field-row row">
             <div class="aw-col field-col col-sm-6 aw-left col-left row">
-                <label class="label label-wr">Primary Fee </label>
+                <label class="label label-wr">Primary Fee <span class="red">*</span></label>
                 <div class="aw-col field-col col-sm-6 aw-left col-left">
                     <div class="select-cont full-select">
                         <select>
@@ -93,7 +122,7 @@
                 </div>
             </div>
             <div class="aw-col field-col col-sm-6 aw-right col-right row">
-                <label class="label label-wr">Fuel Surcharge</label>
+                <label class="label label-wr">Fuel Surcharge <span class="red">*</span></label>
                 <div class="aw-col field-col col-sm-6 aw-left col-left">
                     <div class="select-cont full-select">
                         <select>
@@ -114,38 +143,64 @@
                 </div>
             </div>
         </div>
-    <div class="aw-row field-row row">
-        <div class="aw-col field-col col-sm-6 aw-left col-left row">
-            <label class="label label">Other Fee</label>
-            <div class="aw-col field-col col-sm-6 aw-left col-left">
-                <input type="text" class="text" placeholder="Fee name"/>
+
+        <div class="aw-row field-row row">
+            <div class="aw-col field-col col-sm-6 aw-left col-left row">
+                <label class="label label-wr">Lumper Fee <span class="red">*</span></label>
+                <div class="aw-col field-col col-sm-6 aw-left col-left">
+                    <input type="text" class="text" placeholder="Quantity" />
+                </div>
+                <div class="aw-col field-col col-sm-6 aw-right col-right">
+                    <input type="text" class="text" placeholder="$ 0.00"/>
+                </div>
             </div>
-            <div class="aw-col field-col col-sm-6 aw-right col-right">
-                <input type="text" class="text" placeholder="Quantity"/>
-            </div>
-            <div class="aw-col field-col col-sm-6 aw-left col-left">
-                <input type="text" class="text" placeholder="Fee name"/>
-            </div>
-            <div class="aw-col field-col col-sm-6 aw-right col-right">
-                <input type="text" class="text" placeholder="Quantity"/>
-            </div>
-        </div>
-        <div class="aw-col field-col col-sm-6 aw-right col-right">
-            <label class="label label"></label>
-            <div class="aw-col field-col col-sm-6 aw-left col-left">
-                <input type="text" class="text" placeholder="$ 0.00"/>
-            </div>
-            <div class="aw-col field-col col-sm-6 aw-right col-right">
-            </div>
-            <div class="aw-col field-col col-sm-6 aw-left col-left">
-                <input type="text" class="text" placeholder="$ 0.00"/>
-            </div>
-            <div class="aw-col field-col col-sm-6 aw-right col-right">
-                <a class="green btn-text" href><img src="./img/add-green.png" alt="add"/>Add More</a>
-                <a class="green btn-text" href><img src="./img/remove-green.png" alt="add"/>Remove</a>
+            <div class="aw-col field-col col-sm-6 aw-right col-right row">
+                <label class="label label-wr">Toll Fee <span class="red">*</span></label>
+                <div class="aw-col field-col col-sm-6 aw-left col-left">
+                    <input type="text" class="text" placeholder="Quantity" />
+                </div>
+                <div class="aw-col field-col col-sm-6 aw-right col-right">
+                    <input type="text" class="text" placeholder="$ 0.00"/>
+                </div>
             </div>
         </div>
-    </div>
+
+        <div class="aw-row field-row row">
+            <div class="aw-col field-col col-sm-6 aw-left col-left row">
+                <label class="label label-wr">Other Fee</label>
+                <div class="aw-col field-col col-sm-6 aw-left col-left">
+                    <input type="text" class="text" placeholder="Fee name"/>
+                </div>
+                <div class="aw-col field-col col-sm-6 aw-right col-right">
+                    <input type="text" class="text" placeholder="Quantity"/>
+                </div>
+                <div class="field-row second-field-row clearfix">
+                    <div class="aw-col field-col col-sm-6 aw-left col-left">
+                        <input type="text" class="text" placeholder="Fee name"/>
+                    </div>
+                    <div class="aw-col field-col col-sm-6 aw-right col-right">
+                        <input type="text" class="text" placeholder="Quantity"/>
+                    </div>
+                </div>
+            </div>
+            <div class="aw-col field-col col-sm-6 aw-right col-right row">
+                <label class="label label-wr"></label>
+                <div class="aw-col field-col col-sm-6 aw-left col-left">
+                    <input type="text" class="text" placeholder="$ 0.00"/>
+                </div>
+                <div class="aw-col field-col col-sm-6 aw-right col-right">
+                </div>
+                <div class="field-row second-field-row clearfix">
+                    <div class="aw-col field-col col-sm-6 aw-left col-left">
+                        <input type="text" class="text" placeholder="$ 0.00"/>
+                    </div>
+                    <div class="aw-col field-col col-sm-6 aw-right col-right">
+                        <a class="green cap btn-text margin-right-10" href><img src="./img/add-green.png" alt="add"/>Add More</a>
+                        <a class="green cap btn-text" href><img src="./img/remove-green.png" alt="add"/>Remove</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="aw-row field-row row">
             <div class="aw-col field-col col-sm-6 aw-left col-left">
                 <label class="label">Total Fee <span class="red">*</span></label>
@@ -166,59 +221,37 @@
                 <label class="label">Final Fee <span class="red">*</span></label>
                 <input type="text" class="text" placeholder="$ 0.00"/>
             </div>
-            <div class="aw-col field-col col-sm-6 aw-right col-right row">
-                <div class="aw-col field-col col-sm-6 aw-left col-left">
-                    <label class="label">Dispatcher</label>
-                    <div class="select-cont full-select">
-                        <select>
-                            <option>Select Dispatcher</option>
-                            <option value="1">Dispatcher 1</option>
-                            <option value="2">Dispatcher 2</option>
-                            <option value="3">Dispatcher 3</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="aw-col field-col col-sm-6 aw-right col-right">
-                    <label class="label">Sales Rep.</label>
-                    <div class="select-cont full-select">
-                        <select>
-                            <option>Select Sales Rep.</option>
-                            <option value="1">Sales Rep. 1</option>
-                            <option value="2">Sales Rep. 2</option>
-                            <option value="3">Sales Rep. 3</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <hr/>
     <div class="aw-row field-row row">
         <div class="aw-col field-col col-sm-6 aw-left col-left right">
-            <span class="upper">
-                <a class="green btn-text" href>Carrier</a>
+            <span class="upper up-title">
+                <a class="green btn-text cap" href>Carrier</a>
             </span>
         </div>
         <div class="aw-col field-col col-sm-6 aw-right col-right">
-            <span class="upper">Driver</span>
+            <span class="upper up-title">Driver</span>
         </div>
     </div>
     <div class="aw-row field-row row">
-        <div class="aw-col field-col col-sm-9 aw-left col-left">
-            <label class="label">Carrier</label>
-            <div class="status-select select-cont inline">
-                <select>
-                    <option>Select Carrier</option>
-                    <option value="1">Carrier 1</option>
-                    <option value="2">Carrier 2</option>
-                    <option value="3">Carrier 3</option>
-                </select>
+        <div class="aw-col field-col col-sm-6 aw-left col-left row">
+            <div class="aw-col field-col col-sm-9 aw-left col-left">
+                <label class="label">Carrier</label>
+                <div class="load-select full-select select-cont">
+                    <select>
+                        <option>Select Carrier</option>
+                        <option value="1">Carrier 1</option>
+                        <option value="2">Carrier 2</option>
+                        <option value="3">Carrier 3</option>
+                    </select>
+                    <a class="ss-select-link select-edit" href><img src="img/edit.png" alt="edit"/></a>
+                </div>
             </div>
-            <a class="ss-select-link" href><img src="img/edit.png" alt="edit"/></a>
-        </div>
-        <div class="aw-col field-col col-sm-3 aw-right col-right">
-            <label class="label"></label>
-            <a class="green btn-text" href><img src="./img/add-green.png" alt="add"/>Add Carrier</a>
+            <div class="aw-col field-col col-sm-3 aw-right col-right">
+                <label class="label"></label>
+                <a class="green btn-text cap" href><img src="./img/add-green.png" alt="add"/>Add Carrier</a>
+            </div>
         </div>
         <div class="aw-col field-col col-sm-6 aw-right col-right row">
             <div class="aw-col field-col col-sm-6 aw-left col-left">
@@ -265,7 +298,7 @@
     </div>
     <div class="aw-row field-row row">
         <div class="aw-col field-col col-sm-6 aw-left col-left">
-            <div class="aw-col field-col col-sm-6 aw-left col-left">
+            <div class="aw-col field-col col-sm-6 aw-left col-left row">
                 <label class="label">Advanced Payment <span class="red">*</span></label>
                 <input type="text" class="text"  placeholder="$ 0.00"/>
             </div>
@@ -313,7 +346,7 @@
                 <input type="file" class="file" />
             </div>
             <div class="aw-col field-col col-sm-6 aw-right col-right">
-                <a class="green btn-text" href><img src="./img/add-green.png" alt="add"/>Add More</a>
+                <a class="green btn-text cap" href><img src="./img/add-green.png" alt="add"/>Add More</a>
             </div>
         </div>
     </div>
@@ -325,7 +358,7 @@
             <div class="aw-col field-col col-sm-6 aw-left col-left row">
                 <label class="label label-wr">Shipper Name <span class="red">*</span></label>
                 <div class="aw-col field-col col-sm-9 aw-left col-left">
-                    <div class="status-select select-cont inline">
+                    <div class="status-select select-cont full-select">
                         <select>
                             <option>Select Shipper</option>
                             <option value="1">Shipper 1</option>
@@ -336,7 +369,7 @@
                     <a class="ss-select-link" href><img src="img/edit.png" alt="edit"/></a>
                 </div>
                 <div class="aw-col field-col col-sm-3 aw-right col-right">
-                    <a class="green btn-text" href><img src="./img/add-green.png" alt="add"/>Add Shipper</a>
+                    <a class="green btn-text cap" href><img src="./img/add-green.png" alt="add"/>Add Shipper</a>
                 </div>
             </div>
             <div class="aw-col field-col col-sm-6 aw-right col-right">
@@ -346,7 +379,7 @@
         </div>
         <div class="aw-row field-row row">
             <div class="aw-col field-col col-sm-6 aw-left col-left">
-                <label class="label">Shipper Contact #1 <span class="red">*</span></label>
+                <label class="label">Shipper Contact #1</label>
                 <div class="select-cont full-select">
                     <select>
                         <option>Select Contact</option>
@@ -357,7 +390,7 @@
                 </div>
             </div>
             <div class="aw-col field-col col-sm-6 aw-right col-right">
-                <label class="label">Shipper Contact #2 <span class="red">*</span></label>
+                <label class="label">Shipper Contact #2</label>
                 <div class="select-cont full-select">
                     <select>
                         <option>Select Contact</option>
@@ -420,7 +453,7 @@
                     <input type="text" class="text" placeholder="Weight, lbl"/>
                 </div>
                 <div class="aw-col field-col col-sm-6 aw-right col-right">
-                    <a class="green btn-text" href><img src="./img/add-green.png" alt="add"/>Add More</a>
+                    <a class="green btn-text cap" href><img src="./img/add-green.png" alt="add"/>Add More</a>
                 </div>
             </div>
         </div>
@@ -436,8 +469,8 @@
                 <div class="textarea-wrap"><textarea></textarea></div>
             </div>
         </div>
-        <div class="aw-row field-row">
-            <label class="label">Customer Broker</label>
+        <div class="aw-row field-row row">
+            <label class="label label-wr">Customer Broker</label>
             <div class="aw-col field-col col-sm-6 aw-left col-left row">
                 <div class="aw-col field-col col-sm-9 aw-left col-left">
                     <div class="select-cont full-select">
@@ -450,7 +483,7 @@
                     </div>
                 </div>
                 <div class="aw-col field-col col-sm-3 aw-right col-right">
-                    <a class="green btn-text" href><img src="./img/add-green.png" alt="add"/>Add Customer Broker</a>
+                    <a class="green btn-text cap" href><img src="./img/add-green.png" alt="add"/>Add Customer Broker</a>
                 </div>
             </div>
         </div>
@@ -463,7 +496,7 @@
             <div class="aw-col field-col col-sm-6 aw-left col-left row">
                 <label class="label label-wr">Shipper Name <span class="red">*</span></label>
                 <div class="aw-col field-col col-sm-9 aw-left col-left">
-                    <div class="status-select select-cont inline">
+                    <div class="status-select select-cont full-select">
                         <select>
                             <option>Select Shipper</option>
                             <option value="1">Shipper 1</option>
@@ -474,7 +507,7 @@
                     <a class="ss-select-link" href><img src="img/edit.png" alt="edit"/></a>
                 </div>
                 <div class="aw-col field-col col-sm-3 aw-right col-right">
-                    <a class="green btn-text" href><img src="./img/add-green.png" alt="add"/>Add Shipper</a>
+                    <a class="green btn-text cap" href><img src="./img/add-green.png" alt="add"/>Add Shipper</a>
                 </div>
             </div>
             <div class="aw-col field-col col-sm-6 aw-right col-right">
@@ -484,7 +517,7 @@
         </div>
         <div class="aw-row field-row row">
             <div class="aw-col field-col col-sm-6 aw-left col-left">
-                <label class="label">Shipper Contact #1 <span class="red">*</span></label>
+                <label class="label">Shipper Contact #1</label>
                 <div class="select-cont full-select">
                     <select>
                         <option>Select Contact</option>
@@ -495,7 +528,7 @@
                 </div>
             </div>
             <div class="aw-col field-col col-sm-6 aw-right col-right">
-                <label class="label">Shipper Contact #2 <span class="red">*</span></label>
+                <label class="label">Shipper Contact #2</label>
                 <div class="select-cont full-select">
                     <select>
                         <option>Select Contact</option>
@@ -558,19 +591,19 @@
                     <input type="text" class="text" placeholder="Weight, lbl"/>
                 </div>
                 <div class="aw-col field-col col-sm-6 aw-right col-right">
-                    <a class="green btn-text" href><img src="./img/add-green.png" alt="add"/>Add More</a>
+                    <a class="green btn-text cap" href><img src="./img/add-green.png" alt="add"/>Add More</a>
                 </div>
             </div>
         </div>
         <div class="aw-row field-row">
             <div class="field-col">
-                <label class="label">Pickup Comments (Not shown on Invoice)</label>
+                <label class="label">Commodity</label>
                 <div class="textarea-wrap"><textarea></textarea></div>
             </div>
         </div>
         <div class="aw-row field-row">
             <div class="field-col">
-                <label class="label">Commodity</label>
+                <label class="label">Pickup Comments (Not shown on Invoice)</label>
                 <div class="textarea-wrap"><textarea></textarea></div>
             </div>
         </div>
