@@ -86,6 +86,44 @@
         };
     });
 
+    app.directive('logoFileLoad', function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/logo-file-load.html",
+            scope: {},
+            link: function(scope, el, attrs) {
+                var file = el.find('input');
+                scope.fileName = 'LOGO';
+                file.bind('change', function(event) {
+                    var files = event.target.files;
+                    scope.$apply(function() {
+                        scope.fileName = files[0].name;
+                        console.log(scope.fileName);
+                    });
+                });
+            }
+        };
+    });
+
+    app.directive('fileLoad', function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/file-load.html",
+            scope: {},
+            link: function(scope, el, attrs) {
+                var file = el.find('input');
+                scope.fileName = 'Add New Document';
+                file.bind('change', function(event) {
+                    var files = event.target.files;
+                    scope.$apply(function() {
+                        scope.fileName = files[0].name;
+                        console.log(scope.fileName);
+                    });
+                });
+            }
+        };
+    });
+
     /** Toggle slide */
 
     app.directive('slideToggle', function () {
@@ -143,5 +181,7 @@
             templateUrl: "templates/pages/subpages/notes.html"
         };
     });
+
+
 
 })();

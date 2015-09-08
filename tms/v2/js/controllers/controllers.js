@@ -42,4 +42,16 @@
         });
     }]);
 
+    app.controller('FileUploadCtrl', ['$scope', function($scope){
+        $scope.fileNameChanged = function() {
+            console.log("It works");
+            console.log(this.value);
+            alert("select file");
+        };
+    }]);
+
+
+
+
+
 })();
