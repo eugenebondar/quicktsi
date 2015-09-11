@@ -1,0 +1,31 @@
+<table class="table-progress table" >
+    <thead>
+    <tr>
+        <th class="th-amount"><span>#</span></th>
+        <th class="th-name"><span>name</span></th>
+        <th class="th-loads"><span>total loads</span></th>
+        <th class="th-revenue"><span>total revenue</span></th>
+        <th class="th-profit"><span>total profit</span></th>
+        <th class="th-profper"><span>profit %</span></th>
+        <th class="th-pickup"><span>late pick-up</span></th>
+        <th class="th-delivery"><span>late delivery</span></th>
+        <th class="th-miles"><span>miles</span></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-amount"><span>{{$index + 1}}</span></td>
+        <td class="th-name"><span>{{item.name}}</span></td>
+        <td class="th-loads"><a href><span>{{item.loads}}</span></a></td>
+        <td class="th-revenue"><span>${{item.revenue}}</span></td>
+        <td class="th-profit"><span>${{item.profit}}</span></td>
+        <td class="th-profper"><span>{{item.profitPercent}}%</span></td>
+        <td class="th-pickup"><span>{{item.pickup}}</span></td>
+        <td class="th-delivery"><span>{{item.delivery}}</span></td>
+        <td class="th-miles"><span>{{item.miles}}</span></td>
+    </tr>
+    </tbody>
+</table>
+<div class="empty-table" ng-show="table.items.length < 1" >
+    No data available in the table
+</div>

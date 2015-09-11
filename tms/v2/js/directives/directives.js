@@ -184,4 +184,50 @@
 
 
 
+
+    app.directive("loadsStats", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/dashboard/loads-stats.html"
+        };
+    });
+    app.directive("loadsPanel", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/dashboard/loads-panel.html"
+        };
+    });
+    app.directive("loadsByMonths", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/dashboard/loads-by-months.html"
+        };
+    });
+    app.directive("invoicesPanel", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/dashboard/invoices-panel.html"
+        };
+    });
+    app.directive("invoicesStats", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/dashboard/invoices-stats.html"
+        };
+    });
+    app.directive("invoicesByMonths", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/dashboard/invoices-by-months.html"
+        };
+    });
+    app.directive("progressPanel", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/pages/dashboard/progress-panel.html"
+        };
+    });
+
+
+
 })();

@@ -129,5 +129,11 @@
             templateUrl: "templates/views/tables/table-create-invoice-three.html"
         };
     });
+    app.directive("tableProgress", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/tables/table-progress.html"
+        };
+    });
 
 })();

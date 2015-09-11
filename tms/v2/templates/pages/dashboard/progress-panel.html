@@ -1,0 +1,39 @@
+<div class="progress-panel-wrap" >
+    <div class="container-controls row">
+        <div class="col-xs-8 cc-label">
+            <span><strong>Invoices</strong> Panel</span>
+            <div class="select-cont full-select select-progress">
+                <select>
+                    <option>Duration</option>
+                    <option value="1">Duration 1</option>
+                    <option value="2">Duration 2</option>
+                    <option value="3">Duration 3</option>
+                </select>
+            </div>
+            <div class="select-cont full-select select-progress">
+                <select>
+                    <option>Role</option>
+                    <option value="1">Role 1</option>
+                    <option value="2">Role 2</option>
+                    <option value="3">Role 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-4 cc-btn">
+            <ul class="cc-btn-list">
+                <li>
+                    <a class="gray-refresh-bth" href><img src="./img/gray-refresh.png" alt="refresh"/></a>
+                </li>
+                <li>
+                    <a class="ct-show-btn" slide-toggle=".slideable-progress-panel"  ng-class="{ open: toolbar.isShow() }"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-loads-panel-wrap row slideable-progress-panel" ng-controller="ProgressTableCtrl as table">
+        <table-progress></table-progress>
+        <div class="container-toolbar container-bottomtoolbar row">
+            <bottom-toolbar></bottom-toolbar>
+        </div>
+    </div>
+</div>

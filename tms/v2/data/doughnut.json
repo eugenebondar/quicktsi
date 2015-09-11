@@ -1,0 +1,6 @@
+[
+  {"label": "20", "data": "35", "color": "#0cc1bc", "legend": "30+ Days"},
+  {"label": "14", "data": "25", "color": "#bcaa56", "legend": "90+ Days"},
+  {"label": "14", "data": "25", "color": "#527ab8", "legend": "60+ Days"},
+  {"label": "8", "data": "15", "color": "#af65bc", "legend": "120+ Days"}
+]

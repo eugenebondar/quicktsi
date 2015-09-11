@@ -1,0 +1,36 @@
+<div class="invoices-stats-wrap" >
+    <div class="container-controls row">
+        <div class="col-xs-8 cc-label">
+            <span><strong>Invoices</strong> Stats</span>
+        </div>
+        <div class="col-xs-4 cc-btn">
+            <ul class="cc-btn-list">
+                <li>
+                    <a class="gray-refresh-bth" href><img src="./img/gray-refresh.png" alt="refresh"/></a>
+                </li>
+                <li>
+                    <a class="ct-show-btn" slide-toggle=".slideable-invoices-stats"  ng-class="{ open: toolbar.isShow() }"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-diagrams row slideable-invoices-stats" ng-controller="PiechartCtrl as piechart">
+        <div class="col-xs-2 diagram-item" ng-repeat="item in piechart.invoice">
+            <piechart color="{{item.color}}" fulfill="{{item.fulfill}}" value="{{item.value}}"></piechart>
+            <p style="color:{{item.color}}" class="canvas-label">{{item.label}}</p>
+            <p><a class="view-details-btn" href="/">View Details</a></p>
+        </div>
+        <div class="col-xs-4 diagram-item doughnut-wrap" ng-controller="DoughnutCtrl as doughnut">
+            <div class="dw-canvas-wrap">
+                <canvas height="92px" width="92px" id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels" chart-options="option" chart-colours="color"></canvas>
+                <ul class="doughnut-label-list">
+                    <li ng-repeat="item in doughnut.items" class="doughnut-label-item"><span><span class="dl-item" style="color:{{item.color}}">{{item.label}}</span>({{item.data}}%)</span></li>
+                </ul>
+            </div>
+            <p class="canvas-label">Outstanding Invoices <br/> View Details</p>
+            <ul class="doughnut-legend-list">
+                <li ng-repeat="item in doughnut.items"><span style="background-color: {{item.color}}"></span>{{item.legend}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

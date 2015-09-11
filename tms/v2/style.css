@@ -228,6 +228,7 @@ textarea {
     z-index: 10;
 }
 .select-cont select {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: medium none;
     height: 100%;
     left: 0;
@@ -235,6 +236,7 @@ textarea {
     position: absolute;
     top: 0;
     width: calc(100% + 20px);
+    z-index: 20;
 }
 .select-cont option {
     padding-left: 11px;
@@ -488,7 +490,7 @@ th.th-checkbox .checkbox + span {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 15;
+    z-index: 40;
 }
 .profile {
     color: #fff;
@@ -845,11 +847,13 @@ th.th-checkbox .checkbox + span {
 
 /** Dashboard */
 
-.container-diagrams {
-    padding: 30px 0;
-}
 .diagram-item {
+    min-height: 242px;
+    padding: 45px 0 0;
     text-align: center;
+}
+.container-diagrams .diagram-item:first-child {
+    border-right: 1px solid #e8edf1;
 }
 .canvas-label {
     padding-top: 26px;
@@ -860,12 +864,273 @@ th.th-checkbox .checkbox + span {
 .view-details-btn:hover {
     text-decoration: underline;
 }
+.ct-show-btn.open {
+    background-image: url("img/arrow-gray.png");
+}
+.ct-show-btn {
+    background: rgba(0, 0, 0, 0) url("img/arrow-r-gray.png") no-repeat scroll 50% 50%;
+    color: #0aa699;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    height: 12px;
+    margin-left: 10px;
+    opacity: 0.65;
+    text-transform: uppercase;
+    width: 12px;
+}
+.cc-label {
+    color: #161d24;
+    font-size: 16px;
+}
+.dashboard-container .select-cont {
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+.select-dashboard {
+    width: 150px;
+}
+.cc-label > span {
+    display: inline-block;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+.dash-border {
+    border: 1px solid #e8edf1;
+    margin-bottom: 20px;
+}
+.dashboard-container .container-controls {
+    border-bottom: 1px solid #e8edf1;
+    margin: 0;
+    padding: 10px 0;
+    position: relative;
+    z-index: 30;
+}
+.cc-btn-list {
+    text-align: right;
+}
+.cc-btn-list > li {
+    display: inline-block;
+    padding-top: 8px;
+    vertical-align: middle;
+}
+.dashboard-container.row {
+    margin: 0 -10px;
+}
+.dc-col.col-sm-6 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.select-year {
+    width: 77px;
+}
+.select-progress {
+    width: 125px;
+}
+.view-all-wrap {
+    padding: 0 0 15px;
+    text-align: center;
+}
+.view-all-btn {
+    font-size: 12px;
+    text-decoration: underline;
+}
+.view-all-btn:hover {
+    text-decoration: none;
+}
+.table-loads-panel-wrap {
+    padding: 10px 10px 0;
+}
+.dashboard-container .table td {
+    height: 35px;
+}
+.table-invoices-panel .th-load {
+    width: 24.1%;
+}
+.table-invoices-panel .th-pickup {
+    width: 33.3%;
+}
+.table-invoices-panel .th-delivery {
+    width: 21.7%;
+}
+.table-invoices-panel .th-status {
+    width: 15.6%;
+}
+.table-progress .th-amount {
+    width: 30px;
+}
+.table-progress .th-name, .table-progress .th-profit, .table-progress .th-pickup {
+    width: 12.63%;
+}
+.table-progress .th-loads {
+    width: 11.98%;
+}
+.table-progress .th-revenue {
+    width: 14.29%;
+}
+.table-progress .th-profper {
+    width: 9.23%;
+}
+.table-progress .th-delivery {
+    width: 14%;
+}
+.table-progress .th-miles {
+    width: 5.82%;
+}
+
 
 /** Canvas Piechart */
 
 .canvas-piechart {
     display: block;
     margin: 0 auto;
+}
+.doughnut-wrap .chart-container {
+    display: inline-block;
+    /*height: 92px;*/
+    /*width: 92px;*/
+}
+.doughnut-legend-list li span {
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    margin-right: 6px;
+    width: 8px;
+}
+.doughnut-legend-list li {
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 13px;
+    vertical-align: middle;
+}
+.dl-item {
+    display: inline-block;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+}
+.doughnut-wrap {
+    border-left: 1px solid #e8edf1;
+    padding-bottom: 10px;
+    position: relative;
+    text-align: center;
+}
+.doughnut-legend-list {
+    padding-top: 10px;
+}
+.doughnut-label-item {
+    font-size: 12px;
+    position: absolute;
+}
+.chart-container::after {
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 15;
+}
+.dw-canvas-wrap {
+    display: inline-block;
+    position: relative;
+}
+.doughnut-label-item:nth-child(1) {
+    right: -63%;
+    top: -10%;
+}
+.doughnut-label-item:nth-child(4) {
+    left: -63%;
+    top: -10%;
+}
+.doughnut-label-item:nth-child(2) {
+    right: -63%;
+    bottom: -10%;
+}
+.doughnut-label-item:nth-child(3) {
+    left: -63%;
+    bottom: -10%;
+}
+.dl-item::after {
+    bottom: -10px;
+    content: "";
+    position: absolute;
+}
+.doughnut-label-item:nth-child(1) .dl-item::after {
+    background: url("img/fig-1.png") repeat scroll 0 0;
+    height: 11px;
+    right: 7px;
+    width: 64px;
+}
+.doughnut-label-item:nth-child(2) .dl-item::after {
+    background: rgba(0, 0, 0, 0) url("img/fig-2.png") repeat scroll 0 0;
+    height: 21px;
+    right: 7px;
+    width: 76px;
+    bottom: 0;
+}
+.doughnut-label-item:nth-child(3) .dl-item::after {
+    background: rgba(0, 0, 0, 0) url("img/fig-3.png") repeat scroll 0 0;
+    bottom: 0;
+    height: 30px;
+    left: 7px;
+    width: 67px;
+}
+.doughnut-label-item:nth-child(4) .dl-item::after {
+    background: url("img/fig-4.png") repeat scroll 0 0;
+    height: 11px;
+    left: 7px;
+    width: 65px;
+}
+.chart-container canvas {
+    position: relative;
+    z-index: 10;
+}
+.invoices-by-months-wrap .chart-container {
+    display: inline-block;
+    padding: 0 20px 0 10px;
+    width: 100%;
+}
+.bar-legend-list {
+    font-size: 14px;
+    padding: 0 20px 20px 40px;
+    position: relative;
+    z-index: 20;
+}
+.bar-legend-list li {
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 20%;
+}
+.bar-legend-list li span {
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin-right: 6px;
+    width: 10px;
+}
+.bar-tablist {
+    padding: 25px 20px 0 40px;
+    position: relative;
+    z-index: 20;
+}
+.bar-tablist li {
+    display: inline-block;
+    margin-right: 10px;
+}
+.bar-tablist li.active {
+    color: #0aa699;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.bar-canvas-wrap canvas {
+    height: 242px !important;
+}
+.invoices-by-months-wrap .bar-canvas-wrap canvas {
+    height: 265px !important;
 }
 
 /** Breadcrumbs */

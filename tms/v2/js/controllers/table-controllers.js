@@ -166,5 +166,12 @@
             row.items = data;
         });
     }]);
+    app.controller('ProgressTableCtrl', ['$http', function($http){
+        var row = this;
+        row.items = [];
+        $http.get('./data/tables/progress-table.json').success(function(data){
+            row.items = data;
+        });
+    }]);
 
 })();

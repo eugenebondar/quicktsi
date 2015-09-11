@@ -1,0 +1,43 @@
+<div class="invoices-panel-wrap dash-border" >
+    <div class="container-controls row">
+        <div class="col-xs-8 cc-label">
+            <span><strong>Invoices</strong> Panel</span>
+        </div>
+        <div class="col-xs-4 cc-btn">
+            <ul class="cc-btn-list">
+                <li>
+                    <a class="gray-refresh-bth" href><img src="./img/gray-refresh.png" alt="refresh"/></a>
+                </li>
+                <li>
+                    <a class="ct-show-btn" slide-toggle=".slideable-invoices-panel"  ng-class="{ open: toolbar.isShow() }"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-loads-panel-wrap row slideable-invoices-panel" ng-controller="InvoicesPageTableCtrl as table">
+        <table class="table-invoices-panel table" >
+            <thead>
+            <tr>
+                <th class="th-load"><span>invoice#</span></th>
+                <th class="th-pickup"><span>creation date</span></th>
+                <th class="th-delivery"><span>status</span></th>
+                <th class="th-status"><span>customer</span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in table.items | limitTo:8">
+                <td class="th-load"><a href="/tms/v2/#/loads/edit-invoices"><span>{{item.invoice}}</span></a></td>
+                <td class="th-pickup"><span>{{item.invoiced}}</span></td>
+                <td class="th-delivery"><span>{{item.status}}</span></td>
+                <td class="th-status"><span>{{item.customer}}</span></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="empty-table" ng-show="table.items.length < 1" >
+            No data available in the table
+        </div>
+        <div class="view-all-wrap">
+            <a href="/tms/v2/#/invoices/" class="view-all-btn">View All Invoice</a>
+        </div>
+    </div>
+</div>
