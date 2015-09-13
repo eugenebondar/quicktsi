@@ -135,5 +135,11 @@
             templateUrl: "templates/views/tables/table-progress.html"
         };
     });
+    app.directive("tableCategoryList", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/tables/table-category-list.html"
+        };
+    });
 
 })();

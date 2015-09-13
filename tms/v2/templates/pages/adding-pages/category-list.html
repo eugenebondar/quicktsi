@@ -11,24 +11,19 @@
     <div class="col-xs-6 cc-btn">
         <ul class="loads-btn-list">
             <li><a class="green-btn" href="#"><img src="img/print.png" alt="print"/>print</a></li>
-            <li><a class="green-btn" href="/tms/v2/#/expenses/add-expense"><img src="img/add.png" alt="add"/>add expense</a></li>
-            <li><a class="green-btn" href="/tms/v2/#/expenses/category-list"><img src="img/category.png" alt="category"/>category list</a></li>
+            <li><a class="green-btn" ng-click="content.showPopup('/tms/v2/templates/views/popups/category-list.html', true)"><img src="img/add.png" alt="add"/>add expense categoty</a></li>
         </ul>
     </div>
 </div>
-<div class="container border" ng-controller="ExpansesPageTableCtrl as table">
+<div class="container border" ng-controller="CategoryListTableCtrl as table">
 
     <div class="toolbar-wrap" ng-controller="ToolbarCtrl as toolbar">
         <div class="container-toolbar load-page-toolbar row">
-            <toolbar></toolbar>
-        </div>
-        <div class="load-page-filters filters row slideable-expenses hide">
-            <filter-expenses></filter-expenses>
+            <toolbar-category-list></toolbar-category-list>
         </div>
     </div>
-
     <div class="container-table">
-        <table-expenses></table-expenses>
+        <table-category-list></table-category-list>
     </div>
     <div class="container-toolbar container-bottomtoolbar row">
         <bottom-toolbar></bottom-toolbar>

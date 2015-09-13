@@ -173,5 +173,12 @@
             row.items = data;
         });
     }]);
+    app.controller('CategoryListTableCtrl', ['$http', function($http){
+        var row = this;
+        row.items = [];
+        $http.get('./data/tables/category-list-table.json').success(function(data){
+            row.items = data;
+        });
+    }]);
 
 })();

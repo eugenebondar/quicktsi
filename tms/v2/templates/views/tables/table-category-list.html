@@ -1,0 +1,35 @@
+<table class="table-category-list table" >
+    <thead>
+    <tr>
+        <th class="th-checkbox">
+            <input type="checkbox" class="checkbox"/><span></span>
+        </th>
+        <th class="th-category"><span>category</span></th>
+        <th class="th-link"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in table.items">
+        <td class="th-checkbox">
+            <input type="checkbox" class="checkbox"/><span></span>
+        </td>
+        <td class="th-category"><span>{{item.category}}</span></td>
+        <td class="th-link">
+            <ul class="th-link-list">
+                <li class="th-link-item">
+                    <a class="link-edit"></a>
+                </li>
+                <li class="th-link-item">
+                    <a class="link-copy"></a>
+                </li>
+                <li class="th-link-item">
+                    <a class="link-remove"></a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="empty-table" ng-show="table.items.length < 1" >
+    No data available in the table
+</div>

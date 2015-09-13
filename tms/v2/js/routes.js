@@ -126,5 +126,8 @@ angular.module('app').config(function($routeProvider){
     .when('/administration/add-user', {
         templateUrl: '/tms/v2/templates/pages/adding-pages/user.html'
     })
+    .when('/expenses/category-list', {
+        templateUrl: '/tms/v2/templates/pages/adding-pages/category-list.html'
+    })
     .otherwise({ redirectTo: '/' });
 });

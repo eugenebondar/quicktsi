@@ -15,6 +15,15 @@
         this.refresh = function(){
             location.reload();
         };
+
+        this.popupURL = "";
+        this.showPopup = function(url, bool, $event) {
+            if (bool) {
+                this.popupURL = url;
+                $('.popup-wrap').addClass('open');
+                $event.preventDefault();
+            }
+        };
     });
 
     app.controller('MenuListCtrl', ['$http', function($http){
@@ -222,5 +231,12 @@
         };
 
     }]);
+
+    app.controller('popupCtrl', function(){
+        this.closePopup = function(){
+            console.log($(this));
+            $('.popup-wrap').removeClass('open')
+        };
+    });
 
 })();

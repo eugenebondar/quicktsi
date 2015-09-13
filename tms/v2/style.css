@@ -14,6 +14,7 @@ img {
 }
 a {
     color: inherit;
+    cursor: pointer;
     text-decoration: none;
 }
 body {
@@ -1438,7 +1439,7 @@ th.th-checkbox .checkbox + span {
     text-align: center;
     top: 0;
     width: 30px;
-    z-index: 11;
+    z-index: 20;
 }
 .status-select.select-cont::after {
     right: 27px;
@@ -1807,6 +1808,9 @@ th.th-checkbox .checkbox + span {
 }
 .table-create-invoices-3 .th-fee {
     width: 7.6%;
+}
+.table-category-list .th-category {
+    width: 90%;
 }
 
 /** Create Invoice Pages */
@@ -2246,4 +2250,61 @@ th.th-checkbox .checkbox + span {
 .fileform.little-fileform .selectbutton {
     padding-top: 6px;
     width: 33px;
+}
+
+/** Popups */
+
+.popup-wrap {
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.popup {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e8edf1;
+    border-radius: 5px;
+    margin: 10% auto 0;
+    max-width: 400px;
+}
+.popup-header {
+    border-bottom: 1px solid #e8edf1;
+    text-align: center;
+}
+.popup-footer {
+    border-top: 1px solid #e8edf1;
+    padding: 11px;
+    text-align: center;
+}
+.load-popup {
+    text-align: center;
+}
+.popup-header h4 {
+    font-size: 28px;
+    font-weight: 300;
+    padding: 10px;
+}
+.pf-link-list > li {
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: top;
+}
+.popup-content {
+    padding: 25px 20px;
+}
+.popup-wrap.open {
+    display: block;
+}
+.invoice-popup textarea {
+    height: 80px;
+}
+.invoice-popup .textarea-wrap {
+    margin-bottom: 15px;
+}
+.invoice-popup .popup-content {
+    padding: 10px 20px;
 }

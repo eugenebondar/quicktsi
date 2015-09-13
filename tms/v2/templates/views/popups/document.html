@@ -1,0 +1,32 @@
+<div class="invoice-popup">
+    <header class="popup-header">
+        <h4>Add Document Type</h4>
+    </header>
+    <section class="popup-content">
+        <div class="form-wrap">
+            <div class="aw-row field-row">
+                <div class="aw-col field-col">
+                    <label class="label">Document Category <span class="red">*</span></label>
+                    <input type="text" class="text" placeolder="Enter Email Address"/>
+                </div>
+                <div class="aw-col field-col">
+                    <label class="label">Document Type <span class="red">*</span></label>
+                    <div class="select-cont full-select">
+                        <select>
+                            <option>Select Category</option>
+                            <option value="1">Category 1</option>
+                            <option value="2">Category 2</option>
+                            <option value="3">Category 3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="popup-footer">
+        <ul class="pf-link-list">
+            <li><a class="white-btn" href ng-click="popup.closePopup()">Cancel</a></li>
+            <li><a class="green-btn" href ng-click="popup.closePopup()"><img alt="save" src="./img/save.png">Save</a></li>
+        </ul>
+    </footer>
+</div>

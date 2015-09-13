@@ -7,6 +7,12 @@
             templateUrl: "templates/views/toolbars/toolbar-driver-pay.html"
         };
     });
+    app.directive("toolbarCategoryList", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/toolbars/toolbar-category-list.html"
+        };
+    });
     app.directive("filterDriverPay", function() {
         return {
             restrict: 'E',
