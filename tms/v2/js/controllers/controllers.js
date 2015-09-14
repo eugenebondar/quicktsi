@@ -17,11 +17,10 @@
         };
 
         this.popupURL = "";
-        this.showPopup = function(url, bool, $event) {
+        this.showPopup = function(url, bool) {
             if (bool) {
                 this.popupURL = url;
                 $('.popup-wrap').addClass('open');
-                $event.preventDefault();
             }
         };
     });
@@ -77,18 +76,18 @@
 
         var bar = this;
         bar.tabs = [
-            {"title": "Jan", "id": 1},
-            {"title": "Feb", "id": 2},
-            {"title": "Mar", "id": 3},
-            {"title": "Apr", "id": 4},
-            {"title": "May", "id": 5},
-            {"title": "Jun", "id": 6},
-            {"title": "Jul", "id": 7},
-            {"title": "Aug", "id": 8},
-            {"title": "Sep", "id": 9},
-            {"title": "Oct", "id": 10},
-            {"title": "Nov", "id": 11},
-            {"title": "Dec", "id": 12}
+            {"title": "Jan", "id": 1, "url": "templates/pages/dashboard/loads-by-month/jan.html"},
+            {"title": "Feb", "id": 2, "url": "templates/pages/dashboard/loads-by-month/feb.html"},
+            {"title": "Mar", "id": 3, "url": "templates/pages/dashboard/loads-by-month/mar.html"},
+            {"title": "Apr", "id": 4, "url": "templates/pages/dashboard/loads-by-month/apr.html"},
+            {"title": "May", "id": 5, "url": "templates/pages/dashboard/loads-by-month/may.html"},
+            {"title": "Jun", "id": 6, "url": "templates/pages/dashboard/loads-by-month/jun.html"},
+            {"title": "Jul", "id": 7, "url": "templates/pages/dashboard/loads-by-month/jul.html"},
+            {"title": "Aug", "id": 8, "url": "templates/pages/dashboard/loads-by-month/aug.html"},
+            {"title": "Sep", "id": 9, "url": "templates/pages/dashboard/loads-by-month/sep.html"},
+            {"title": "Oct", "id": 10, "url": "templates/pages/dashboard/loads-by-month/oct.html"},
+            {"title": "Nov", "id": 11, "url": "templates/pages/dashboard/loads-by-month/nov.html"},
+            {"title": "Dec", "id": 12, "url": "templates/pages/dashboard/loads-by-month/dec.html"}
         ];
         $scope.legends = [["Open", "#33a5e0"], ["Loading", "#3BB8AD"], ["On Route", "#DC71A1"], ["Covered", "#C9BB78"], ["Delivered", "#3DCDC9"], ["Refused", "#FFB951"], ["In Yard", "#7595c6"], ["Dispatched", "#BF84C9"], ["Pending", "#f57978"]];
 
@@ -146,10 +145,13 @@
             scaleShowVerticalLines: false,
             barValueSpacing: 30,
             scaleFontColor: "#8990a0",
-            responsive: true,
             showTooltips: false
         };
 
+        this.barURL = "templates/pages/dashboard/loads-by-month/jan.html";
+        this.showBar = function(url) {
+            this.barURL = url;
+        };
 
     }]);
 
@@ -157,18 +159,18 @@
 
         var bar = this;
         bar.tabs = [
-            {"title": "Jan", "id": 1},
-            {"title": "Feb", "id": 2},
-            {"title": "Mar", "id": 3},
-            {"title": "Apr", "id": 4},
-            {"title": "May", "id": 5},
-            {"title": "Jun", "id": 6},
-            {"title": "Jul", "id": 7},
-            {"title": "Aug", "id": 8},
-            {"title": "Sep", "id": 9},
-            {"title": "Oct", "id": 10},
-            {"title": "Nov", "id": 11},
-            {"title": "Dec", "id": 12}
+            {"title": "Jan", "id": 1, "url": "templates/pages/dashboard/invoices-by-month/jan.html"},
+            {"title": "Feb", "id": 2, "url": "templates/pages/dashboard/invoices-by-month/feb.html"},
+            {"title": "Mar", "id": 3, "url": "templates/pages/dashboard/invoices-by-month/mar.html"},
+            {"title": "Apr", "id": 4, "url": "templates/pages/dashboard/invoices-by-month/apr.html"},
+            {"title": "May", "id": 5, "url": "templates/pages/dashboard/invoices-by-month/may.html"},
+            {"title": "Jun", "id": 6, "url": "templates/pages/dashboard/invoices-by-month/jun.html"},
+            {"title": "Jul", "id": 7, "url": "templates/pages/dashboard/invoices-by-month/jul.html"},
+            {"title": "Aug", "id": 8, "url": "templates/pages/dashboard/invoices-by-month/aug.html"},
+            {"title": "Sep", "id": 9, "url": "templates/pages/dashboard/invoices-by-month/sep.html"},
+            {"title": "Oct", "id": 10, "url": "templates/pages/dashboard/invoices-by-month/oct.html"},
+            {"title": "Nov", "id": 11, "url": "templates/pages/dashboard/invoices-by-month/nov.html"},
+            {"title": "Dec", "id": 12, "url": "templates/pages/dashboard/invoices-by-month/dec.html"}
         ];
         $scope.legends = [["Created", "#33a5e0"], ["Submitted", "#3BB8AD"], ["Void", "#DC71A1"], ["Paid", "#C9BB78"]];
 
@@ -224,19 +226,21 @@
             scaleGridLineColor : "#e8edf1",
             scaleShowGridLines : true,
             scaleShowVerticalLines: false,
-            barValueSpacing: 85,
+            barValueSpacing: 90,
             scaleFontColor: "#8990a0",
-            responsive: true,
             showTooltips: false
         };
-
+        this.barURL = "templates/pages/dashboard/invoices-by-month/jan.html";
+        this.showBar = function(url) {
+            this.barURL = url;
+        };
     }]);
 
     app.controller('popupCtrl', function(){
         this.closePopup = function(){
-            console.log($(this));
             $('.popup-wrap').removeClass('open')
         };
     });
+
 
 })();

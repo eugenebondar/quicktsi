@@ -980,7 +980,20 @@ th.th-checkbox .checkbox + span {
 .table-progress .th-miles {
     width: 5.82%;
 }
-
+.sort-down, .sort-up {
+    display: inline-block;
+    height: 9px;
+    width: 15px;
+}
+.sort-down {
+    background: rgba(0, 0, 0, 0) url("img/sort-down.png") repeat scroll 0 0;
+}
+.sort-up {
+    background: rgba(0, 0, 0, 0) url("img/sort-up.png") repeat scroll 0 0;
+}
+.table th[ng-click] {
+    cursor: pointer;
+}
 
 /** Canvas Piechart */
 
@@ -1129,9 +1142,14 @@ th.th-checkbox .checkbox + span {
 }
 .bar-canvas-wrap canvas {
     height: 242px !important;
+    width: 100% !important;
 }
 .invoices-by-months-wrap .bar-canvas-wrap canvas {
     height: 265px !important;
+    width: 100% !important;
+}
+.bar-canvas-wrap {
+    padding: 0 15px;
 }
 
 /** Breadcrumbs */
@@ -1224,9 +1242,10 @@ th.th-checkbox .checkbox + span {
 /** Load Page */
 
 .container-toolbar {
+    border-bottom: 1px solid #e8edf1;
     color: #8990a0;
-    margin: 0 -10px;
-    padding: 5px 10px 8px;
+    margin: 0 -15px 15px;
+    padding: 5px 15px 8px;
 }
 .container-toolbar.container-bottomtoolbar {
     padding: 20px 15px 14px;
@@ -1270,7 +1289,7 @@ th.th-checkbox .checkbox + span {
     padding-right: 15px !important;
     text-align: right;
 }
-.ct-pagination-list > li {
+.pagination > li, .ct-pagination-list > li {
     display: inline-block;
     font-weight: 600;
     height: 25px;
@@ -1278,14 +1297,25 @@ th.th-checkbox .checkbox + span {
     text-align: center;
     width: 25px;
 }
-.ct-pagination-list a {
+.pagination a, .ct-pagination-list a {
     display: inline-block;
     height: 100%;
     width: 100%;
 }
-.ct-pagination-list > li.active a, .ct-pagination-list > li a:hover {
+.pagination > li.active a, .pagination > li a:hover, .ct-pagination-list > li.active a, .ct-pagination-list > li a:hover {
     background: #f3f7fa none repeat scroll 0 0;
     border-radius: 5px;
+}
+.pagination > li:last-child, .pagination > li:first-child {
+    display: none;
+}
+.pagination li:nth-child(2) a {
+    background: rgba(0, 0, 0, 0) url("img/prev.png") no-repeat scroll 50% 50%;
+    color: transparent;
+}
+.pagination li:nth-last-child(2) a {
+    background: rgba(0, 0, 0, 0) url("img/next.png") no-repeat scroll 50% 50%;
+    color: transparent;
 }
 .ct-pagination-wrap {
     padding-top: 5px;
@@ -1305,8 +1335,8 @@ th.th-checkbox .checkbox + span {
 .page-size-select select {
     background-position: 30px 50%;
     color: #717a89;
-    font-size: 16px;
-    text-align: center;
+    font-size: 15px;
+    padding: 0 25px 0 3px;
 }
 .ct-page-size-wrap > span {
     display: inline-block;
@@ -1347,9 +1377,8 @@ th.th-checkbox .checkbox + span {
 }
 .container-table {
     border-bottom: 1px solid #e8edf1;
-    border-top: 1px solid #e8edf1;
     margin: 0 -15px;
-    padding: 15px 10px 0;
+    padding: 0 10px 0;
 }
 .th-link-item {
     display: inline-block;

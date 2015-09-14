@@ -1,14 +1,96 @@
 (function(){
-    var app = angular.module('table-controllers', []);
-
-    app.controller('LoadsPageTableCtrl', ['$http', function($http){
-        var row = this;
-        row.items = [];
-        $http.get('./data/tables/load-page-table.json').success(function(data){
-            row.items = data;
+    var app = angular.module('table-controllers', ['angularUtils.directives.dirPagination']);
+    app.controller('LoadsPageTableCtrl',function($scope, $http){
+        $scope.items = [];
+        var self = this;
+        $http.get("./data/tables/load-page-table.json").success(function(response){
+            $scope.items = response;
+            self.amountLabel = response.length;
         });
-        row.selector = ".slideable-load";
-    }]);
+        self.selector = ".slideable-load";
+        $scope.sort = function(keyname){
+            $scope.sortKey = keyname;
+            $scope.reverse = !$scope.reverse;
+        };
+        self.fromLabel = 1;
+        self.toLabel = 10;
+        self.itemAmount = 10;
+        self.isPagination;
+
+        $scope.amountTable=10;
+        $scope.options=[{id:1,value:10},{id:2,value:25},{id:3,value:50},{id:4,value:100}]
+
+        if (self.amountLabel < 10) {
+            self.isPagination = false;
+        } else {
+            self.isPagination = true;
+        }
+
+        $scope.changedValue = function(item){
+            if (item.value < self.amountLabel) {
+                self.itemAmount = item.value;
+                self.isPagination = true;
+            } else {
+                self.itemAmount = self.amountLabel;
+                self.isPagination = false;
+            }
+        }
+        self.pageChanged = function(value){
+            self.fromLabel = ((value-1)*self.itemAmount)+1;
+            if ((self.amountLabel - value*self.itemAmount) < 0) {
+                self.toLabel = self.amountLabel;
+            } else {
+                self.toLabel = value*self.itemAmount;
+            }
+
+        }
+    });
+    app.controller('ExpansesPageTableCtrl',function($scope, $http){
+        $scope.items = [];
+        var self = this;
+        $http.get("./data/tables/expenses-table.json").success(function(response){
+            $scope.items = response;
+            self.amountLabel = response.length;
+        });
+        self.selector = ".slideable-load";
+        $scope.sort = function(keyname){
+            $scope.sortKey = keyname;
+            $scope.reverse = !$scope.reverse;
+        };
+        self.fromLabel = 1;
+        self.toLabel = 10;
+        self.itemAmount = 10;
+        self.isPagination;
+
+        $scope.amountTable=10;
+        $scope.options=[{id:1,value:10},{id:2,value:25},{id:3,value:50},{id:4,value:100}]
+
+        if (self.amountLabel < 10) {
+            self.isPagination = false;
+        } else {
+            self.isPagination = true;
+        }
+
+        $scope.changedValue = function(item){
+            if (item.value < self.amountLabel) {
+                self.itemAmount = item.value;
+                self.isPagination = true;
+            } else {
+                self.itemAmount = self.amountLabel;
+                self.isPagination = false;
+            }
+        }
+        self.pageChanged = function(value){
+            self.fromLabel = ((value-1)*self.itemAmount)+1;
+            if ((self.amountLabel - value*self.itemAmount) < 0) {
+                self.toLabel = self.amountLabel;
+            } else {
+                self.toLabel = value*self.itemAmount;
+            }
+
+        }
+    });
+
     app.controller('ExpansesPageTableCtrl', ['$http', function($http){
         var row = this;
         row.items = [];
@@ -18,6 +100,9 @@
         row.selector = ".slideable-expenses";
 
     }]);
+
+
+
     app.controller('InvoicesPageTableCtrl', ['$http', function($http){
         var row = this;
         row.items = [];

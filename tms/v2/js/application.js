@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module('app', ['app-controllers', 'app-directives', 'ngRoute', '720kb.datepicker', 'chart.js']);
+    var app = angular.module('app', ['app-controllers', 'app-directives', 'ngRoute', '720kb.datepicker', 'chart.js', 'app-filters']);
 
     app.config(function($compileProvider){
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|javascript):/);

@@ -24,44 +24,9 @@
     </div>
     <div class="loads-by-months-wrap row slideable-invoice-by-month" ng-controller="LoadsBarCtrl as bar">
         <ul class="bar-tablist">
-            <li ng-repeat="item in bar.tabs" ng-class="{ active: bar.isSelected(item.id) }"><a href ng-click="bar.selectTab(item.id)">{{item.title}}</a></li>
+            <li ng-repeat="item in bar.tabs" ng-class="{ active: bar.isSelected(item.id) }"><a href ng-click="bar.showBar(item.url); bar.selectTab(item.id)">{{item.title}}</a></li>
         </ul>
-        <div ng-show="bar.isSelected(1)" class="bar-canvas-wrap">
-            <canvas class="chart chart-bar" chart-data="janData" chart-labels="labels" chart-options="options" chart-colours="colors"></canvas>
-        </div>
-        <div ng-show="bar.isSelected(2)" class="bar-canvas-wrap">
-            <canvas class="chart chart-bar" chart-data="febData" chart-labels="labels" chart-options="options" chart-colours="colors"></canvas>
-        </div>
-        <div ng-show="bar.isSelected(3)" class="bar-canvas-wrap">
-            <canvas class="chart chart-bar" chart-data="marData" chart-labels="labels" chart-options="options" chart-colours="colors"></canvas>
-        </div>
-        <div ng-show="bar.isSelected(4)" class="bar-canvas-wrap">
-            <canvas class="chart chart-bar" chart-data="aprData" chart-labels="labels" chart-options="options" chart-colours="colors"></canvas>
-        </div>
-        <div ng-show="bar.isSelected(5)" class="bar-canvas-wrap">
-            <canvas class="chart chart-bar" chart-data="mayData" chart-labels="labels" chart-options="options" chart-colours="colors"></canvas>
-        </div>
-        <div ng-show="bar.isSelected(6)" class="bar-canvas-wrap">
-            <canvas class="chart chart-bar" chart-data="junData" chart-labels="labels" chart-options="options" chart-colours="colors"></canvas>
-        </div>
-        <div ng-show="bar.isSelected(7)" class="bar-canvas-wrap">
-            <canvas class="chart chart-bar" chart-data="julData" chart-labels="labels" chart-options="options" chart-colours="colors"></canvas>
-        </div>
-        <div ng-show="bar.isSelected(8)" class="bar-canvas-wrap">
-            <canvas class="chart chart-bar" chart-data="augData" chart-labels="labels" chart-options="options" chart-colours="colors"></canvas>
-        </div>
-        <div ng-show="bar.isSelected(9)" class="bar-canvas-wrap">
-            <canvas class="chart chart-bar" chart-data="sepData" chart-labels="labels" chart-options="options" chart-colours="colors"></canvas>
-        </div>
-        <div ng-show="bar.isSelected(10)" class="bar-canvas-wrap">
-            <canvas class="chart chart-bar" chart-data="octData" chart-labels="labels" chart-options="options" chart-colours="colors"></canvas>
-        </div>
-        <div ng-show="bar.isSelected(11)" class="bar-canvas-wrap">
-            <canvas class="chart chart-bar" chart-data="novData" chart-labels="labels" chart-options="options" chart-colours="colors"></canvas>
-        </div>
-        <div ng-show="bar.isSelected(12)" class="bar-canvas-wrap">
-            <canvas class="chart chart-bar" chart-data="decData" chart-labels="labels" chart-options="options" chart-colours="colors"></canvas>
-        </div>
+        <div ng-include="bar.barURL"></div>
         <ul class="bar-legend-list">
             <li ng-repeat="item in legends"><span style="background-color:{{item[1]}}"></span>{{item[0]}}</li>
         </ul>
