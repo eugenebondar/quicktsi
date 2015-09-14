@@ -4,13 +4,13 @@
         <th class="th-checkbox">
             <input type="checkbox" class="checkbox"/><span></span>
         </th>
-        <th class="th-category"><span>document category</span></th>
-        <th class="th-type"><span>document type</span></th>
+        <th class="th-category" ng-click="sort('category')"><span>document category <span ng-show="sortKey=='category'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
+        <th class="th-type" ng-click="sort('type')"><span>document type <span ng-show="sortKey=='type'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
         <th class="th-link"></th>
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="item in table.items">
+    <tr dir-paginate="item in items|orderBy:sortKey:reverse|itemsPerPage:table.itemAmount">
         <td class="th-checkbox">
             <input type="checkbox" class="checkbox"/><span></span>
         </td>

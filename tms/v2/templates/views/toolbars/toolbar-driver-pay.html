@@ -3,24 +3,31 @@
         <a class="ct-filter-btn" slide-toggle="{{table.selector}}">Report</a>
     </div>
     <div class="col-xs-4 ct-amount-of-items">
-        <strong>1</strong> to <strong>10</strong> of <strong>37</strong> entries
+        <strong>{{table.fromLabel}}</strong> to <strong>{{table.toLabel}}</strong> of <strong>{{table.amountLabel}}</strong> entries
     </div>
 </div>
 <div class="col-sm-6 ct-pagination-wrap row">
     <div class="ct-pagination col-xs-6">
-        <ul class="ct-pagination-list">
-            <li class="prev"><a href="#"><img src="img/prev.png" alt="prev"/></a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li class="next"><a href="#"><img src="img/next.png" alt="next"/></a></li>
+        <dir-pagination-controls ng-show="table.isPagination"
+                                 max-size="5"
+                                 direction-links="true"
+                                 boundary-links="true"
+                                 on-page-change="table.pageChanged(newPageNumber)" >
+        </dir-pagination-controls>
+        <ul class="ct-pagination-list" ng-show="!table.isPagination">
+            <li class="prev"><a><img src="img/prev.png" alt="prev"/></a></li>
+            <li><a>1</a></li>
+            <li class="next"><a><img src="img/next.png" alt="next"/></a></li>
         </ul>
     </div>
     <div class="ct-page-size-wrap col-xs-6">
         <span>Page-size:</span>
         <div class="page-size-select select-cont inline">
-            <selwrap></selwrap>
+            <select  ng-init="select = options[0]"
+                     ng-model="select"
+                     ng-change="changedValue(select)"
+                     data-ng-options="option as option.value for option in options">
+            </select>
         </div>
     </div>
 </div>

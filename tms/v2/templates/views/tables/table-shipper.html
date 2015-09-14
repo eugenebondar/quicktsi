@@ -1,17 +1,25 @@
+<div class="toolbar-wrap" ng-controller="ToolbarCtrl as toolbar">
+    <div class="container-toolbar load-page-toolbar row">
+        <toolbar></toolbar>
+    </div>
+    <div class="load-page-filters filters row slideable-shipper hide">
+        <filter-shipper></filter-shipper>
+    </div>
+</div>
 <table class="table-shipper table" >
     <thead>
     <tr>
-        <th class="th-name"><span>name</span></th>
-        <th class="th-address"><span>address</span></th>
-        <th class="th-city"><span>city</span></th>
-        <th class="th-zip"><span>zip</span></th>
-        <th class="th-state"><span>state</span></th>
+        <th class="th-name" ng-click="sort('name')"><span>name <span ng-show="sortKey=='name'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
+        <th class="th-address" ng-click="sort('address')"><span>address <span ng-show="sortKey=='address'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
+        <th class="th-city" ng-click="sort('city')"><span>city <span ng-show="sortKey=='city'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
+        <th class="th-zip" ng-click="sort('zip')"><span>zip <span ng-show="sortKey=='zip'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
+        <th class="th-state" ng-click="sort('state')"><span>state <span ng-show="sortKey=='state'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
         <th class="th-telephone"><span>telephone</span></th>
         <th class="th-link"></th>
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="item in table.items">
+    <tr dir-paginate="item in items|orderBy:sortKey:reverse|itemsPerPage:table.itemAmount">
         <td class="th-name"><span>{{item.name}}</span></td>
         <td class="th-address"><a href><span>{{item.address}}</span></a></td>
         <td class="th-city"><span>{{item.city}}</span></td>
