@@ -912,6 +912,9 @@ th.th-checkbox .checkbox + span {
     position: relative;
     z-index: 30;
 }
+.loads-panel-wrap .container-controls, .invoices-panel-wrap .table-loads-panel-wrap {
+    padding: 13px 0 12px;
+}
 .cc-btn-list {
     text-align: right;
 }
@@ -1136,7 +1139,8 @@ th.th-checkbox .checkbox + span {
 }
 .bar-tablist li {
     display: inline-block;
-    margin-right: 10px;
+    text-align: center;
+    width: 8.3%;
 }
 .bar-tablist li.active {
     color: #0aa699;
@@ -1144,7 +1148,7 @@ th.th-checkbox .checkbox + span {
     text-decoration: underline;
 }
 .bar-canvas-wrap canvas {
-    height: 242px !important;
+    height: 247px !important;
     width: 100% !important;
 }
 .invoices-by-months-wrap .bar-canvas-wrap canvas {
@@ -1153,6 +1157,10 @@ th.th-checkbox .checkbox + span {
 }
 .bar-canvas-wrap {
     padding: 0 15px;
+}
+.lbmw .bar-legend-list {
+    padding-bottom: 28px;
+    padding-top: 10px;
 }
 
 /** Breadcrumbs */

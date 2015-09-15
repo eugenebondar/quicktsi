@@ -24,7 +24,21 @@
             }
         };
     });
-
+    app.controller('reloadLoadsStatsCtrl', ['$scope', '$rootScope', function($scope, $rootScope){
+        $rootScope.loadsTriggerRelink = function() {
+            $rootScope.$broadcast('loadsStats');
+        };
+    }]);
+    app.controller('reloadInvoiceStatsCtrl', ['$scope', '$rootScope', function($scope, $rootScope){
+        $rootScope.invoiceTriggerRelink = function() {
+            $rootScope.$broadcast('invoiceStats');
+        };
+    }]);
+    app.controller('reloadProgressPanelCtrl', ['$scope', '$rootScope', function($scope, $rootScope){
+        $rootScope.progressTriggerRelink = function() {
+            $rootScope.$broadcast('progressStats');
+        };
+    }]);
     app.controller('MenuListCtrl', ['$http', function($http){
         var menu = this;
         menu.items = [];
@@ -41,8 +55,7 @@
         }
 
     }]);
-
-    app.controller('PiechartCtrl', ['$http', function($http){
+    app.controller('PiechartCtrl', ['$scope', '$http', function($scope, $http){
         var pie = this;
         pie.items = [];
         $http.get('./data/piechart.json').success(function(data){
@@ -152,7 +165,10 @@
         this.showBar = function(url) {
             this.barURL = url;
         };
-
+        this.reloadBar = function(){
+            this.selectTab(1);
+            this.barURL = "templates/pages/dashboard/loads-by-month/jan.html";
+        };
     }]);
 
     app.controller("InvoicesBarCtrl", ["$scope", "$http", function ($scope, $http) {
@@ -233,6 +249,10 @@
         this.barURL = "templates/pages/dashboard/invoices-by-month/jan.html";
         this.showBar = function(url) {
             this.barURL = url;
+        };
+        this.reloadBar = function(){
+            this.selectTab(1);
+            this.barURL = "templates/pages/dashboard/invoices-by-month/jan.html";
         };
     }]);
 

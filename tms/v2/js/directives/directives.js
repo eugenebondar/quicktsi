@@ -7,7 +7,72 @@
             templateUrl: "templates/content.html"
         };
     });
+    app.directive('loadsRelinkEvent', function($rootScope) {
+        return {
+            transclude: 'element',
+            restrict: 'A',
+            link: function(scope, element, attr, ctrl, transclude) {
+                var previousContent = null;
 
+                var loadsTriggerRelink = function() {
+                    if (previousContent) {
+                        previousContent.remove();
+                        previousContent = null;
+                    }
+                    transclude(function (clone) {
+                        element.parent().append(clone);
+                        previousContent = clone;
+                    });
+                };
+                loadsTriggerRelink();
+                $rootScope.$on(attr.loadsRelinkEvent, loadsTriggerRelink);
+            }
+        };
+    });
+    app.directive('invoiceRelinkEvent', function($rootScope) {
+        return {
+            transclude: 'element',
+            restrict: 'A',
+            link: function(scope, element, attr, ctrl, transclude) {
+                var previousContent = null;
+
+                var invoiceTriggerRelink = function() {
+                    if (previousContent) {
+                        previousContent.remove();
+                        previousContent = null;
+                    }
+                    transclude(function (clone) {
+                        element.parent().append(clone);
+                        previousContent = clone;
+                    });
+                };
+                invoiceTriggerRelink();
+                $rootScope.$on(attr.invoiceRelinkEvent, invoiceTriggerRelink);
+            }
+        };
+    });
+    app.directive('progressRelinkEvent', function($rootScope) {
+        return {
+            transclude: 'element',
+            restrict: 'A',
+            link: function(scope, element, attr, ctrl, transclude) {
+                var previousContent = null;
+
+                var progressTriggerRelink = function() {
+                    if (previousContent) {
+                        previousContent.remove();
+                        previousContent = null;
+                    }
+                    transclude(function (clone) {
+                        element.parent().append(clone);
+                        previousContent = clone;
+                    });
+                };
+                progressTriggerRelink();
+                $rootScope.$on(attr.progressRelinkEvent, progressTriggerRelink);
+            }
+        };
+    });
     app.directive("piechart", function() {
         var linkFunction = function(scope, element, attrs){
             var progress = 0,

@@ -1,4 +1,4 @@
-<div class="loads-stats-wrap" >
+<div class="loads-stats-wrap" ng-controller="PiechartCtrl as piechart">
     <div class="container-controls row">
         <div class="col-xs-8 cc-label">
             <span><strong>Loads</strong> Stats</span>
@@ -14,7 +14,7 @@
         <div class="col-xs-4 cc-btn">
             <ul class="cc-btn-list">
                 <li>
-                    <a class="gray-refresh-bth" href><img src="./img/gray-refresh.png" alt="refresh"/></a>
+                    <a class="gray-refresh-bth" href ng-click="loadsTriggerRelink()"><img src="./img/gray-refresh.png" alt="refresh"/></a>
                 </li>
                 <li>
                     <a class="ct-show-btn" slide-toggle=".slideable-loads-stats"  ng-class="{ open: toolbar.isShow() }"></a>
@@ -22,7 +22,7 @@
             </ul>
         </div>
     </div>
-    <div class="container-diagrams row slideable-loads-stats" ng-controller="PiechartCtrl as piechart">
+    <div class="container-diagrams row slideable-loads-stats" loads-relink-event="loadsStats" ng-controller="reloadLoadsStatsCtrl">
         <div class="col-xs-2 diagram-item" ng-repeat="item in piechart.items">
             <piechart color="{{item.color}}" fulfill="{{item.fulfill}}" value="{{item.value}}"></piechart>
             <p style="color:{{item.color}}" class="canvas-label">{{item.label}}</p>
