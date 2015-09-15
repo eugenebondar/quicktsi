@@ -6,7 +6,7 @@
         <div class="col-xs-4 cc-btn">
             <ul class="cc-btn-list">
                 <li>
-                    <a class="gray-refresh-bth" href ng-click="loadData()"><img src="./img/gray-refresh.png" alt="refresh"/></a>
+                    <a class="gray-refresh-bth" href ng-click="ipanelTriggerRelink()"><img src="./img/gray-refresh.png" alt="refresh"/></a>
                 </li>
                 <li>
                     <a class="ct-show-btn" slide-toggle=".slideable-invoices-panel"  ng-class="{ open: toolbar.isShow() }"></a>
@@ -14,7 +14,7 @@
             </ul>
         </div>
     </div>
-    <div class="table-loads-panel-wrap row slideable-invoices-panel">
+    <div class="table-loads-panel-wrap row slideable-invoices-panel" ipanel-relink-event="invoicePanel" ng-controller="reloadInvoicePanelCtrl">
         <table class="table-invoices-panel table" >
             <thead>
             <tr>

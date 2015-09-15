@@ -14,7 +14,7 @@
         <div class="col-xs-4 cc-btn">
             <ul class="cc-btn-list">
                 <li>
-                    <a class="gray-refresh-bth" href ng-click="bar.reloadBar()"><img src="./img/gray-refresh.png" alt="refresh"/></a>
+                    <a class="gray-refresh-bth" href ng-click="imonthTriggerRelink()"><img src="./img/gray-refresh.png" alt="refresh"/></a>
                 </li>
                 <li>
                     <a class="ct-show-btn" slide-toggle=".slideable-invoice-by-month"  ng-class="{ open: toolbar.isShow() }"></a>
@@ -22,7 +22,7 @@
             </ul>
         </div>
     </div>
-    <div class="loads-by-months-wrap lbmw row slideable-invoice-by-month">
+    <div class="loads-by-months-wrap lbmw row slideable-invoice-by-month" imonth-relink-event="invoiceMonth" ng-controller="reloadInvoiceMonthCtrl">
         <ul class="bar-tablist">
             <li ng-repeat="item in bar.tabs" ng-class="{ active: bar.isSelected(item.id) }"><a href ng-click="bar.showBar(item.url); bar.selectTab(item.id)">{{item.title}}</a></li>
         </ul>

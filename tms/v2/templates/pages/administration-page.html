@@ -8,10 +8,10 @@
     </div>
     <div class="container-controls" ng-repeat="item in panel.items">
         <div class="panel-controls row" ng-show="panel.isSelected(item.id)">
-            <div class="col-xs-6 cc-label">
+            <div class="col-xs-4 cc-label">
                 <h2 class="title">{{item.title}}</h2>
             </div>
-            <div class="col-xs-6 cc-btn">
+            <div class="col-xs-8 cc-btn">
                 <ul class="loads-btn-list">
                     <li ng-repeat="button in item.buttons">
                         <a class="green-btn" href="{{button.href}}" ng-click="content.showPopup('/tms/v2/templates/views/popups/document.html', button.ispopap)">

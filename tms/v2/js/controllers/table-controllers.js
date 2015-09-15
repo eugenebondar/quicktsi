@@ -2,23 +2,19 @@
     var app = angular.module('table-controllers', ['angularUtils.directives.dirPagination']);
 
     app.controller('LoadsPageTableCtrl',function($scope, $http){
-        $scope.loadData = function () {
-            $scope.items = [];
-            var self = this;
-            $http.get("./data/tables/load-page-table.json").success(function(response){
-                $scope.items = response;
-                self.amountLabel = response.length;
-                if(self.amountLabel<10) {
-                    self.toLabel = self.amountLabel;
-                    self.isPagination = false;
-                } else {
-                    self.toLabel = 10;
-                    self.isPagination = true;
-                }
-            });
-        };
-        $scope.loadData();
-
+        $scope.items = [];
+        var self = this;
+        $http.get("./data/tables/load-page-table.json").success(function(response){
+            $scope.items = response;
+            self.amountLabel = response.length;
+            if(self.amountLabel<10) {
+                self.toLabel = self.amountLabel;
+                self.isPagination = false;
+            } else {
+                self.toLabel = 10;
+                self.isPagination = true;
+            }
+        });
         self.selector = ".slideable-load";
         $scope.sort = function(keyname){
             $scope.sortKey = keyname;
@@ -89,22 +85,19 @@
         };
     });
     app.controller('InvoicesPageTableCtrl',function($scope, $http){
-        $scope.loadData = function () {
-            $scope.items = [];
-            var self = this;
-            $http.get("./data/tables/invoices-table.json").success(function(response){
-                $scope.items = response;
-                self.amountLabel = response.length;
-                if(self.amountLabel<10) {
-                    self.toLabel = self.amountLabel;
-                    self.isPagination = false;
-                } else {
-                    self.toLabel = 10;
-                    self.isPagination = true;
-                }
-            });
-        };
-        $scope.loadData();
+        $scope.items = [];
+        var self = this;
+        $http.get("./data/tables/invoices-table.json").success(function(response){
+            $scope.items = response;
+            self.amountLabel = response.length;
+            if(self.amountLabel<10) {
+                self.toLabel = self.amountLabel;
+                self.isPagination = false;
+            } else {
+                self.toLabel = 10;
+                self.isPagination = true;
+            }
+        });
         self.selector = ".slideable-invoices";
         $scope.sort = function(keyname){
             $scope.sortKey = keyname;

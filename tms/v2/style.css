@@ -245,6 +245,7 @@ textarea {
 }
 .table {
     border-collapse: collapse;
+    margin-top: 15px;
     width: 100%;
 }
 .hide {
@@ -311,6 +312,7 @@ textarea {
     margin-bottom: 7px;
 }
 .full-select {
+    background: #fff none repeat scroll 0 0;
     height: 31px;
     width: 100%;
 }
@@ -331,6 +333,7 @@ textarea {
     padding-right: 0;
 }
 .radio-sel-wrap {
+    background: #fff none repeat scroll 0 0;
     border-left: 1px solid #e8edf1;
     height: 29px;
     padding-left: 6px;
@@ -338,7 +341,7 @@ textarea {
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 11;
+    z-index: 25;
 }
 .radio-sel-wrap > * {
     margin-bottom: 0 !important;
@@ -915,6 +918,10 @@ th.th-checkbox .checkbox + span {
 .loads-panel-wrap .container-controls, .invoices-panel-wrap .table-loads-panel-wrap {
     padding: 13px 0 12px;
 }
+.lbmw {
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
 .cc-btn-list {
     text-align: right;
 }
@@ -999,6 +1006,9 @@ th.th-checkbox .checkbox + span {
 }
 .table th[ng-click] {
     cursor: pointer;
+}
+.alert-table-wrap {
+    margin-top: -15px;
 }
 
 /** Canvas Piechart */
@@ -1850,7 +1860,7 @@ th.th-checkbox .checkbox + span {
     width: 7.6%;
 }
 .table-category-list .th-category {
-    width: 90%;
+    width: 82%;
 }
 
 /** Create Invoice Pages */
@@ -2010,7 +2020,7 @@ th.th-checkbox .checkbox + span {
 .filters {
     background: #f7fafa none repeat scroll 0 0;
     border-top: 1px solid #e8edf1;
-    margin: 0 -15px;
+    margin: 0 -10px;
     padding: 20px 15px 15px;
 }
 .fs-invoices .green-btn.search-filter-btn {
@@ -2057,7 +2067,7 @@ th.th-checkbox .checkbox + span {
     margin: 0 -20px;
 }
 .panel .container-table {
-    margin: 0 -20px;
+    margin: 0 -10px;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -2362,12 +2372,13 @@ th.th-checkbox .checkbox + span {
     background: #fff none repeat scroll 0 0;
     border: 1px solid #e8edf1;
     border-radius: 0 0 5px 5px;
+    min-width: 180px;
     padding: 15px 0;
     position: absolute;
     text-align: center;
     top: 30px;
     width: 100%;
-    z-index: 10;
+    z-index: 15;
 }
 .tp-minutes {
     background: #fff none repeat scroll 0 0;
@@ -2553,4 +2564,99 @@ th.th-checkbox .checkbox + span {
     right: 1px;
     top: 1px;
     width: 31px;
+}
+
+/** Media */
+
+@media screen and (max-width: 1440px) {
+    body, .full-select select, .text {
+        font-size: 13px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .breadcrumbs-list, .label {
+        font-size: 14px;
+    }
+    .cc-label, .up-title {
+        font-size: 15px;
+    }
+    .aw-tetle h4 {
+        font-size: 14px;
+        height: 35px;
+        padding: 9px 15px;
+    }
+    .aw-tetle {
+        padding-bottom: 10px;
+    }
+    .aw-block {
+        margin-bottom: 20px;
+    }
+    .green-btn, .white-btn {
+        vertical-align: top;
+        height: 33px;
+        line-height: 31px;
+        min-width: 85px;
+        padding: 0 15px;
+    }
+    .ct-search > input {
+        height: 29px;
+        line-height: 27px;
+        max-width: 100px;
+    }
+    .ct-filter-btn {
+        font-size: 13px;
+        margin-left: 0;
+        padding-right: 17px;
+    }
+    .ct-amount-of-items {
+        padding-right: 10px !important;
+    }
+    .ct-pagination {
+        padding-left: 0;
+    }
+    .page-size-select {
+        height: 28px;
+        margin-top: 5px;
+    }
+    option {
+        padding-bottom: 4px;
+        padding-top: 4px;
+    }
+    .container-toolbar {
+        margin: 0 -15px -1px;
+    }
+    .cc-btn {
+        padding-top: 9px;
+    }
+    .container-toolbar.container-bottomtoolbar {
+        padding: 10px 15px 4px;
+    }
+    .select-cont select {
+        padding-right: 26px !important;
+    }
+    .field-inp {
+        padding-right: 0 !important;
+    }
+    .filter-bottom .label-for {
+        padding-left: 2px;
+    }
+    .select-cont::after {
+        z-index: 24;
+    }
+    .select-cont.select-radio::after {
+        right: 34px;
+    }
+    .admin-tabs-list li a {
+        padding: 9px;
+    }
+    .table-carrier-pay.table th {
+        padding: 10px 3px 8px;
+    }
+    .label-for {
+        margin-top: 6px !important;
+    }
+    .dashboard-container .cc-btn {
+        padding-top: 0;
+    }
 }

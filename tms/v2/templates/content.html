@@ -48,7 +48,7 @@
             </div>
             <nav class="main-navigation" ng-controller="MenuListCtrl as menu">
                 <ul class="main-menu" >
-                    <li ng-repeat="item in menu.items" ng-class="{ active: menu.isSelected(item.name) }">
+                    <li ng-repeat="item in menu.items" ng-class="{ active: isActive(item.url) }">
                         <a href="{{item.url}}" class="{{item.name}}-menu" ng-click="menu.selectTab(item.name)">{{item.name}}</a>
                     </li>
                 </ul>
@@ -64,7 +64,6 @@
     </section>
     <div class="popup-wrap" ng-controller="popupCtrl as popup">
         <div class="popup" ng-include="content.popupURL">
-
         </div>
     </div>
 </div>
