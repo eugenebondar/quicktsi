@@ -4,12 +4,12 @@
         <th class="th-checkbox">
             <input type="checkbox" class="checkbox"/><span></span>
         </th>
-        <th class="th-category"><span>category</span></th>
+        <th class="th-category" ng-click="sort('category')"><span>category <span ng-show="sortKey=='category'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
         <th class="th-link"></th>
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="item in table.items">
+    <tr dir-paginate="item in items|orderBy:sortKey:reverse|itemsPerPage:table.itemAmount">
         <td class="th-checkbox">
             <input type="checkbox" class="checkbox"/><span></span>
         </td>
@@ -30,6 +30,6 @@
     </tr>
     </tbody>
 </table>
-<div class="empty-table" ng-show="table.items.length < 1" >
+<div class="empty-table" ng-show="table.amountLabel < 1" >
     No data available in the table
 </div>

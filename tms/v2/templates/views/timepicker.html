@@ -1,0 +1,37 @@
+<input type="text" class="text time-input" placeholder="Actual Drop Time" value="{{time.value}}" ng-click="time.showTime()"/>
+<div class="time-picker-wrap" ng-show="time.show">
+    <div class="time-picker">
+        <div class="tp-hours">
+            <div class="th-hour th-hour-1" ng-class="{ active: time.isHoursSelected('1')}" ng-click="time.setHours('1'); time.changed()">1</div>
+            <div class="th-hour th-hour-2" ng-class="{ active: time.isHoursSelected('2')}" ng-click="time.setHours('2'); time.changed()">2</div>
+            <div class="th-hour th-hour-3" ng-class="{ active: time.isHoursSelected('3')}" ng-click="time.setHours('3'); time.changed()">3</div>
+            <div class="th-hour th-hour-4" ng-class="{ active: time.isHoursSelected('4')}" ng-click="time.setHours('4'); time.changed()">4</div>
+            <div class="th-hour th-hour-5" ng-class="{ active: time.isHoursSelected('5')}" ng-click="time.setHours('5'); time.changed()">5</div>
+            <div class="th-hour th-hour-6" ng-class="{ active: time.isHoursSelected('6')}" ng-click="time.setHours('6'); time.changed()">6</div>
+            <div class="th-hour th-hour-7" ng-class="{ active: time.isHoursSelected('7')}" ng-click="time.setHours('7'); time.changed()">7</div>
+            <div class="th-hour th-hour-8" ng-class="{ active: time.isHoursSelected('8')}" ng-click="time.setHours('8'); time.changed()">8</div>
+            <div class="th-hour th-hour-9" ng-class="{ active: time.isHoursSelected('9')}" ng-click="time.setHours('9'); time.changed()">9</div>
+            <div class="th-hour th-hour-10" ng-class="{ active: time.isHoursSelected('10')}" ng-click="time.setHours('10'); time.changed()">10</div>
+            <div class="th-hour th-hour-11" ng-class="{ active: time.isHoursSelected('11')}" ng-click="time.setHours('11'); time.changed()">11</div>
+            <div class="th-hour th-hour-12" ng-class="{ active: time.isHoursSelected('12')}" ng-click="time.setHours('12'); time.changed()">12</div>
+            <div class="tp-minutes">
+                <div class="th-minute th-minute-1" ng-class="{ active: time.isMinutesSelected('05')}"  ng-click="time.setMinutes('05'); time.changed()">5</div>
+                <div class="th-minute th-minute-2" ng-class="{ active: time.isMinutesSelected('10')}" ng-click="time.setMinutes('10'); time.changed()">10</div>
+                <div class="th-minute th-minute-3" ng-class="{ active: time.isMinutesSelected('15')}" ng-click="time.setMinutes('15'); time.changed()">15</div>
+                <div class="th-minute th-minute-4" ng-class="{ active: time.isMinutesSelected('20')}" ng-click="time.setMinutes('20'); time.changed()">20</div>
+                <div class="th-minute th-minute-5" ng-class="{ active: time.isMinutesSelected('25')}" ng-click="time.setMinutes('25'); time.changed()">25</div>
+                <div class="th-minute th-minute-6" ng-class="{ active: time.isMinutesSelected('30')}" ng-click="time.setMinutes('30'); time.changed()">30</div>
+                <div class="th-minute th-minute-7" ng-class="{ active: time.isMinutesSelected('35')}" ng-click="time.setMinutes('35'); time.changed()">35</div>
+                <div class="th-minute th-minute-8" ng-class="{ active: time.isMinutesSelected('40')}" ng-click="time.setMinutes('40'); time.changed()">40</div>
+                <div class="th-minute th-minute-9" ng-class="{ active: time.isMinutesSelected('45')}" ng-click="time.setMinutes('45'); time.changed()">45</div>
+                <div class="th-minute th-minute-10" ng-class="{ active: time.isMinutesSelected('50')}" ng-click="time.setMinutes('50'); time.changed()">50</div>
+                <div class="th-minute th-minute-11" ng-class="{ active: time.isMinutesSelected('55')}" ng-click="time.setMinutes('55'); time.changed()">55</div>
+                <div class="th-minute th-minute-12" ng-class="{ active: time.isMinutesSelected('00')}" ng-click="time.setMinutes('00'); time.changed()">0</div>
+            </div>
+        </div>
+        <div class="tp-time-periods">
+            <div class="tp-am" ng-class="{ active: time.isTimePeriodSelected('AM')}" ng-click="time.setTimePeriod('AM'); time.changed()">AM</div>
+            <div class="tp-pn" ng-class="{ active: time.isTimePeriodSelected('PM')}" ng-click="time.setTimePeriod('PM'); time.changed()">PM</div>
+        </div>
+    </div>
+</div>

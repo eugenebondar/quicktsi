@@ -226,7 +226,7 @@
             scaleGridLineColor : "#e8edf1",
             scaleShowGridLines : true,
             scaleShowVerticalLines: false,
-            barValueSpacing: 90,
+            barValueSpacing: 105,
             scaleFontColor: "#8990a0",
             showTooltips: false
         };

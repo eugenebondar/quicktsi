@@ -4,13 +4,13 @@
         <th class="th-checkbox">
             <input type="checkbox" class="checkbox"/><span></span>
         </th>
-        <th class="th-name"><span>carrier name</span></th>
-        <th class="th-year"><span>year</span></th>
-        <th class="th-gross"><span>gross revenue</span></th>
+        <th class="th-name" ng-click="sort('name')"><span>carrier name <span ng-show="sortKey=='name'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
+        <th class="th-year" ng-click="sort('year')"><span>year <span ng-show="sortKey=='year'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
+        <th class="th-gross" ng-click="sort('gross')"><span>gross revenue <span ng-show="sortKey=='gross'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="item in table.items">
+    <tr dir-paginate="item in items|orderBy:sortKey:reverse|itemsPerPage:table.itemAmount">
         <td class="th-checkbox">
             <input type="checkbox" class="checkbox"/><span></span>
         </td>
@@ -20,6 +20,6 @@
     </tr>
     </tbody>
 </table>
-<div class="empty-table" ng-show="table.items.length < 1" >
+<div class="empty-table" ng-show="table.amountLabel < 1" >
     No data available in the table
 </div>

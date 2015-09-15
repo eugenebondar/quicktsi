@@ -17,7 +17,7 @@
         </ul>
     </div>
 </div>
-<div class="container border">
+<div class="container border" ng-controller="CreateInvoiceStepTwoTableCtrl as table">
     <div class="invoice-content-wrap">
         <div class="invoice-steps-wrap row">
             <div class="invoice-step invoice-step-1 checked">
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-table" ng-controller="CreateInvoiceStepTwoTableCtrl as table">
+        <div class="container-table">
             <table-create-invoice-two></table-create-invoice-two>
         </div>
         <div class="container-toolbar container-bottomtoolbar row">

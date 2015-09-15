@@ -2,14 +2,14 @@
     <thead>
     <tr>
         <th class="th-id"><span>#</span></th>
-        <th class="th-customer"><span>customer</span></th>
-        <th class="th-number"><span>number of loads</span></th>
-        <th class="th-selection"><span>selection</span></th>
+        <th class="th-customer" ng-click="sort('id')"><span>customer <span ng-show="sortKey=='id'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
+        <th class="th-number" ng-click="sort('customer')"><span>number of loads <span ng-show="sortKey=='customer'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
+        <th class="th-selection" ng-click="sort('number')"><span>selection <span ng-show="sortKey=='number'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="item in table.items">
-        <td class="th-load"><span>{{item.id}}</span></td>
+    <tr dir-paginate="item in items|orderBy:sortKey:reverse|itemsPerPage:table.itemAmount">
+        <td class="th-id"><span>{{item.id}}</span></td>
         <td class="th-customer"><span>{{item.customer}}</span></td>
         <td class="th-number"><span>{{item.number}}</span></td>
         <td class="th-selection">
@@ -19,6 +19,6 @@
     </tr>
     </tbody>
 </table>
-<div class="empty-table" ng-show="table.items.length < 1" >
+<div class="empty-table" ng-show="table.amountLabel < 1" >
     No data available in the table
 </div>

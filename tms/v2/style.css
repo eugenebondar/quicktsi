@@ -285,6 +285,9 @@ textarea {
 .form-wrap {
     padding: 5px 0 20px;
 }
+.manage-reports-wrap {
+    min-height: 400px;
+}
 .aw-block {
     margin-bottom: 30px;
 }
@@ -1244,7 +1247,7 @@ th.th-checkbox .checkbox + span {
 .container-toolbar {
     border-bottom: 1px solid #e8edf1;
     color: #8990a0;
-    margin: 0 -15px 15px;
+    margin: 0 -15px 30px;
     padding: 5px 15px 8px;
 }
 .container-toolbar.container-bottomtoolbar {
@@ -1920,9 +1923,8 @@ th.th-checkbox .checkbox + span {
     padding: 5px 0 0;
 }
 .table-create-invoices-3-wrap {
-    padding: 0 15px;
+    padding: 0 15px 20px;
 }
-
 
 /** Account page */
 
@@ -2336,4 +2338,211 @@ th.th-checkbox .checkbox + span {
 }
 .invoice-popup .popup-content {
     padding: 10px 20px;
+}
+
+/** Time picker */
+
+.tp-hours {
+    background: #e8edf1 none repeat scroll 0 0;
+    border-radius: 50%;
+    display: inline-block;
+    height: 156px;
+    position: relative;
+    width: 156px;
+}
+.time-picker-wrap {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e8edf1;
+    border-radius: 0 0 5px 5px;
+    padding: 15px 0;
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    width: 100%;
+    z-index: 10;
+}
+.tp-minutes {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 50%;
+    display: inline-block;
+    height: 110px;
+    margin-top: 24px;
+    position: relative;
+    width: 110px;
+}
+.th-hour {
+    color: #647994;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    width: 15px;
+}
+.th-hour-1 {
+    right: 36px;
+    top: 10px;
+}
+.th-hour-12 {
+    left: 0;
+    margin: auto;
+    right: 0;
+    top: 2px;
+}
+.th-hour-6 {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+}
+.th-hour-9 {
+    bottom: 0;
+    left: 4px;
+    margin: auto;
+    top: 0;
+}
+.th-hour-3 {
+    bottom: 0;
+    margin: auto;
+    right: 4px;
+    top: 0;
+}
+.th-hour-2 {
+    right: 12px;
+    top: 35px;
+}
+.th-hour-11 {
+    left: 36px;
+    top: 10px;
+}
+.th-hour-10 {
+    left: 12px;
+    top: 35px;
+}
+.th-hour.th-hour-7 {
+    bottom: 10px;
+    left: 36px;
+}
+.th-hour-8 {
+    bottom: 35px;
+    left: 12px;
+}
+.th-hour-4 {
+    bottom: 35px;
+    right: 12px;
+}
+.th-hour-5 {
+    bottom: 10px;
+    right: 36px;
+}
+.th-minute {
+    color: #94999f;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px;
+    position: absolute;
+    width: 15px;
+}
+.th-minute-1 {
+    right: 27px;
+    top: 10px;
+}
+.th-minute-12 {
+    left: 0;
+    margin: auto;
+    right: 0;
+    top: 4px;
+}
+.th-minute-6 {
+    bottom: 2px;
+    left: 0;
+    margin: auto;
+    right: 0;
+}
+.th-minute-9 {
+    bottom: 0;
+    left: 4px;
+    margin: auto;
+    top: 0;
+}
+.th-minute-3 {
+    bottom: 0;
+    margin: auto;
+    right: 4px;
+    top: 0;
+}
+.th-minute-2 {
+    right: 12px;
+    top: 28px;
+}
+.th-minute-11 {
+    left: 27px;
+    top: 10px;
+}
+.th-minute-10 {
+    left: 12px;
+    top: 28px;
+}
+.th-minute-7 {
+    bottom: 10px;
+    left: 27px;
+}
+.th-minute-8 {
+    bottom: 28px;
+    left: 12px;
+}
+.th-minute-4 {
+    bottom: 28px;
+    right: 12px;
+}
+.th-minute-5 {
+    bottom: 10px;
+    right: 27px;
+}
+.tp-am, .tp-pn {
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    width: 29px;
+}
+.tp-am {
+    float: left;
+}
+.tp-pn {
+    float: right;
+}
+.tp-time-periods {
+    height: 29px;
+}
+.time-picker {
+    margin: 0 auto;
+    width: 178px;
+}
+.tp-am.active, .tp-pn.active {
+    background: #0aa699 none repeat scroll 0 0;
+    color: #fff;
+}
+.th-hour.active, .th-minute.active {
+    color: #0aa699;
+}
+.time-input-wrap.time timepicker {
+    display: block;
+    position: relative;
+}
+.time-input-wrap timepicker::after {
+    background: #0aa699 url("img/date.png") no-repeat scroll 50% 50%;
+    border-left: 1px solid #e8edf1;
+    border-radius: 0 5px 5px 0;
+    content: "";
+    height: 29px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 31px;
 }

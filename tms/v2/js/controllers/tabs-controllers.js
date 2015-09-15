@@ -9,8 +9,6 @@
         this.isShow = function(){
             return this.showFilter;
         }
-
-
     });
 
     app.controller('PanelCtrl', ['$http', function($http){
@@ -19,7 +17,6 @@
         $http.get('./data/administrations.json').success(function(data){
             admin.items = data;
         });
-
         this.tab = 1;
         this.selectTab = function(setTab){
             this.tab = setTab;

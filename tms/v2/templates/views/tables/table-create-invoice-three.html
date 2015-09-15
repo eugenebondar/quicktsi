@@ -53,19 +53,19 @@
     <table class="table-create-invoices-3 table-border table" >
         <thead>
         <tr>
-            <th class="th-load"><span>load#</span></th>
-            <th class="th-pickup"><span>pickup</span></th>
-            <th class="th-delivery"><span>delivery</span></th>
-            <th class="th-from"><span>from</span></th>
-            <th class="th-to"><span>to</span></th>
+            <th class="th-load" ng-click="sort('load')"><span>load# <span ng-show="sortKey=='load'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
+            <th class="th-pickup" ng-click="sort('pickup')"><span>pickup <span ng-show="sortKey=='pickup'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
+            <th class="th-delivery" ng-click="sort('delivery')"><span>delivery <span ng-show="sortKey=='delivery'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
+            <th class="th-from" ng-click="sort('from')"><span>from <span ng-show="sortKey=='from'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
+            <th class="th-to" ng-click="sort('to')"><span>to <span ng-show="sortKey=='to'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
             <th class="th-po"><span>P.O #</span></th>
             <th class="th-info"><span>customer info</span></th>
-            <th class="th-weight"><span>weight</span></th>
-            <th class="th-fee"><span>fees</span></th>
+            <th class="th-weight" ng-click="sort('weight')"><span>weight <span ng-show="sortKey=='weight'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
+            <th class="th-fee" ng-click="sort('fees')"><span>fees <span ng-show="sortKey=='fees'" ng-class="{'sort-up':reverse,'sort-down':!reverse}"></span></span></th>
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="item in table.items">
+        <tr dir-paginate="item in items|orderBy:sortKey:reverse|itemsPerPage:table.itemAmount">
             <td class="th-load"><span>{{item.load}}</span></td>
             <td class="th-pickup"><span>{{item.pickup}}</span></td>
             <td class="th-delivery"><span>{{item.delivery}}</span></td>
@@ -97,6 +97,6 @@
         </tfoot>
     </table>
 </div>
-<div class="empty-table" ng-show="table.items.length < 1" >
+<div class="empty-table" ng-show="table.amountLabel < 1" >
     No data available in the table
 </div>
