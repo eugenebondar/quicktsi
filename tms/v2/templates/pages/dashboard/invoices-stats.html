@@ -14,23 +14,27 @@
             </ul>
         </div>
     </div>
-    <div class="container-diagrams row slideable-invoices-stats" invoice-relink-event="invoiceStats" ng-controller="reloadInvoiceStatsCtrl">
-        <div class="col-xs-2 diagram-item" ng-repeat="item in piechart.invoice">
-            <piechart color="{{item.color}}" fulfill="{{item.fulfill}}" value="{{item.value}}"></piechart>
-            <p style="color:{{item.color}}" class="canvas-label">{{item.label}}</p>
-            <p><a class="view-details-btn" href="/">View Details</a></p>
-        </div>
-        <div class="col-xs-4 diagram-item doughnut-wrap" ng-controller="DoughnutCtrl as doughnut">
-            <div class="dw-canvas-wrap">
-                <canvas height="92px" width="92px" id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels" chart-options="option" chart-colours="color"></canvas>
-                <ul class="doughnut-label-list">
-                    <li ng-repeat="item in doughnut.items" class="doughnut-label-item"><span><span class="dl-item" style="color:{{item.color}}">{{item.label}}</span>({{item.data}}%)</span></li>
+    <div class="slideable-invoices-stats">
+        <div class="container-diagrams row" invoice-relink-event="invoiceStats" ng-controller="reloadInvoiceStatsCtrl">
+            <div class="col-xs-2 diagram-item" ng-repeat="item in piechart.invoice">
+                <a href="{{item.href}}">
+                    <piechart color="{{item.color}}" fulfill="{{item.fulfill}}" value="{{item.value}}"></piechart>
+                    <p style="color:{{item.color}}" class="canvas-label">{{item.label}}</p>
+                </a>
+                <p><a class="view-details-btn" href="{{item.href}}">View Details</a></p>
+            </div>
+            <div class="col-xs-4 diagram-item doughnut-wrap" ng-controller="DoughnutCtrl as doughnut">
+                <div class="dw-canvas-wrap">
+                    <canvas height="92px" width="92px" id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels" chart-options="option" chart-colours="color"></canvas>
+                    <ul class="doughnut-label-list">
+                        <li ng-repeat="item in doughnut.items" class="doughnut-label-item"><span><span class="dl-item" style="color:{{item.color}}">{{item.label}}</span>({{item.data}}%)</span></li>
+                    </ul>
+                </div>
+                <p class="canvas-label">Outstanding Invoices <br/> View Details</p>
+                <ul class="doughnut-legend-list">
+                    <li ng-repeat="item in doughnut.items"><span style="background-color: {{item.color}}"></span>{{item.legend}}</li>
                 </ul>
             </div>
-            <p class="canvas-label">Outstanding Invoices <br/> View Details</p>
-            <ul class="doughnut-legend-list">
-                <li ng-repeat="item in doughnut.items"><span style="background-color: {{item.color}}"></span>{{item.legend}}</li>
-            </ul>
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 [
-  {"color": "#53c1b8", "fulfill": "100", "value": "164", "label": "Total Invoices"},
-  {"color": "#f25856", "fulfill": "64", "value": "106", "label": "Uninvoice Loads"},
-  {"color": "#008fd8", "fulfill": "26", "value": "42", "label": "Unset Invoices"},
-  {"color": "#d4538e", "fulfill": "38", "value": "64", "label": "Unpaid Invoices"}
+  {"color": "#53c1b8", "fulfill": "100", "value": "164", "label": "Total Invoices", "href": "/tms/v2/#/invoices"},
+  {"color": "#f25856", "fulfill": "64", "value": "106", "label": "Uninvoice Loads", "href": "/tms/v2/#/invoices"},
+  {"color": "#008fd8", "fulfill": "26", "value": "42", "label": "Unset Invoices", "href": "/tms/v2/#/invoices"},
+  {"color": "#d4538e", "fulfill": "38", "value": "64", "label": "Unpaid Invoices", "href": "/tms/v2/#/invoices"}
 ]

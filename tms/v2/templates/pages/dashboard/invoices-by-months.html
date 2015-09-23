@@ -22,13 +22,15 @@
             </ul>
         </div>
     </div>
-    <div class="loads-by-months-wrap lbmw row slideable-invoice-by-month" imonth-relink-event="invoiceMonth" ng-controller="reloadInvoiceMonthCtrl">
-        <ul class="bar-tablist">
-            <li ng-repeat="item in bar.tabs" ng-class="{ active: bar.isSelected(item.id) }"><a href ng-click="bar.showBar(item.url); bar.selectTab(item.id)">{{item.title}}</a></li>
-        </ul>
-        <div ng-include="bar.barURL"></div>
-        <ul class="bar-legend-list">
-            <li ng-repeat="item in legends"><span style="background-color:{{item[1]}}"></span>{{item[0]}}</li>
-        </ul>
+    <div class="slideable-invoice-by-month">
+        <div class="loads-by-months-wrap lbmw row" imonth-relink-event="invoiceMonth" ng-controller="reloadInvoiceMonthCtrl">
+            <ul class="bar-tablist">
+                <li ng-repeat="item in bar.tabs" ng-class="{ active: bar.isSelected(item.id) }"><a href ng-click="bar.showBar(item.url); bar.selectTab(item.id)">{{item.title}}</a></li>
+            </ul>
+            <div ng-include="bar.barURL"></div>
+            <ul class="bar-legend-list">
+                <li ng-repeat="item in legends"><span style="background-color:{{item[1]}}"></span>{{item[0]}}</li>
+            </ul>
+        </div>
     </div>
 </div>

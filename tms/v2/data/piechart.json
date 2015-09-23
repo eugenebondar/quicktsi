@@ -1,8 +1,8 @@
 [
-  {"color": "#53c1b8", "fulfill": "100", "value": "346", "label": "Total Loads"},
-  {"color": "#f25856", "fulfill": "85", "value": "294", "label": "Pending Loads"},
-  {"color": "#008fd8", "fulfill": "32", "value": "111", "label": "Open Loads"},
-  {"color": "#d4538e", "fulfill": "68", "value": "235", "label": "On Route Loads"},
-  {"color": "#bcaa56", "fulfill": "75", "value": "259", "label": "Covered Loads"},
-  {"color": "#0cc1bc", "fulfill": "52", "value": "180", "label": "Delivered Loads"}
+  {"color": "#53c1b8", "fulfill": "100", "value": "346", "label": "Total Loads", "href": "/tms/v2/#/loads"},
+  {"color": "#f25856", "fulfill": "85", "value": "294", "label": "Pending Loads", "href": "/tms/v2/#/loads"},
+  {"color": "#008fd8", "fulfill": "32", "value": "111", "label": "Open Loads", "href": "/tms/v2/#/loads"},
+  {"color": "#d4538e", "fulfill": "68", "value": "235", "label": "On Route Loads", "href": "/tms/v2/#/loads"},
+  {"color": "#bcaa56", "fulfill": "75", "value": "259", "label": "Covered Loads", "href": "/tms/v2/#/loads"},
+  {"color": "#0cc1bc", "fulfill": "52", "value": "180", "label": "Delivered Loads", "href": "/tms/v2/#/loads"}
 ]

@@ -179,60 +179,55 @@
         };
 
         $scope.janData = [
-            [160, 230, 125, 180]
+            [160, 230, 125, 180, 0, 0, 0, 0]
         ];
         $scope.febData = [
-            [120, 230, 125, 180]
+            [120, 230, 125, 180, 0, 0, 0, 0]
         ];
         $scope.marData = [
-            [110, 230, 125, 180]
+            [110, 230, 125, 180, 0, 0, 0, 0]
         ];
         $scope.aprData = [
-            [60, 230, 125, 180]
+            [60, 230, 125, 180, 0, 0, 0, 0]
         ];
         $scope.mayData = [
-            [160, 230, 125, 180]
+            [160, 230, 125, 180, 0, 0, 0, 0]
         ];
         $scope.junData = [
-            [10, 230, 125, 180]
+            [10, 230, 125, 180, 0, 0, 0, 0]
         ];
         $scope.julData = [
-            [180, 230, 125, 180]
+            [180, 230, 125, 180, 0, 0, 0, 0]
         ];
         $scope.augData = [
-            [90, 230, 125, 180]
+            [90, 230, 125, 180, 0, 0, 0, 0]
         ];
         $scope.sepData = [
-            [80, 230, 125, 180]
+            [80, 230, 125, 180, 0, 0, 0, 0]
         ];
         $scope.octData = [
-            [0, 230, 125, 180]
+            [0, 230, 125, 180, 0, 0, 0, 0]
         ];
         $scope.novData = [
-            [25, 230, 125, 180]
+            [25, 230, 125, 180, 0, 0, 0, 0]
         ];
         $scope.decData = [
-            [160, 230, 125, 180]
+            [160, 230, 125, 180, 0, 0, 0, 0]
         ];
-
         $scope.colors = [{fillColor:["#33a5e0", "#c084c8", "#f57978", "#3bb8ad"]}];
-        $scope.labels = ["", "", "", ""];
+        $scope.labels = ["", "", "", "", "", "", "", ""];
         $scope.options = {
             barStrokeWidth: 0,
             scaleGridLineColor : "#e8edf1",
             scaleShowGridLines : true,
             scaleShowVerticalLines: false,
-            barValueSpacing: 105,
+            barValueSpacing: 30,
             scaleFontColor: "#8990a0",
             showTooltips: false
         };
         this.barURL = "templates/pages/dashboard/invoices-by-month/jan.html";
         this.showBar = function(url) {
             this.barURL = url;
-        };
-        this.reloadBar = function(){
-            this.selectTab(1);
-            this.barURL = "templates/pages/dashboard/invoices-by-month/jan.html";
         };
     }]);
 })();

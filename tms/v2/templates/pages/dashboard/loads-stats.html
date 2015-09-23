@@ -22,11 +22,15 @@
             </ul>
         </div>
     </div>
-    <div class="container-diagrams row slideable-loads-stats" loads-relink-event="loadsStats" ng-controller="reloadLoadsStatsCtrl">
-        <div class="col-xs-2 diagram-item" ng-repeat="item in piechart.items">
-            <piechart color="{{item.color}}" fulfill="{{item.fulfill}}" value="{{item.value}}"></piechart>
-            <p style="color:{{item.color}}" class="canvas-label">{{item.label}}</p>
-            <p><a class="view-details-btn" href="/">View Details</a></p>
+    <div class="slideable-loads-stats">
+        <div class="container-diagrams row " loads-relink-event="loadsStats" ng-controller="reloadLoadsStatsCtrl">
+            <div class="col-xs-2 diagram-item" ng-repeat="item in piechart.items">
+                <a href="{{item.href}}">
+                    <piechart color="{{item.color}}" fulfill="{{item.fulfill}}" value="{{item.value}}"></piechart>
+                    <p style="color:{{item.color}}" class="canvas-label">{{item.label}}</p>
+                </a>
+                <p><a class="view-details-btn" href="{{item.href}}">View Details</a></p>
+            </div>
         </div>
     </div>
 </div>

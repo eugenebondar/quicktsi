@@ -311,6 +311,9 @@ textarea {
 .field-row {
     margin-bottom: 7px;
 }
+.two-column {
+    margin-bottom: 30px;
+}
 .full-select {
     background: #fff none repeat scroll 0 0;
     height: 31px;
@@ -451,7 +454,7 @@ th.th-checkbox .checkbox + span {
     position: fixed;
     transition: all 0.8s ease 0s;
     width: 230px;
-    z-index: 5;
+    z-index: 50;
 }
 .logo {
     background: #22262f none repeat scroll 0 0;
@@ -497,7 +500,7 @@ th.th-checkbox .checkbox + span {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 40;
+    z-index: 60;
 }
 .profile {
     color: #fff;
@@ -915,7 +918,7 @@ th.th-checkbox .checkbox + span {
     position: relative;
     z-index: 30;
 }
-.loads-panel-wrap .container-controls, .invoices-panel-wrap .table-loads-panel-wrap {
+.loads-panel-wrap .container-controls, .invoices-panel-wrap .container-controls {
     padding: 13px 0 12px;
 }
 .lbmw {
@@ -2357,6 +2360,9 @@ th.th-checkbox .checkbox + span {
 .invoice-popup .popup-content {
     padding: 10px 20px;
 }
+.dashboard-container .table {
+    margin-top: 0;
+}
 
 /** Time picker */
 
@@ -2658,5 +2664,357 @@ th.th-checkbox .checkbox + span {
     }
     .dashboard-container .cc-btn {
         padding-top: 0;
+    }
+    .dashboard-container .cc-label {
+        padding-right: 0;
+    }
+    .select-year {
+         margin-right: 0 !important;
+         width: 62px;
+     }
+    .dashboard-container .cc-label > span {
+        padding-right: 2px;
+    }
+    .bar-legend-list li span {
+        height: 7px;
+        margin-right: 3px;
+        width: 7px;
+    }
+    .bar-legend-list li {
+        margin-bottom: 2px;
+        width: 33%;
+    }
+    .bar-legend-list {
+        font-size: 13px;
+        padding: 0 20px 7px 40px;
+    }
+    .diagram-item {
+        min-height: 257px;
+    }
+    .lbmw .bar-legend-list {
+        padding-bottom: 14px;
+        padding-top: 7px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .page .sidebar, .page .logo {
+        width: 70px;
+    }
+    .close.page .sidebar, .close.page .logo {
+        width: 230px;
+    }
+    .page .main-header, .page .content {
+        margin-left: 70px;
+    }
+    .page.close .main-header {
+        margin-left: 230px;
+    }
+    .page.close .Dashboard-menu::after {
+        background-position: 0 0 !important;
+    }
+    .page.close .Loads-menu::after {
+        background-position: -29px 0 !important;
+    }
+    .page.close .Invoices-menu::after {
+        background-position: -57px 0 !important;
+    }
+    .page.close .Expenses-menu::after {
+        background-position: -84px 0 !important;
+    }
+    .page.close .Administration-menu::after {
+        background-position: -110px 0 !important;
+    }
+    .page.close .Users-menu::after {
+        background-position: -139px 0 !important;
+    }
+    .page.close .Accounting-menu::after {
+        background-position: -168px 0 !important;
+    }
+    .page.close .Reports-menu::after {
+        background-position: -197px 0 !important;
+    }
+    .page.close .Profile-menu::after {
+        background-position: -226px 0 !important;
+    }
+    .page.close .Help-menu::after {
+        background-position: -255px 0 !important;
+    }
+
+    .page.close .page.close .Dashboard-menu:hover::after, .page.close .active .Dashboard-menu::after {
+        background-position: 0 -25px !important;
+    }
+    .page.close .Loads-menu:hover::after, .page.close .active .Loads-menu::after {
+        background-position: -29px -25px !important;
+    }
+    .page.close .Invoices-menu:hover::after, .page.close .active .Invoices-menu::after {
+        background-position: -57px -25px !important;
+    }
+    .page.close .Expenses-menu:hover::after, .page.close .active .Expenses-menu::after {
+        background-position: -84px -25px !important;
+    }
+    .page.close .Administration-menu:hover::after, .page.close .active .Administration-menu::after {
+        background-position: -110px -25px !important;
+    }
+    .page.close .Users-menu:hover::after, .page.close .active .Users-menu::after {
+        background-position: -139px -25px !important;
+    }
+    .page.close .Accounting-menu:hover::after, .page.close .active .Accounting-menu::after {
+        background-position: -168px -25px !important;
+    }
+    .page.close .Reports-menu:hover::after, .page.close .active .Reports-menu::after {
+        background-position: -197px -25px !important;
+    }
+    .page.close .Profile-menu:hover::after, .page.close .active .Profile-menu::after {
+        background-position: -226px -25px !important;
+    }
+    .page.close .Help-menu:hover::after, .page.close .active .Help-menu::after {
+        background-position: -255px -25px !important;
+    }
+    .page.close .main-menu li {
+        color: #8b91a1;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 0 0 35px;
+    }
+    .page.close .main-menu a::after {
+        background: rgba(0, 0, 0, 0) url("img/menu.png") no-repeat scroll 0 0 / 279px auto;
+        content: "";
+        height: 23px;
+        left: 2px;
+        position: absolute;
+        top: 2px;
+        width: 21px;
+    }
+    .page.close .main-menu a:hover, .main-menu li.active {
+        color: #fff;
+    }
+    .page.close .main-menu a {
+        padding-left: 45px;
+        position: relative;
+        transition: all 0.4s ease;
+    }
+    .page.close .profile {
+        padding: 15px 0 35px;
+    }
+    .page.close .profile .prof-img {
+        float: left;
+        width: 41.6667%;
+        padding: 0 15px;
+    }
+    .page.close .profile .prof-info {
+        float: left;
+        width: 58.3333%;
+        padding: 0 15px;
+    }
+    .page.close .prof-img img {
+        width: auto;
+    }
+    .page.close .prof-name {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.2em;
+        text-align: left;
+    }
+    .page.close .logo > a::after {
+        right: -100%;
+    }
+    .page.close .logo > a {
+        width: auto;
+    }
+    .main-menu a::after {
+        background-size: 405px auto;
+        height: 36px;
+        left: 2px;
+        top: 2px;
+        width: 36px;
+    }
+    .main-menu a {
+        padding-left: 60px;
+        white-space: nowrap;
+    }
+    .Dashboard-menu::after {
+        background-position: 2px 0 !important;
+    }
+    .Loads-menu::after {
+        background-position: -38px 0 !important;
+    }
+    .Invoices-menu::after {
+        background-position: -80px 0 !important;
+    }
+    .Expenses-menu::after {
+        background-position: -119px 0 !important;
+    }
+    .Administration-menu::after {
+        background-position: -158px 0 !important;
+    }
+    .Users-menu::after {
+        background-position: -200px 0 !important;
+    }
+    .Accounting-menu::after {
+        background-position: -241px 0 !important;
+    }
+    .Reports-menu::after {
+        background-position: -282px 0 !important;
+    }
+    .Profile-menu::after {
+        background-position: -324px 0 !important;
+    }
+    .Help-menu::after {
+        background-position: -367px 0 !important;
+    }
+    .Dashboard-menu:hover::after, .active .Dashboard-menu::after {
+        background-position: 2px -37px !important;
+    }
+    .Loads-menu:hover::after, .active .Loads-menu::after {
+        background-position: -38px -37px !important;
+    }
+    .Invoices-menu:hover::after, .active .Invoices-menu::after {
+        background-position: -80px -37px !important;
+    }
+    .Expenses-menu:hover::after, .active .Expenses-menu::after {
+        background-position: -119px -37px !important;
+    }
+    .Administration-menu:hover::after, .active .Administration-menu::after {
+        background-position: -158px -37px !important;
+    }
+    .Users-menu:hover::after, .active .Users-menu::after {
+        background-position: -200px -37px !important;
+    }
+    .Accounting-menu:hover::after, .active .Accounting-menu::after {
+        background-position: -241px -37px !important;
+    }
+    .Reports-menu:hover::after, .active .Reports-menu::after {
+        background-position: -282px -37px !important;
+    }
+    .Profile-menu:hover::after, .active .Profile-menu::after {
+        background-position: -324px -37px !important;
+    }
+    .Help-menu:hover::after, .active .Help-menu::after {
+        background-position: -367px -37px !important;
+    }
+    .logo > a {
+        position: relative;
+        width: 40px;
+    }
+    .logo > a::after {
+        right: 0;
+    }
+    .log-out, .pn-welcome {
+        display: none;
+    }
+    .profile > div {
+        float: none;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+    .prof-img img {
+        width: 36px;
+    }
+    .prof-name {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.4em;
+        text-align: center;
+    }
+    .profile {
+        padding: 15px 0 28px;
+        transition: all 0.4s ease 0s;
+    }
+}
+@media screen and (max-width: 991px) {
+    .refresh {
+        padding: 3px 7px 0;
+    }
+    .ct-search > input {
+        margin: 0 4px;
+    }
+    .ct-amount-of-items {
+        margin-top: 7px;
+        padding-right: 4px !important;
+    }
+    .ct-pagination {
+        padding-right: 0;
+    }
+    .ct-pagination-wrap {
+        padding-top: 1px;
+    }
+    .form-wrap .row > .row {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+    .form-wrap .row > .row {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+    .field-row {
+        margin-bottom: 0;
+    }
+    .form-wrap .row .col-sm-6, .form-wrap .row .col-sm-9, .form-wrap .row .col-sm-3, .form-wrap .row .col-sm-4, .form-wrap .row .col-xs-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .form-wrap .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .filter-col {
+        margin-bottom: 0;
+        padding: 0;
+    }
+    .filters .label-for, .filters .text, .filters select, .filters .full-select {
+        margin-bottom: 5px;
+    }
+    .label-wr {
+        padding-left: 0;
+    }
+    .field-col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .field-col.right, .field-col.left {
+        text-align: center;
+    }
+    .field-col .green.btn-text.cap {
+        padding-left: 10px;
+    }
+    .sm-margin {
+        margin-bottom: 10px;
+    }
+    .table th {
+        font-size: 12px;
+        padding: 10px 3px 8px;
+    }
+    .admin-tabs-list li a {
+        font-size: 13px;
+        padding: 8px 5px;
+    }
+    .cb-broken + .label-for {
+        margin: 0 0 0 10px;
+        position: relative;
+        top: -5px;
+    }
+    .available-inp .label-for {
+        left: 14px;
+        position: relative;
+        top: -25px;
+    }
+    .label {
+        white-space: nowrap;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .filt-left.col-xs-6, .filter-col .col-xs-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .account-page-filters .cb-broken + .label-for {
+        margin: 0 0 0 10px;
+        position: relative;
+        top: 0;
     }
 }
