@@ -21,6 +21,23 @@
             if (bool) {
                 this.popupURL = url;
                 $('.popup-wrap').addClass('open');
+                cont.isSHowPopup = true;
+                console.log("Try show: " + cont.isSHowPopup);
+            }
+        };
+        var cont = this;
+        cont.isSHowPopup = false;
+        this.hidePopup = function(url, bool) {
+            if (cont.isSHowPopup) {
+                $(document).mouseup(function (e) {
+                    var container = $(".popup");
+                    if (container.has(e.target).length === 0){
+                        container.removeClass('open');
+                        cont.isSHowPopup = false;
+                        e.stopPropagation();
+                        console.log("Try hide: " + cont.isSHowPopup);
+                    }
+                });
             }
         };
     });
@@ -46,9 +63,7 @@
     }]);
     app.controller('popupCtrl', function(){
         this.closePopup = function(){
-            $('.popup-wrap').removeClass('open')
+            $('.popup-wrap').removeClass('open');
         };
     });
-
-
 })();

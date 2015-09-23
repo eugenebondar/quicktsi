@@ -923,4 +923,11 @@
             }
         }
     });
+    app.controller('StatusTableCtrl',function($scope, $http){
+        $scope.items = [];
+        var self = this;
+        $http.get("./data/tables/status-table.json").success(function(response){
+            $scope.items = response;
+        });
+    });
 })();

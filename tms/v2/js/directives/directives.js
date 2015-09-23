@@ -154,5 +154,32 @@
     });
 
 
+    app.directive("bulkSelect", function() {
+        return {
+            restrict: 'E',
+            templateUrl: "templates/views/toolbars/bulk.html",
+            scope:true,
+            link: function(scope, elem, attrs, ctrl) {
+                var bulk = $(attrs.bulkSelector);
+                $(document).click(function(e){
+                    if ($(e.target).closest(bulk).length) return;
+                    scope.$apply(function(){
+                        ctrl.isShow = false;
+                    });
+                    e.stopPropagation();
+                });
+            },
+            controller: function() {
+                var self = this;
+                self.isShow = false;
+                self.showBulk = function() {
+                    self.isShow = true;
+                };
+            },
+            controllerAs: 'bulk'
+        };
+    });
+
+
 
 })();

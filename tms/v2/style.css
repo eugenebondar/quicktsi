@@ -319,10 +319,44 @@ textarea {
     height: 31px;
     width: 100%;
 }
-.full-select select {
+.select-bulk {
+    background: #ffffff url("img/select-arrow.png") no-repeat scroll 117px 50%;
+    border: 1px solid #e8edf1;
+    border-radius: 5px;
     color: #505358;
+    font-size: 13px;
+    height: 31px;
+    position: relative;
+    width: 135px;
+}
+.full-select select {
     font-size: 14px;
     padding: 0 5px;
+}
+.select-bulk span {
+    color: #505358;
+    display: inline-block;
+    height: 29px;
+    line-height: 29px;
+    padding: 0 16px 0 10px;
+    width: 100%;
+}
+.select-bulk > ul {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e8edf1;
+    bottom: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+}
+.select-bulk > ul li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.select-bulk > ul li:hover {
+    color: #fff;
+    background-color: #3B69D5;
 }
 .form-wrap .row .col-sm-6, .form-wrap .row .col-sm-9, .form-wrap .row .col-sm-3, .form-wrap .row .col-sm-4, .form-wrap .row .col-xs-6 {
     padding-left: 10px;
@@ -2570,6 +2604,9 @@ th.th-checkbox .checkbox + span {
     right: 1px;
     top: 1px;
     width: 31px;
+}
+.time-input-wrap.time timepicker::after {
+    background-image: url("img/time.png");
 }
 
 /** Media */

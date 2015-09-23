@@ -62,8 +62,8 @@
             </div>
         </main>
     </section>
-    <div class="popup-wrap" ng-controller="popupCtrl as popup">
-        <div class="popup" ng-include="content.popupURL">
+    <div class="popup-wrap" ng-controller="popupCtrl as popup" ng-show="content.isSHowPopup">
+        <div class="popup" ng-include="content.popupURL" ng-click="content.hidePopup()">
         </div>
     </div>
 </div>

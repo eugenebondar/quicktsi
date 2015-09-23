@@ -1,0 +1,10 @@
+<div class="select-bulk" ng-init="value = 'Bulk Action'" >
+    <span ng-click="bulk.showBulk()">{{value}}</span>
+    <ul ng-show="bulk.isShow">
+        <li ng-click="value = 'Change Status'; bulk.isShow = false;">Change Status</li>
+        <li ng-click="value = 'Tweet Load'; bulk.isShow = false;">Tweet Load</li>
+        <li ng-click="value = 'Post on Facebook'; bulk.isShow = false;">Post on Facebook</li>
+        <li ng-click="value = 'Post on LinkedIn'; bulk.isShow = false;">Post on LinkedIn</li>
+        <li ng-click="value = 'Post on LoadBoard'; bulk.isShow = false;">Post on LoadBoard</li>
+    </ul>
+</div>

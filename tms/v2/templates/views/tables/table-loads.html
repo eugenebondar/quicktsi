@@ -38,11 +38,12 @@
             <td class="th-status">
                 <div class="inline status-select-wrap">
                     <div class="status-select select-cont inline">
-                        <select>
-                            <option ng-repeat="option in item.select" value="{{option}}">{{option}}</option>
+                        <select ng-change="content.showPopup('/tms/v2/templates/views/popups/dispatch.html', true)"
+                                ng-model="item.select[0]"
+                                ng-options="item for item in item.select">
                         </select>
                     </div>
-                    <a class="ss-select-link" data-popup="true" ng-click="content.showPopup('/tms/v2/templates/views/popups/dispatch.html', true)"><img src="img/rounds.png" alt="..."/></a>
+                    <a class="ss-select-link" data-popup="true" ng-click="content.showPopup('/tms/v2/templates/views/popups/status.html', true)"><img src="img/rounds.png" alt="..."/></a>
                 </div>
                 
             </td>

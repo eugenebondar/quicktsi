@@ -1,0 +1,25 @@
+<div class="invoice-popup" ng-controller="StatusTableCtrl as table">
+    <header class="popup-header">
+        <h4>Load #1022 Status History</h4>
+    </header>
+    <section class="popup-content">
+        <table class="table table-status-history">
+            <thead>
+                <th class="th-status">Status</th>
+                <th class="th-on">Update on</th>
+                <th class="th-by">Update by</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in items">
+                    <td class="th-status">{{item.status}}</td>
+                    <td class="th-on">{{item.on}}</td>
+                    <td class="th-by">{{item.by}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <footer class="popup-footer">
+        <ul class="pf-link-list">
+        </ul>
+    </footer>
+</div>
